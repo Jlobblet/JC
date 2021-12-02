@@ -123,7 +123,8 @@ iptr strtoiptr(const char* nptr, char** endptr, int base) {
         errno = ERANGE;
         return IPTR_MIN;
     }
-    return (i64)parsed;}
+    return (iptr)parsed;
+}
 
 uptr strtouptr(const char* nptr, char** endptr, int base) {
     unsigned long parsed = strtoul(nptr, endptr, base);
@@ -131,5 +132,5 @@ uptr strtouptr(const char* nptr, char** endptr, int base) {
         errno = ERANGE;
         return UPTR_MAX;
     }
-    return (u64)parsed;
+    return (uptr)parsed;
 }
