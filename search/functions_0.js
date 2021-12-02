@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['elapsed_5fus_74',['elapsed_us',['../jtime_8c.html#a0f02fa75235b7b7aa1c3bfd5273149a0',1,'elapsed_us(clock_t start, clock_t end):&#160;jtime.c'],['../jtime_8h.html#a0f02fa75235b7b7aa1c3bfd5273149a0',1,'elapsed_us(clock_t start, clock_t end):&#160;jtime.c']]]
+  ['advance_5fline_90',['advance_line',['../jstring_8c.html#a34fb7fc1f8e7f786269f9f7098930bbf',1,'advance_line(const char *start, const char **end):&#160;jstring.c'],['../jstring_8h.html#a34fb7fc1f8e7f786269f9f7098930bbf',1,'advance_line(const char *start, const char **end):&#160;jstring.c']]]
 ];

@@ -1,4 +1,11 @@
 var searchData=
 [
-  ['read_5fall_5flines_41',['read_all_lines',['../jio_8c.html#a12b761ef58e2d61b3851fed37b7ebefd',1,'read_all_lines(const char *filepath, char ***lines, uptr **lengths, uptr n):&#160;jio.c'],['../jio_8h.html#a12b761ef58e2d61b3851fed37b7ebefd',1,'read_all_lines(const char *filepath, char ***lines, uptr **lengths, uptr n):&#160;jio.c']]]
+  ['li16_41',['li16',['../jint_8h.html#a335e7fe290cb8801705609c7bd8632a4',1,'jint.h']]],
+  ['li32_42',['li32',['../jint_8h.html#a22db9db58308c761b2b76a89ad10495a',1,'jint.h']]],
+  ['li64_43',['li64',['../jint_8h.html#a5d1f7b2389991252ad0aefae07f307e9',1,'jint.h']]],
+  ['li8_44',['li8',['../jint_8h.html#a4157abae2d3c7720dd356d216255dc83',1,'jint.h']]],
+  ['lu16_45',['lu16',['../jint_8h.html#a9ff639323bef9060669677ec6505cbc3',1,'jint.h']]],
+  ['lu32_46',['lu32',['../jint_8h.html#a8499cbd1f07a3cdd1681e9c8aec2ab00',1,'jint.h']]],
+  ['lu64_47',['lu64',['../jint_8h.html#a8caee69fb510cced7d688af68d2bf151',1,'jint.h']]],
+  ['lu8_48',['lu8',['../jint_8h.html#a8db971ed87438e4b7f30f7a8c1f1d962',1,'jint.h']]]
 ];

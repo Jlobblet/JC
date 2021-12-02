@@ -91,6 +91,9 @@ $(document).ready(function(){initNavTree('jint_8h.html',''); initResizable(); })
 <div class="title">jint.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Integral types.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 </div>
 <p><a href="jint_8h_source.html">Go to the source code of this file.</a></p>
@@ -196,35 +199,53 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ace94060869be7013df8e1a521c83ec1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#ace94060869be7013df8e1a521c83ec1e">strtoi</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:ace94060869be7013df8e1a521c83ec1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>int</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>int</code>.  <a href="jint_8h.html#ace94060869be7013df8e1a521c83ec1e">More...</a><br /></td></tr>
 <tr class="separator:ace94060869be7013df8e1a521c83ec1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a3eaced5b31d3830ca1d35acc49dd8d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a6a3eaced5b31d3830ca1d35acc49dd8d">strtoui</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a6a3eaced5b31d3830ca1d35acc49dd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>unsigned int</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>unsigned int</code>.  <a href="jint_8h.html#a6a3eaced5b31d3830ca1d35acc49dd8d">More...</a><br /></td></tr>
 <tr class="separator:a6a3eaced5b31d3830ca1d35acc49dd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04efe848645fe971cd64a617480ed1e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#ae3702327b5f47e83b431e22b33da7b58">i8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a04efe848645fe971cd64a617480ed1e4">strtoi8</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a04efe848645fe971cd64a617480ed1e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i8</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i8</code>.  <a href="jint_8h.html#a04efe848645fe971cd64a617480ed1e4">More...</a><br /></td></tr>
 <tr class="separator:a04efe848645fe971cd64a617480ed1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf4a820681ddc4b4230554d1d2311ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a0bf4a820681ddc4b4230554d1d2311ae">strtou8</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a0bf4a820681ddc4b4230554d1d2311ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u8</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u8</code>.  <a href="jint_8h.html#a0bf4a820681ddc4b4230554d1d2311ae">More...</a><br /></td></tr>
 <tr class="separator:a0bf4a820681ddc4b4230554d1d2311ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25168f64b1afcc8372ce286b27d79ac4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#ad309dbcaeea13aa602d686964156ea0b">i16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a25168f64b1afcc8372ce286b27d79ac4">strtoi16</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a25168f64b1afcc8372ce286b27d79ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i16</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i16</code>.  <a href="jint_8h.html#a25168f64b1afcc8372ce286b27d79ac4">More...</a><br /></td></tr>
 <tr class="separator:a25168f64b1afcc8372ce286b27d79ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13919f96448fe3d39e398250763b16f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a13919f96448fe3d39e398250763b16f6">strtou16</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a13919f96448fe3d39e398250763b16f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u16</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u16</code>.  <a href="jint_8h.html#a13919f96448fe3d39e398250763b16f6">More...</a><br /></td></tr>
 <tr class="separator:a13919f96448fe3d39e398250763b16f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0ad8e4634fc033035bdf8abe96d2115"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a48d6cd8e4135fb2ff7e7f2dac84089ec">i32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#aa0ad8e4634fc033035bdf8abe96d2115">strtoi32</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:aa0ad8e4634fc033035bdf8abe96d2115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i32</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i32</code>.  <a href="jint_8h.html#aa0ad8e4634fc033035bdf8abe96d2115">More...</a><br /></td></tr>
 <tr class="separator:aa0ad8e4634fc033035bdf8abe96d2115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7cd00093636d24a4bcd0f4cff93f517"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#ad7cd00093636d24a4bcd0f4cff93f517">strtou32</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:ad7cd00093636d24a4bcd0f4cff93f517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u32</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u32</code>.  <a href="jint_8h.html#ad7cd00093636d24a4bcd0f4cff93f517">More...</a><br /></td></tr>
 <tr class="separator:ad7cd00093636d24a4bcd0f4cff93f517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b1beb07dfeb0c27a9ce1ebefe69bab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a85cb35fbe5bf2961d7ad5f26814a91a2">i64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a6b1beb07dfeb0c27a9ce1ebefe69bab5">strtoi64</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a6b1beb07dfeb0c27a9ce1ebefe69bab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i64</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i64</code>.  <a href="jint_8h.html#a6b1beb07dfeb0c27a9ce1ebefe69bab5">More...</a><br /></td></tr>
 <tr class="separator:a6b1beb07dfeb0c27a9ce1ebefe69bab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3e50d8d95a53c8a127b680d8cd435b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#ad3e50d8d95a53c8a127b680d8cd435b6">strtou64</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:ad3e50d8d95a53c8a127b680d8cd435b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u64</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u64</code>.  <a href="jint_8h.html#ad3e50d8d95a53c8a127b680d8cd435b6">More...</a><br /></td></tr>
 <tr class="separator:ad3e50d8d95a53c8a127b680d8cd435b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6f6793d59a5056fdcd2fbd1ddd16cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#ad6f6793d59a5056fdcd2fbd1ddd16cf9">strtoiptr</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:ad6f6793d59a5056fdcd2fbd1ddd16cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>iptr</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>iptr</code>.  <a href="jint_8h.html#ad6f6793d59a5056fdcd2fbd1ddd16cf9">More...</a><br /></td></tr>
 <tr class="separator:ad6f6793d59a5056fdcd2fbd1ddd16cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a180db886281ced9e0703dcf9c938aeb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a180db886281ced9e0703dcf9c938aeb7">strtouptr</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a180db886281ced9e0703dcf9c938aeb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>uptr</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>uptr</code>.  <a href="jint_8h.html#a180db886281ced9e0703dcf9c938aeb7">More...</a><br /></td></tr>
 <tr class="separator:a180db886281ced9e0703dcf9c938aeb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a843a48f12dcfb9c839f2e6eae0769fa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#aa5e59e4e6417eecf0bba295c1f89a7c3">imax</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a843a48f12dcfb9c839f2e6eae0769fa2">strtoimax</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a843a48f12dcfb9c839f2e6eae0769fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>imax</code>. This function operates as a wrapper around <code>strtoll</code>, discarding results outside the range of <code>imax</code>.  <a href="jint_8h.html#a843a48f12dcfb9c839f2e6eae0769fa2">More...</a><br /></td></tr>
 <tr class="separator:a843a48f12dcfb9c839f2e6eae0769fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d918304d580f9370f66aeb6ef4bd104"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a084a1ac0c1c54d5de6521c96f9973deb">umax</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jint_8h.html#a9d918304d580f9370f66aeb6ef4bd104">strtoumax</a> (const char *nptr, char **endptr, int base)</td></tr>
+<tr class="memdesc:a9d918304d580f9370f66aeb6ef4bd104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>umax</code>. This function operates as a wrapper around <code>strtoull</code>, discarding results outside the range of <code>umax</code>.  <a href="jint_8h.html#a9d918304d580f9370f66aeb6ef4bd104">More...</a><br /></td></tr>
 <tr class="separator:a9d918304d580f9370f66aeb6ef4bd104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Integral types. </p>
+
+<p class="definition">Definition in file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a31c11a64ca799bf89552369a63cecf98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31c11a64ca799bf89552369a63cecf98">&#9670;&nbsp;</a></span>I16_MAX</h2>
 
@@ -237,7 +258,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00039">39</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00041">41</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -253,7 +274,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00051">51</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00053">53</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -269,7 +290,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00041">41</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00043">43</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -285,7 +306,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00052">52</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00054">54</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -301,7 +322,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00043">43</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00045">45</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -317,7 +338,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00053">53</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00055">55</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -333,7 +354,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00037">37</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00039">39</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -349,7 +370,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00050">50</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00052">52</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -365,7 +386,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00047">47</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00049">49</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -381,7 +402,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00055">55</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00057">57</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +418,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00045">45</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00047">47</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -413,7 +434,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00054">54</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00056">56</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -429,7 +450,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00040">40</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00042">42</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -445,7 +466,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00042">42</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00044">44</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +482,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00044">44</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00046">46</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -477,7 +498,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00038">38</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00040">40</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -493,7 +514,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00048">48</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00050">50</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +530,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00046">46</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00048">48</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -526,7 +547,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00030">30</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00032">32</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -542,7 +563,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00032">32</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00034">34</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -558,7 +579,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00034">34</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00036">36</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -574,7 +595,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00028">28</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00030">30</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -590,7 +611,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00031">31</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00033">33</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -606,7 +627,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00033">33</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00035">35</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -622,7 +643,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00035">35</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00037">37</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -638,7 +659,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00029">29</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00031">31</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -654,7 +675,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00008">8</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00010">10</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -670,7 +691,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00010">10</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00012">12</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -686,7 +707,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00012">12</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00014">14</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -702,7 +723,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00006">6</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00008">8</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -718,7 +739,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00016">16</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00018">18</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -734,7 +755,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00014">14</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00016">16</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -750,7 +771,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00021">21</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00023">23</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -766,7 +787,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00023">23</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00025">25</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -782,7 +803,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00025">25</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00027">27</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -798,7 +819,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00019">19</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00021">21</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -814,7 +835,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00022">22</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00024">24</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -830,7 +851,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00024">24</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00026">26</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -846,7 +867,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00026">26</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00028">28</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -862,7 +883,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00020">20</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00022">22</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -878,7 +899,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00009">9</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00011">11</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -894,7 +915,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00011">11</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00013">13</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -910,7 +931,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00013">13</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00015">15</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -926,7 +947,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00007">7</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00009">9</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -942,7 +963,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00017">17</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00019">19</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -958,7 +979,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00015">15</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8h_source.html#l00017">17</a> of file <a class="el" href="jint_8h_source.html">jint.h</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1016,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00006">6</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>int</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>int</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtol</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>int</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>int</code>, the function returns <code>INT_MAX</code> or <code>INT_MIN</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00010">10</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
 
 </div>
 </div>
@@ -1031,9 +1063,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00050">50</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i16</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i16</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtol</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>i16</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>i16</code>, the function returns <code>I16_MAX</code> or <code>I16_MIN</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00039">I16_MAX</a>, and <a class="el" href="jint_8h_source.html#l00051">I16_MIN</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00058">58</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00041">I16_MAX</a>, and <a class="el" href="jint_8h_source.html#l00053">I16_MIN</a>.</p>
 
 </div>
 </div>
@@ -1069,9 +1112,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00072">72</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i32</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i32</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtol</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>i32</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>i32</code>, the function returns <code>I32_MAX</code> or <code>I32_MIN</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00041">I32_MAX</a>, and <a class="el" href="jint_8h_source.html#l00052">I32_MIN</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00082">82</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00043">I32_MAX</a>, and <a class="el" href="jint_8h_source.html#l00054">I32_MIN</a>.</p>
 
 </div>
 </div>
@@ -1107,9 +1161,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00094">94</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i64</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i64</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtol</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>i64</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>i64</code>, the function returns <code>I64_MAX</code> or <code>I32_MIN</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00043">I64_MAX</a>, and <a class="el" href="jint_8h_source.html#l00053">I64_MIN</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00106">106</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00045">I64_MAX</a>, and <a class="el" href="jint_8h_source.html#l00055">I64_MIN</a>.</p>
 
 </div>
 </div>
@@ -1145,9 +1210,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00028">28</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>i8</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>i8</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtol</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>i8</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>i8</code>, the function returns <code>I8_MAX</code> or <code>I8_MIN</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00037">I8_MAX</a>, and <a class="el" href="jint_8h_source.html#l00050">I8_MIN</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00034">34</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00039">I8_MAX</a>, and <a class="el" href="jint_8h_source.html#l00052">I8_MIN</a>.</p>
 
 </div>
 </div>
@@ -1183,9 +1259,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00138">138</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>imax</code>. This function operates as a wrapper around <code>strtoll</code>, discarding results outside the range of <code>imax</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoll</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>imax</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>imax</code>, the function returns <code>IMAX_MAX</code> or <code>IMAX_MIN</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00047">IMAX_MAX</a>, and <a class="el" href="jint_8h_source.html#l00055">IMAX_MIN</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00154">154</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00049">IMAX_MAX</a>, and <a class="el" href="jint_8h_source.html#l00057">IMAX_MIN</a>.</p>
 
 </div>
 </div>
@@ -1221,9 +1308,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00116">116</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>iptr</code>. This function operates as a wrapper around <code>strtol</code>, discarding results outside the range of <code>iptr</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtol</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>iptr</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>iptr</code>, the function returns <code>IPTR_MAX</code> or <code>IPTR_MIN</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00045">IPTR_MAX</a>, and <a class="el" href="jint_8h_source.html#l00054">IPTR_MIN</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00130">130</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00047">IPTR_MAX</a>, and <a class="el" href="jint_8h_source.html#l00056">IPTR_MIN</a>.</p>
 
 </div>
 </div>
@@ -1259,9 +1357,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00063">63</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u16</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u16</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoul</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>u16</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>u16</code>, the function returns <code>U16_MAX</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00040">U16_MAX</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00072">72</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00042">U16_MAX</a>.</p>
 
 </div>
 </div>
@@ -1297,9 +1406,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00085">85</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u32</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u32</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoul</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>u32</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>u32</code>, the function returns <code>U32_MAX</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00042">U32_MAX</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00096">96</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00044">U32_MAX</a>.</p>
 
 </div>
 </div>
@@ -1335,9 +1455,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00107">107</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u64</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u64</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoul</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>u64</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>u64</code>, the function returns <code>U64_MAX</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00044">U64_MAX</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00120">120</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00046">U64_MAX</a>.</p>
 
 </div>
 </div>
@@ -1373,9 +1504,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00041">41</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>u8</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>u8</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoul</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>u8</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>u8</code>, the function returns <code>U8_MAX</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00038">U8_MAX</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00048">48</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00040">U8_MAX</a>.</p>
 
 </div>
 </div>
@@ -1411,7 +1553,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00019">19</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>unsigned int</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>unsigned int</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoul</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>unsigned int</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>unsigned int</code>, the function returns <code>UINT_MAX</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00024">24</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
 
 </div>
 </div>
@@ -1447,9 +1600,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00150">150</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>umax</code>. This function operates as a wrapper around <code>strtoull</code>, discarding results outside the range of <code>umax</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoull</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>umax</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>umax</code>, the function returns <code>UMAX_MAX</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00048">UMAX_MAX</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00167">167</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00050">UMAX_MAX</a>.</p>
 
 </div>
 </div>
@@ -1485,9 +1649,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00129">129</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+<p>Parses the C-style string <code>nptr</code>, interpreting its content as an integer of the specified base, which is returned as a value of type <code>uptr</code>. This function operates as a wrapper around <code>strtoul</code>, discarding results outside the range of <code>uptr</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nptr</td><td>C-style string containing the representation of an integer.</td></tr>
+    <tr><td class="paramname">endptr</td><td>Pointer to a value to write the next character in <code>nptr</code> after the integer. If <code>endptr</code> is a null pointer it is not used.</td></tr>
+    <tr><td class="paramname">base</td><td>Numerical base (aka radix) that determines valid characters and their interpretation. See <code>strtoul</code> for details. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the converted integer as an <code>uptr</code> value. If no valid conversion could be performed, <code>0</code> is returned. If the value read is out of range of an <code>uptr</code>, the function returns <code>UPTR_MAX</code>, and <code>errno</code> is set to <code>ERANGE</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jint_8h_source.html#l00046">UPTR_MAX</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jint_8c_source.html#l00144">144</a> of file <a class="el" href="jint_8c_source.html">jint.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jint_8h_source.html#l00048">UPTR_MAX</a>.</p>
 
 </div>
 </div>
@@ -1497,7 +1672,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jint_8h.html">jint.h</a></li>
-    <li class="footer">Generated on Thu Dec 2 2021 03:24:09 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Thu Dec 2 2021 21:27:24 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

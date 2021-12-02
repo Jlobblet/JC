@@ -1,27 +1,33 @@
 var indexSectionsWithContent =
 {
-  0: "efijlrsu",
+  0: "aefijlmrsu",
   1: "j",
-  2: "ers",
-  3: "filu",
-  4: "iu"
+  2: "j",
+  3: "aemrs",
+  4: "afs",
+  5: "filu",
+  6: "iu"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "typedefs",
-  4: "defines"
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "typedefs",
+  6: "defines"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Typedefs",
-  4: "Macros"
+  1: "Data Structures",
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Typedefs",
+  6: "Macros"
 };
 
