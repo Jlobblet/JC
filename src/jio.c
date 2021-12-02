@@ -4,6 +4,14 @@
 #include "jio.h"
 
 uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n) {
+    if (lines == NULL) {
+        errno = EINVAL;
+        return -1;
+    }
+    if (lengths == NULL) {
+        errno = EINVAL;
+        return -1;
+    }
     // Open file
     FILE* fp = fopen(filepath, "r");
     if (fp == NULL) {
