@@ -46,7 +46,7 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
                 errno = ENOMEM;
                 return -1;
             }
-            *lengths = (uptr*)realloc(*lengths, n * sizeof(uptr));
+            *lengths = (uptr*)realloc(*lengths, n * sizeof(uptr*));
             if (*lengths == NULL) {
                 errno = ENOMEM;
                 return -1;
@@ -65,7 +65,7 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
         errno = ENOMEM;
         return -1;
     }
-    *lengths = (uptr*)realloc(*lengths, i * sizeof(uptr));
+    *lengths = (uptr*)realloc(*lengths, i * sizeof(uptr*));
     if (*lines == NULL) {
         errno = ENOMEM;
         return -1;
