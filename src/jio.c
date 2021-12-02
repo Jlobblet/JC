@@ -21,12 +21,12 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
     if (n == 0) {
         // Allocate arrays
         n = 1;
-        *lines = (char**)malloc(sizeof(char*));
+        *lines = (char**)malloc(n *sizeof(char*));
         if (*lines == NULL) {
             errno = ENOMEM;
             return -1;
         }
-        *lengths = (uptr*)malloc(sizeof(uptr));
+        *lengths = (uptr*)malloc(n * sizeof(uptr*));
         if (*lengths == NULL) {
             errno = ENOMEM;
             return -1;
