@@ -1,3 +1,5 @@
+/// \file
+/// Integral types.
 #ifndef JC_JINT_H
 #define JC_JINT_H
 
