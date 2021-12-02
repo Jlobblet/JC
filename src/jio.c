@@ -34,11 +34,10 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
     }
     // How much the buffers grow each time they hit capacity
     const uptr growth_factor = 2;
-    // Current index
-    uptr i = 0;
+    uptr i;
     // Length of the buffer getline allocates
     uptr buffer_length = 0;
-    while (getline((*lines) + i, &buffer_length, fp) != -1) {
+    for (i = 0; getline((*lines) + i, &buffer_length, fp) != -1; i++) {
         if (i >= n) {
             n *= growth_factor;
             *lines = (char**)realloc(*lines, n * sizeof(char*));
@@ -55,12 +54,10 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
         (*lengths)[i] = buffer_length;
         // Reset buffer length so that getline can allocate again
         buffer_length = 0;
-        // Increment index
-        ++i;
     }
     fclose(fp);
     // Shrink arrays to minimum size
-    *lines = (char**)realloc(*lines, n * sizeof(char*));
+    *lines = (char**)realloc(*lines, i * sizeof(char*));
     if (*lines == NULL) {
         errno = ENOMEM;
         return -1;
