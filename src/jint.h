@@ -11,8 +11,8 @@ typedef int32_t i32;
 typedef uint32_t u32;
 typedef int64_t i64;
 typedef uint64_t u64;
-typedef intptr_t isize;
-typedef uintptr_t usize;
+typedef intptr_t iptr;
+typedef uintptr_t uptr;
 typedef intmax_t imax;
 typedef uintmax_t umax;
 
@@ -42,14 +42,14 @@ typedef uint_fast64_t fu64;
 #define U32_MAX UINT32_MAX
 #define I64_MAX INT64_MAX
 #define U64_MAX UINT64_MAX
-#define ISIZE_MAX INTPTR_MAX
-#define USIZE_MAX UINTPTR_MAX
+#define IPTR_MAX INTPTR_MAX
+#define UPTR_MAX UINTPTR_MAX
 
 #define I8_MIN INT8_MIN
 #define I16_MIN INT16_MIN
 #define I32_MIN INT32_MIN
 #define I64_MIN INT64_MIN
-#define ISIZE_MIN INTPTR_MIN
+#define IPTR_MIN INTPTR_MIN
 
 int strtoi(const char* nptr, char** endptr, int base);
 unsigned int strtoui(const char* nptr, char** endptr, int base);
@@ -62,7 +62,7 @@ i32 strtoi32(const char* nptr, char** endptr, int base);
 u32 strtou32(const char* nptr, char** endptr, int base);
 i64 strtoi64(const char* nptr, char** endptr, int base);
 u64 strtou64(const char* nptr, char** endptr, int base);
-isize strotoisize(const char* nptr, char** endptr, int base);
-usize strotousize(const char* nptr, char** endptr, int base);
+iptr strtoiptr(const char* nptr, char** endptr, int base);
+uptr strtouptr(const char* nptr, char** endptr, int base);
 
 #endif //JC_JINT_H

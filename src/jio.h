@@ -3,7 +3,7 @@
 
 #include "jint.h"
 
-usize read_all_lines(const char* filepath, char*** lines, usize** lengths, usize n);
+uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n);
 
 
 #endif //JC_JIO_H

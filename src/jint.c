@@ -113,23 +113,23 @@ u64 strtou64(const char* nptr, char** endptr, int base) {
     return (u64)parsed;
 }
 
-isize strotoisize(const char* nptr, char** endptr, int base) {
+iptr strtoiptr(const char* nptr, char** endptr, int base) {
     long parsed = strtol(nptr, endptr, base);
-    if (parsed > ISIZE_MAX) {
+    if (parsed > IPTR_MAX) {
         errno = ERANGE;
-        return ISIZE_MAX;
+        return IPTR_MAX;
     }
-    if (parsed < ISIZE_MIN) {
+    if (parsed < IPTR_MIN) {
         errno = ERANGE;
-        return ISIZE_MIN;
+        return IPTR_MIN;
     }
     return (i64)parsed;}
 
-usize strotousize(const char* nptr, char** endptr, int base) {
+uptr strtouptr(const char* nptr, char** endptr, int base) {
     unsigned long parsed = strtoul(nptr, endptr, base);
-    if (parsed > USIZE_MAX) {
+    if (parsed > UPTR_MAX) {
         errno = ERANGE;
-        return USIZE_MAX;
+        return UPTR_MAX;
     }
     return (u64)parsed;
 }

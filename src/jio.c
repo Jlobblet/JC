@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "jio.h"
 
-usize read_all_lines(const char* filepath, char*** lines, usize** lengths, usize n) {
+uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n) {
     // Open file
     FILE* fp = fopen(filepath, "r");
     if (fp == NULL) {
@@ -18,18 +18,18 @@ usize read_all_lines(const char* filepath, char*** lines, usize** lengths, usize
             errno = ENOMEM;
             return -1;
         }
-        *lengths = (usize*)malloc(sizeof(usize));
+        *lengths = (uptr*)malloc(sizeof(uptr));
         if (*lengths == NULL) {
             errno = ENOMEM;
             return -1;
         }
     }
     // How much the buffers grow each time they hit capacity
-    const usize growth_factor = 2;
+    const uptr growth_factor = 2;
     // Current index
-    usize i = 0;
+    uptr i = 0;
     // Length of the buffer getline allocates
-    usize buffer_length = 0;
+    uptr buffer_length = 0;
     while (getline((*lines) + i, &buffer_length, fp) != -1) {
         if (i >= n) {
             n *= growth_factor;
@@ -38,7 +38,7 @@ usize read_all_lines(const char* filepath, char*** lines, usize** lengths, usize
                 errno = ENOMEM;
                 return -1;
             }
-            *lengths = (usize*)realloc(*lengths, n * sizeof(usize));
+            *lengths = (uptr*)realloc(*lengths, n * sizeof(uptr));
             if (*lengths == NULL) {
                 errno = ENOMEM;
                 return -1;
@@ -56,7 +56,7 @@ usize read_all_lines(const char* filepath, char*** lines, usize** lengths, usize
         errno = ENOMEM;
         return -1;
     }
-    *lengths = (usize*)realloc(*lengths, i * sizeof(usize));
+    *lengths = (uptr*)realloc(*lengths, i * sizeof(uptr));
     if (*lines == NULL) {
         errno = ENOMEM;
         return -1;
