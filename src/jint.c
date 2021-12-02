@@ -134,3 +134,24 @@ uptr strtouptr(const char* nptr, char** endptr, int base) {
     }
     return (uptr)parsed;
 }
+
+imax strtoimax(const char* nptr, char** endptr, int base) {
+    long long parsed = strtol(nptr, endptr, base);
+    if (parsed > IMAX_MAX) {
+        errno = ERANGE;
+        return IMAX_MAX;
+    }
+    if (parsed < IMAX_MIN) {
+        errno = ERANGE;
+        return IMAX_MIN;
+    }
+    return (imax)parsed;}
+
+umax strtoumax(const char* nptr, char** endptr, int base) {
+    unsigned long long parsed = strtoul(nptr, endptr, base);
+    if (parsed > UMAX_MAX) {
+        errno = ERANGE;
+        return UMAX_MAX;
+    }
+    return (umax)parsed;
+}

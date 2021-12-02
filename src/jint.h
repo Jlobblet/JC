@@ -44,12 +44,15 @@ typedef uint_fast64_t fu64;
 #define U64_MAX UINT64_MAX
 #define IPTR_MAX INTPTR_MAX
 #define UPTR_MAX UINTPTR_MAX
+#define IMAX_MAX INTMAX_MAX
+#define UMAX_MAX UINTMAX_MAX
 
 #define I8_MIN INT8_MIN
 #define I16_MIN INT16_MIN
 #define I32_MIN INT32_MIN
 #define I64_MIN INT64_MIN
 #define IPTR_MIN INTPTR_MIN
+#define IMAX_MIN INTMAX_MIN
 
 int strtoi(const char* nptr, char** endptr, int base);
 unsigned int strtoui(const char* nptr, char** endptr, int base);
@@ -64,5 +67,7 @@ i64 strtoi64(const char* nptr, char** endptr, int base);
 u64 strtou64(const char* nptr, char** endptr, int base);
 iptr strtoiptr(const char* nptr, char** endptr, int base);
 uptr strtouptr(const char* nptr, char** endptr, int base);
+imax strtoimax(const char* nptr, char** endptr, int base);
+umax strtoumax(const char* nptr, char** endptr, int base);
 
 #endif //JC_JINT_H
