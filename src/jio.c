@@ -23,12 +23,10 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
         n = 1;
         *lines = (char**)malloc(n *sizeof(char*));
         if (*lines == NULL) {
-            errno = ENOMEM;
             return -1;
         }
         *lengths = (uptr*)malloc(n * sizeof(uptr*));
         if (*lengths == NULL) {
-            errno = ENOMEM;
             return -1;
         }
     }
@@ -42,12 +40,10 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
             n *= growth_factor;
             *lines = (char**)realloc(*lines, n * sizeof(char*));
             if (*lines == NULL) {
-                errno = ENOMEM;
                 return -1;
             }
             *lengths = (uptr*)realloc(*lengths, n * sizeof(uptr*));
             if (*lengths == NULL) {
-                errno = ENOMEM;
                 return -1;
             }
         }
@@ -59,12 +55,10 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
     // Shrink arrays to minimum size
     *lines = (char**)realloc(*lines, i * sizeof(char*));
     if (*lines == NULL) {
-        errno = ENOMEM;
         return -1;
     }
     *lengths = (uptr*)realloc(*lengths, i * sizeof(uptr*));
     if (*lines == NULL) {
-        errno = ENOMEM;
         return -1;
     }
     return i;
