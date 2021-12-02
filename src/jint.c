@@ -1,6 +1,29 @@
 #include <errno.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "jint.h"
+
+int strtoi(const char* nptr, char** endptr, int base) {
+    long parsed = strtol(nptr, endptr, base);
+    if (parsed > INT_MAX) {
+        errno = ERANGE;
+        return INT_MAX;
+    }
+    if (parsed < INT_MIN) {
+        errno = ERANGE;
+        return INT_MIN;
+    }
+    return (int)parsed;
+}
+
+unsigned int strtoui(const char* nptr, char** endptr, int base) {
+    unsigned long parsed = strtoul(nptr, endptr, base);
+    if (parsed > UINT_MAX) {
+        errno = ERANGE;
+        return UINT_MAX;
+    }
+    return (unsigned int)parsed;
+}
 
 i8 strtoi8(const char* nptr, char** endptr, int base) {
     long parsed = strtol(nptr, endptr, base);

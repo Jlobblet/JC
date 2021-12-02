@@ -51,6 +51,9 @@ typedef uint_fast64_t fu64;
 #define I64_MIN INT64_MIN
 #define ISIZE_MIN INTPTR_MIN
 
+int strtoi(const char* nptr, char** endptr, int base);
+unsigned int strtoui(const char* nptr, char** endptr, int base);
+
 i8 strtoi8(const char* nptr, char** endptr, int base);
 u8 strtou8(const char* nptr, char** endptr, int base);
 i16 strtoi16(const char* nptr, char** endptr, int base);
