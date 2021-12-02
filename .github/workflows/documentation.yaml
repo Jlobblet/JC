@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Intstall dependencies
+        run: sudo apt-get install -y git
       - name: Doxygen
         uses: mattnotmitt/doxygen-action@v1.3.1
         with:
