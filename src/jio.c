@@ -50,6 +50,7 @@ uptr read_all_lines(const char* filepath, char*** lines, uptr** lengths, uptr n)
         // Increment index
         ++i;
     }
+    fclose(fp);
     // Shrink arrays to minimum size
     *lines = (char**)realloc(*lines, n * sizeof(char*));
     if (*lines == NULL) {
