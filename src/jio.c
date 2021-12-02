@@ -20,7 +20,7 @@
 /// \remark This function allocates a `char*` array for each line in the file. The programmer must
 /// free each entry in the `lines` array, then `lines` and `lengths`, when freeing allocated memory.
 /// \remark All allocations made are shrunk to the minimum size after reading in the file.
-/// \subsubsection Errors
+/// \errors
 /// `errno`  | Description
 /// -------- | -----------
 /// `EINVAL` | `lines` or `lengths` is a null pointer.
