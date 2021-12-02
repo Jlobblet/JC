@@ -3,9 +3,13 @@
 
 #include <sys/stat.h>
 
+/// Struct containing data about a memory-mapped file.
 typedef struct jc_mmap {
+    /// Pointer to the start of the file.
     char* address;
+    /// File descriptor.
     int fd;
+    /// Results of fstat.
     struct stat stat;
 } jc_mmap;
 
