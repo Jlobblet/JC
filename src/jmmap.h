@@ -1,3 +1,5 @@
+/// \file
+/// Convenience functions for memory-mapped files.
 #ifndef JC_JMMAP_H
 #define JC_JMMAP_H
 
