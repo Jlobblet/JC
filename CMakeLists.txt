@@ -3,4 +3,4 @@ project(JC C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_library(JC jint.c jint.h jio.c jio.h jtime.c jtime.h)
+add_subdirectory(src)
