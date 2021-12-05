@@ -150,13 +150,13 @@ uptr BitArray2d_count_on(BitArray2d* arr) {
     uptr sum = 0;
     for (uptr i = 0; i < arr->rows; i++) {
         for (uptr j = 0; j < get_row_width(arr)
-#ifdef NDEBUG
+#ifndef NDEBUG
         - 1
 #endif //NDEBUG
         ; j++) {
             sum += popcount(arr->row_starts[i][j]);
         }
-#ifdef NDEBUG
+#ifndef NDEBUG
         for (uptr c = BITS * (arr->cols / BITS); c < arr->cols; c++) {
             sum += BitArray2d_get(arr, i, c);
         }
@@ -175,7 +175,7 @@ uptr BitArray2d_count_off(BitArray2d* arr) {
         ; j++) {
             sum += pop0count(arr->row_starts[i][j]);
         }
-#ifdef NDEBUG
+#ifndef NDEBUG
         for (uptr c = BITS * (arr->cols / BITS); c < arr->cols; c++) {
             sum += BitArray2d_get(arr, i, c);
         }
