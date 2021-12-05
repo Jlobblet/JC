@@ -52,5 +52,8 @@ void BitArray2d_set(BitArray2d *arr, uptr row, uptr col, BitArray2dBacker value)
 void BitArray2d_on(BitArray2d *arr, uptr row, uptr col);
 void BitArray2d_off(BitArray2d *arr, uptr row, uptr col);
 void BitArray2d_toggle(BitArray2d *arr, uptr row, uptr col);
+uptr BitArray2d_count_on(BitArray2d* arr);
+uptr BitArray2d_count_off(BitArray2d* arr);
+void BitArray2d_flip(BitArray2d* arr);
 
 #endif //JC_JBITS_H
