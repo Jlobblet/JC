@@ -8,7 +8,7 @@
 /// Struct containing data about a memory-mapped file.
 typedef struct jc_mmap {
     /// Pointer to the start of the file.
-    volatile char* address;
+    char* address;
     /// File descriptor.
     int fd;
     /// Results of fstat.
