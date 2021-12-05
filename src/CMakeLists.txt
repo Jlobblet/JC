@@ -1,4 +1,5 @@
 add_library(JC
+    jbits.c jbits.h
     jint.c jint.h
     jio.c jio.h
     jmmap.c jmmap.h
