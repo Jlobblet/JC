@@ -17,7 +17,7 @@ jobs:
         with:
           working-directory: doc/
         env:
-          DOXYGEN_PROJECT_NUMBER: "${{ GITHUB_REF }}"
+          DOXYGEN_PROJECT_NUMBER: "${{ github.ref_name }}"
       - run: rm doc/.gitignore
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
