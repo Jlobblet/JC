@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['read_5fall_5flines_94',['read_all_lines',['../jio_8c.html#a12b761ef58e2d61b3851fed37b7ebefd',1,'read_all_lines(const char *filepath, char ***lines, uptr **lengths, uptr n):&#160;jio.c'],['../jio_8h.html#a12b761ef58e2d61b3851fed37b7ebefd',1,'read_all_lines(const char *filepath, char ***lines, uptr **lengths, uptr n):&#160;jio.c']]]
+  ['get_5foffset_125',['get_offset',['../jbits_8h.html#ace068db68a006f9e1dbe8d81eeee0826',1,'jbits.h']]],
+  ['get_5frow_5fwidth_126',['get_row_width',['../jbits_8h.html#acd6cb4a626c88dfac9c18db40537f15f',1,'jbits.h']]]
 ];

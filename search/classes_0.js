@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jc_5fmmap_79',['jc_mmap',['../structjc__mmap.html',1,'']]]
+  ['bitarray2d_99',['BitArray2d',['../structBitArray2d.html',1,'']]]
 ];

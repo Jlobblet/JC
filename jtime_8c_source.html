@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">v1.2.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -89,8 +89,14 @@ $(document).ready(function(){initNavTree('jtime_8c_source.html',''); initResizab
 <div class="contents">
 <a href="jtime_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="jtime_8h.html">jtime.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="jtime_8c.html#a0f02fa75235b7b7aa1c3bfd5273149a0">    3</a></span>&#160;clock_t <a class="code" href="jtime_8c.html#a0f02fa75235b7b7aa1c3bfd5273149a0">elapsed_us</a>(clock_t start, clock_t end) { <span class="keywordflow">return</span> ((end - start) * 1000000) / CLOCKS_PER_SEC; }</div>
-<div class="ttc" id="ajtime_8c_html_a0f02fa75235b7b7aa1c3bfd5273149a0"><div class="ttname"><a href="jtime_8c.html#a0f02fa75235b7b7aa1c3bfd5273149a0">elapsed_us</a></div><div class="ttdeci">clock_t elapsed_us(clock_t start, clock_t end)</div><div class="ttdef"><b>Definition:</b> <a href="jtime_8c_source.html#l00003">jtime.c:3</a></div></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="jtime_8c.html#a1536d4928d75ca3a03207461c9761a8f">    3</a></span>&#160;clock_t <a class="code" href="jtime_8c.html#a1536d4928d75ca3a03207461c9761a8f">elapsed_ns</a>(clock_t start, clock_t end) { <span class="keywordflow">return</span> ((end - start) * 1000000000) / CLOCKS_PER_SEC; }</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="jtime_8c.html#a0f02fa75235b7b7aa1c3bfd5273149a0">    4</a></span>&#160;clock_t <a class="code" href="jtime_8c.html#a0f02fa75235b7b7aa1c3bfd5273149a0">elapsed_us</a>(clock_t start, clock_t end) { <span class="keywordflow">return</span> ((end - start) * 1000000) / CLOCKS_PER_SEC; }</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="jtime_8c.html#ac67354ffbd5fc0f390cda36cdaf3ccb7">    5</a></span>&#160;clock_t <a class="code" href="jtime_8c.html#ac67354ffbd5fc0f390cda36cdaf3ccb7">elapsed_ms</a>(clock_t start, clock_t end) { <span class="keywordflow">return</span> ((end - start) * 1000) / CLOCKS_PER_SEC; }</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="jtime_8c.html#aebb9663a8de8e3af6fe52cbc089cd80d">    6</a></span>&#160;clock_t <a class="code" href="jtime_8c.html#aebb9663a8de8e3af6fe52cbc089cd80d">elapsed_s</a>(clock_t start, clock_t end) { <span class="keywordflow">return</span> (end - start) / CLOCKS_PER_SEC; }</div>
+<div class="ttc" id="ajtime_8c_html_a0f02fa75235b7b7aa1c3bfd5273149a0"><div class="ttname"><a href="jtime_8c.html#a0f02fa75235b7b7aa1c3bfd5273149a0">elapsed_us</a></div><div class="ttdeci">clock_t elapsed_us(clock_t start, clock_t end)</div><div class="ttdef"><b>Definition:</b> <a href="jtime_8c_source.html#l00004">jtime.c:4</a></div></div>
+<div class="ttc" id="ajtime_8c_html_a1536d4928d75ca3a03207461c9761a8f"><div class="ttname"><a href="jtime_8c.html#a1536d4928d75ca3a03207461c9761a8f">elapsed_ns</a></div><div class="ttdeci">clock_t elapsed_ns(clock_t start, clock_t end)</div><div class="ttdef"><b>Definition:</b> <a href="jtime_8c_source.html#l00003">jtime.c:3</a></div></div>
+<div class="ttc" id="ajtime_8c_html_ac67354ffbd5fc0f390cda36cdaf3ccb7"><div class="ttname"><a href="jtime_8c.html#ac67354ffbd5fc0f390cda36cdaf3ccb7">elapsed_ms</a></div><div class="ttdeci">clock_t elapsed_ms(clock_t start, clock_t end)</div><div class="ttdef"><b>Definition:</b> <a href="jtime_8c_source.html#l00005">jtime.c:5</a></div></div>
+<div class="ttc" id="ajtime_8c_html_aebb9663a8de8e3af6fe52cbc089cd80d"><div class="ttname"><a href="jtime_8c.html#aebb9663a8de8e3af6fe52cbc089cd80d">elapsed_s</a></div><div class="ttdeci">clock_t elapsed_s(clock_t start, clock_t end)</div><div class="ttdef"><b>Definition:</b> <a href="jtime_8c_source.html#l00006">jtime.c:6</a></div></div>
 <div class="ttc" id="ajtime_8h_html"><div class="ttname"><a href="jtime_8h.html">jtime.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -98,7 +104,7 @@ $(document).ready(function(){initNavTree('jtime_8c_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jtime_8c.html">jtime.c</a></li>
-    <li class="footer">Generated on Thu Dec 2 2021 21:27:24 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Sun Dec 5 2021 00:59:59 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

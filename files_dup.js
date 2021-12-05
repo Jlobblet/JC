@@ -1,5 +1,7 @@
 var files_dup =
 [
+    [ "jbits.c", "jbits_8c.html", "jbits_8c" ],
+    [ "jbits.h", "jbits_8h.html", "jbits_8h" ],
     [ "jint.c", "jint_8c.html", "jint_8c" ],
     [ "jint.h", "jint_8h.html", "jint_8h" ],
     [ "jio.c", "jio_8c.html", "jio_8c" ],

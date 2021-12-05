@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fd_110',['fd',['../structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d',1,'jc_mmap']]]
+  ['bits_145',['BITS',['../jbits_8h.html#ae2f40c2ff37ff3428b2dd5ad21f09294',1,'jbits.h']]]
 ];
