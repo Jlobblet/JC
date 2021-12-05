@@ -37,7 +37,7 @@ iptr mmap_read(const char* filepath, jc_mmap* buf) {
 /// \return On success, 0 is returned.
 /// On failure, -1 is returned and errno is set to indicate the error.
 iptr mmap_close(jc_mmap* buf) {
-    return munmap(buf->address, buf->stat.st_size)
+    return munmap((void*) buf->address, buf->stat.st_size)
            || close(buf->fd)
            || 0;
 }
