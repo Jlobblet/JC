@@ -3,17 +3,23 @@
 #include <assert.h>
 #include "jarray.h"
 
+inline uptr NDArray_total_size(NDArray* arr) {
+    assert(arr->dims);
+    uptr size = 1;
+    for (uptr i = 0; i < arr->dims; i++) {
+        uptr s = arr->size[i];
+        assert(s);
+        size *= s;
+    }
+    return size;
+}
+
 /// Initialise an N-dimensional array.
 ///
 /// \param arr The array to initialise.
 /// \return On success, `0`. On error, `-1` and `errno` is set to indicate the error.
 iptr NDArray_init(NDArray* arr) {
-    assert(arr->dims);
-    size_t n = 1;
-    for (size_t i = 0; i < arr->dims; i++) {
-        assert(arr->size[i]);
-        n *= arr->size[i];
-    }
+    uptr n = NDArray_total_size(arr);
     arr->data = calloc(n, sizeof(NDArray_Backer));
     if (arr->data == NULL) {
         return -1;
@@ -25,6 +31,7 @@ iptr NDArray_init(NDArray* arr) {
 /// \param arr The array to finalise.
 void NDArray_dest(NDArray* arr) {
     free(arr->data);
+    arr->data = NULL;
 }
 
 /// Get the value in a given cell of an N-dimensional array.
@@ -63,4 +70,164 @@ void NDArray_set(NDArray* arr, NDArray_Backer value, uptr index, ...) {
     }
     va_end(args);
     arr->data[i] = value;
+}
+
+void NDArray_map(NDArray* arr, NDArray_mapping_t mapping) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] = mapping(arr->data[i]);
+    }
+}
+
+void NDArray_add(NDArray* arr, NDArray_Backer value) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] += value;
+    }
+}
+
+void NDArray_sub(NDArray* arr, NDArray_Backer value) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] -= value;
+    }
+}
+
+void NDArray_mul(NDArray* arr, NDArray_Backer value) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] *= value;
+    }
+}
+
+void NDArray_div(NDArray* arr, NDArray_Backer value) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] /= value;
+    }
+}
+
+void NDArray_and(NDArray* arr, NDArray_Backer value) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] &= value;
+    }
+}
+
+void NDArray_or(NDArray* arr, NDArray_Backer value) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] |= value;
+    }
+}
+
+void NDArray_xor(NDArray* arr, NDArray_Backer value) {
+    uptr n = NDArray_total_size(arr);
+    for (uptr i = 0; i < n; i++) {
+        arr->data[i] ^= value;
+    }
+}
+
+void NDArray_map2(NDArray* left, NDArray* right, NDArray_map2ing_t map2ing) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = map2ing(left->data[i], right->data[i]);
+    }
+}
+
+void NDArray_arr_add(NDArray* left, NDArray* right) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = left->data[i] + right->data[i];
+    }
+}
+
+void NDArray_arr_sub(NDArray* left, NDArray* right) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = left->data[i] - right->data[i];
+    }
+}
+
+void NDArray_arr_mul(NDArray* left, NDArray* right) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = left->data[i] * right->data[i];
+    }
+}
+
+void NDArray_arr_div(NDArray* left, NDArray* right) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = left->data[i] / right->data[i];
+    }
+}
+
+void NDArray_arr_and(NDArray* left, NDArray* right) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = left->data[i] & right->data[i];
+    }
+}
+
+void NDArray_arr_or(NDArray* left, NDArray* right) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = left->data[i] | right->data[i];
+    }
+}
+
+void NDArray_arr_xor(NDArray* left, NDArray* right) {
+    assert(left->dims == right->dims);
+#ifndef NDEBUG
+    for (uptr i = 0; i < left->dims; i++) {
+        assert(left->size[i] == right->size[i]);
+    }
+#endif //NDEBUG
+    uptr n = NDArray_total_size(left);
+    for (uptr i = 0; i < n; i++) {
+        left->data[i] = left->data[i] ^ right->data[i];
+    }
 }
