@@ -1,4 +1,5 @@
 add_library(JC
+    jarray.c jarray.h
     jbits.c jbits.h
     jint.c jint.h
     jio.c jio.h
