@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.2.0</span>
+   &#160;<span id="projectnumber">v1.3.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('jbits_8h.html',''); initResizable(); }
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -97,36 +99,247 @@ $(document).ready(function(){initNavTree('jbits_8h.html',''); initResizable(); }
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBitArray.html">BitArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBitArray2d.html">BitArray2d</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a29ce083cf6270f6c58cf59c8246e902c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a29ce083cf6270f6c58cf59c8246e902c">popcount</a>(x)</td></tr>
+<tr class="separator:a29ce083cf6270f6c58cf59c8246e902c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3fe6bdfb4d1fa43a09e61d531c7b762"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#af3fe6bdfb4d1fa43a09e61d531c7b762">pop0count</a>(x)</td></tr>
+<tr class="separator:af3fe6bdfb4d1fa43a09e61d531c7b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:af23c66638b5a3b23789cb80cd0945629"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="jint_8h.html#afc58ec9b539b48194919f0340e1d3bf2">fu8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#af23c66638b5a3b23789cb80cd0945629">BitArrayBacker</a></td></tr>
+<tr class="separator:af23c66638b5a3b23789cb80cd0945629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc7e639150801cfd7ba8b3c87585ff2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a5dc7e639150801cfd7ba8b3c87585ff2">BitArray2dBacker</a></td></tr>
+<tr class="separator:a5dc7e639150801cfd7ba8b3c87585ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acd6cb4a626c88dfac9c18db40537f15f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#acd6cb4a626c88dfac9c18db40537f15f">get_row_width</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr)</td></tr>
-<tr class="separator:acd6cb4a626c88dfac9c18db40537f15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace068db68a006f9e1dbe8d81eeee0826"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#ace068db68a006f9e1dbe8d81eeee0826">get_offset</a> (<a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col)</td></tr>
-<tr class="separator:ace068db68a006f9e1dbe8d81eeee0826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3b72b5586222cefb7bdb4ad685b251"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#aea3b72b5586222cefb7bdb4ad685b251">popcount8</a> (<a class="el" href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> x)</td></tr>
+<tr class="separator:aea3b72b5586222cefb7bdb4ad685b251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507aefc83e68392a1368671bc90f2847"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a507aefc83e68392a1368671bc90f2847">popcount16</a> (<a class="el" href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> x)</td></tr>
+<tr class="separator:a507aefc83e68392a1368671bc90f2847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f1880e6f89effc960d6b6bf0bbcb96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a55f1880e6f89effc960d6b6bf0bbcb96">popcount32</a> (<a class="el" href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> x)</td></tr>
+<tr class="separator:a55f1880e6f89effc960d6b6bf0bbcb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae07f1ac3f8a977ece19b01317f99df1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#ae07f1ac3f8a977ece19b01317f99df1c">popcount64</a> (<a class="el" href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a> x)</td></tr>
+<tr class="separator:ae07f1ac3f8a977ece19b01317f99df1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8b4045b39b5f4575a93f9aabcb34ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a4e8b4045b39b5f4575a93f9aabcb34ef">pop0count8</a> (<a class="el" href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> x)</td></tr>
+<tr class="separator:a4e8b4045b39b5f4575a93f9aabcb34ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b063fd3c5dc76d2157616d3cd07bf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#aa0b063fd3c5dc76d2157616d3cd07bf2">pop0count16</a> (<a class="el" href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a> x)</td></tr>
+<tr class="separator:aa0b063fd3c5dc76d2157616d3cd07bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086a220a53af69dfc0e9841b7d231a59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a086a220a53af69dfc0e9841b7d231a59">pop0count32</a> (<a class="el" href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a> x)</td></tr>
+<tr class="separator:a086a220a53af69dfc0e9841b7d231a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741fa84b2a282c8783098ee9dccc3257"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a741fa84b2a282c8783098ee9dccc3257">pop0count64</a> (<a class="el" href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a> x)</td></tr>
+<tr class="separator:a741fa84b2a282c8783098ee9dccc3257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4516647ee496e34e0a79d14e75989210"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a4516647ee496e34e0a79d14e75989210">BitArray_offset</a> (<a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index)</td></tr>
+<tr class="separator:a4516647ee496e34e0a79d14e75989210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc38d53a4497ef2dc6c9130d2342e67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#aefc38d53a4497ef2dc6c9130d2342e67">BitArray_init</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr)</td></tr>
+<tr class="separator:aefc38d53a4497ef2dc6c9130d2342e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf1d98ff7007d65b82160fa126dafac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#afbf1d98ff7007d65b82160fa126dafac">BitArray_dest</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr)</td></tr>
+<tr class="separator:afbf1d98ff7007d65b82160fa126dafac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7967c54d5584ea56e866c1acb1da121"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#aa7967c54d5584ea56e866c1acb1da121">BitArray_get</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index)</td></tr>
+<tr class="separator:aa7967c54d5584ea56e866c1acb1da121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca2130915b917b54528fb8fe58cb74c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a7ca2130915b917b54528fb8fe58cb74c">BitArray_set</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index, <a class="el" href="jbits_8h.html#af23c66638b5a3b23789cb80cd0945629">BitArrayBacker</a> value)</td></tr>
+<tr class="separator:a7ca2130915b917b54528fb8fe58cb74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0468f7c49a384a0541809d846f510bae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a0468f7c49a384a0541809d846f510bae">BitArray_on</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index)</td></tr>
+<tr class="separator:a0468f7c49a384a0541809d846f510bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea627a0eb622882003794ea52988556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a1ea627a0eb622882003794ea52988556">BitArray_off</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index)</td></tr>
+<tr class="separator:a1ea627a0eb622882003794ea52988556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade6edbb648fd5fa30c595dc5df59afd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#ade6edbb648fd5fa30c595dc5df59afd8">BitArray_toggle</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index)</td></tr>
+<tr class="separator:ade6edbb648fd5fa30c595dc5df59afd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf87b27cadf40f626d69d099b645bc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a7cf87b27cadf40f626d69d099b645bc6">BitArray_flip</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr)</td></tr>
+<tr class="separator:a7cf87b27cadf40f626d69d099b645bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af322e1f74cb376feef154d79696b981b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#af322e1f74cb376feef154d79696b981b">BitArray_and</a> (<a class="el" href="structBitArray.html">BitArray</a> *left, <a class="el" href="structBitArray.html">BitArray</a> *right)</td></tr>
+<tr class="separator:af322e1f74cb376feef154d79696b981b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a00471cb51a4d0899af82dd746e79f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#af3a00471cb51a4d0899af82dd746e79f">BitArray_popcount</a> (<a class="el" href="structBitArray.html">BitArray</a> *arr)</td></tr>
+<tr class="separator:af3a00471cb51a4d0899af82dd746e79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33717e1a9644188c793f3df17a865fd7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a33717e1a9644188c793f3df17a865fd7">BitArray2d_row_width</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr)</td></tr>
+<tr class="separator:a33717e1a9644188c793f3df17a865fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76522fa7b6002eb65452e6cdee564c1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a76522fa7b6002eb65452e6cdee564c1e">BitArray2d_offset</a> (<a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col)</td></tr>
+<tr class="separator:a76522fa7b6002eb65452e6cdee564c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a493c1778865c38119734869542fc23b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a493c1778865c38119734869542fc23b2">BitArray2d_init</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr)</td></tr>
+<tr class="memdesc:a493c1778865c38119734869542fc23b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> struct.  <a href="jbits_8h.html#a493c1778865c38119734869542fc23b2">More...</a><br /></td></tr>
 <tr class="separator:a493c1778865c38119734869542fc23b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61a0b3f37317918b57f59f7f205d8e9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a61a0b3f37317918b57f59f7f205d8e9a">BitArray2d_dest</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr)</td></tr>
+<tr class="memdesc:a61a0b3f37317918b57f59f7f205d8e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle cleaning up a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>.  <a href="jbits_8h.html#a61a0b3f37317918b57f59f7f205d8e9a">More...</a><br /></td></tr>
 <tr class="separator:a61a0b3f37317918b57f59f7f205d8e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3017cf9044635dbceca9edc9ce1ff506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a3017cf9044635dbceca9edc9ce1ff506">BitArray2d_get</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> row, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col)</td></tr>
+<tr class="memdesc:a3017cf9044635dbceca9edc9ce1ff506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>.  <a href="jbits_8h.html#a3017cf9044635dbceca9edc9ce1ff506">More...</a><br /></td></tr>
 <tr class="separator:a3017cf9044635dbceca9edc9ce1ff506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b9d7f3c20ed4d645fdc5f260adb3166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a8b9d7f3c20ed4d645fdc5f260adb3166">BitArray2d_set</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> row, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> value)</td></tr>
-<tr class="separator:a8b9d7f3c20ed4d645fdc5f260adb3166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56c2cffde75300db45b857b8ede2ead"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#ac56c2cffde75300db45b857b8ede2ead">BitArray2d_set</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> row, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col, <a class="el" href="jbits_8h.html#a5dc7e639150801cfd7ba8b3c87585ff2">BitArray2dBacker</a> value)</td></tr>
+<tr class="memdesc:ac56c2cffde75300db45b857b8ede2ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>.  <a href="jbits_8h.html#ac56c2cffde75300db45b857b8ede2ead">More...</a><br /></td></tr>
+<tr class="separator:ac56c2cffde75300db45b857b8ede2ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46fd31bff43d4fe82377aedfedf20a15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a46fd31bff43d4fe82377aedfedf20a15">BitArray2d_on</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> row, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col)</td></tr>
+<tr class="memdesc:a46fd31bff43d4fe82377aedfedf20a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to <code>1</code>.  <a href="jbits_8h.html#a46fd31bff43d4fe82377aedfedf20a15">More...</a><br /></td></tr>
 <tr class="separator:a46fd31bff43d4fe82377aedfedf20a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d496ba8e9acd7f95b6fa36368a34963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a2d496ba8e9acd7f95b6fa36368a34963">BitArray2d_off</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> row, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col)</td></tr>
+<tr class="memdesc:a2d496ba8e9acd7f95b6fa36368a34963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to <code>0</code>.  <a href="jbits_8h.html#a2d496ba8e9acd7f95b6fa36368a34963">More...</a><br /></td></tr>
 <tr class="separator:a2d496ba8e9acd7f95b6fa36368a34963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86524010a4132e917a4d7c48419e77ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a86524010a4132e917a4d7c48419e77ef">BitArray2d_toggle</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> row, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> col)</td></tr>
+<tr class="memdesc:a86524010a4132e917a4d7c48419e77ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>.  <a href="jbits_8h.html#a86524010a4132e917a4d7c48419e77ef">More...</a><br /></td></tr>
 <tr class="separator:a86524010a4132e917a4d7c48419e77ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2365c56a18cde62de0a882a7df4c3326"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a2365c56a18cde62de0a882a7df4c3326">BitArray2d_count_on</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr)</td></tr>
+<tr class="separator:a2365c56a18cde62de0a882a7df4c3326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0fb11e1209e4ed79454173d2e6b77f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a4e0fb11e1209e4ed79454173d2e6b77f">BitArray2d_count_off</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr)</td></tr>
+<tr class="separator:a4e0fb11e1209e4ed79454173d2e6b77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac831bdc346f3bbf44977792c7caf8fe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#ac831bdc346f3bbf44977792c7caf8fe8">BitArray2d_flip</a> (<a class="el" href="structBitArray2d.html">BitArray2d</a> *arr)</td></tr>
+<tr class="separator:ac831bdc346f3bbf44977792c7caf8fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae2f40c2ff37ff3428b2dd5ad21f09294"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#ae2f40c2ff37ff3428b2dd5ad21f09294">BITS</a> = (sizeof(<a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>) * 8)</td></tr>
-<tr class="separator:ae2f40c2ff37ff3428b2dd5ad21f09294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e67019e1093b0f5ae14911eea2b9eda"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a1e67019e1093b0f5ae14911eea2b9eda">BitArray_BACKER_BITS</a> = (sizeof(<a class="el" href="jbits_8h.html#af23c66638b5a3b23789cb80cd0945629">BitArrayBacker</a>) * 8)</td></tr>
+<tr class="separator:a1e67019e1093b0f5ae14911eea2b9eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979479a0bbb8b753ce168cbcd6df8709"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jbits_8h.html#a979479a0bbb8b753ce168cbcd6df8709">BitArray2d_BACKER_BITS</a> = (sizeof(<a class="el" href="jbits_8h.html#a5dc7e639150801cfd7ba8b3c87585ff2">BitArray2dBacker</a>) * 8)</td></tr>
+<tr class="separator:a979479a0bbb8b753ce168cbcd6df8709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="af3fe6bdfb4d1fa43a09e61d531c7b762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3fe6bdfb4d1fa43a09e61d531c7b762">&#9670;&nbsp;</a></span>pop0count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define pop0count</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">_Generic((x),      \</div>
+<div class="line"><a class="code" href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> : <a class="code" href="jbits_8h.html#a4e8b4045b39b5f4575a93f9aabcb34ef">pop0count8</a>,                        \</div>
+<div class="line"><a class="code" href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a>: <a class="code" href="jbits_8h.html#aa0b063fd3c5dc76d2157616d3cd07bf2">pop0count16</a>,                       \</div>
+<div class="line"><a class="code" href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>: <a class="code" href="jbits_8h.html#a086a220a53af69dfc0e9841b7d231a59">pop0count32</a>,                       \</div>
+<div class="line"><a class="code" href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>: <a class="code" href="jbits_8h.html#a741fa84b2a282c8783098ee9dccc3257">pop0count64</a>)                       \</div>
+<div class="line">(x)</div>
+<div class="ttc" id="ajbits_8h_html_a086a220a53af69dfc0e9841b7d231a59"><div class="ttname"><a href="jbits_8h.html#a086a220a53af69dfc0e9841b7d231a59">pop0count32</a></div><div class="ttdeci">uptr pop0count32(u32 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00044">jbits.c:44</a></div></div>
+<div class="ttc" id="ajbits_8h_html_a4e8b4045b39b5f4575a93f9aabcb34ef"><div class="ttname"><a href="jbits_8h.html#a4e8b4045b39b5f4575a93f9aabcb34ef">pop0count8</a></div><div class="ttdeci">uptr pop0count8(u8 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00036">jbits.c:36</a></div></div>
+<div class="ttc" id="ajbits_8h_html_a741fa84b2a282c8783098ee9dccc3257"><div class="ttname"><a href="jbits_8h.html#a741fa84b2a282c8783098ee9dccc3257">pop0count64</a></div><div class="ttdeci">uptr pop0count64(u64 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00048">jbits.c:48</a></div></div>
+<div class="ttc" id="ajbits_8h_html_aa0b063fd3c5dc76d2157616d3cd07bf2"><div class="ttname"><a href="jbits_8h.html#aa0b063fd3c5dc76d2157616d3cd07bf2">pop0count16</a></div><div class="ttdeci">uptr pop0count16(u16 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00040">jbits.c:40</a></div></div>
+<div class="ttc" id="ajint_8h_html_a3f7e2bcbb0b4c338f3c4f6c937cd4234"><div class="ttname"><a href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a></div><div class="ttdeci">uint64_t u64</div><div class="ttdef"><b>Definition:</b> <a href="jint_8h_source.html#l00015">jint.h:15</a></div></div>
+<div class="ttc" id="ajint_8h_html_a92c50087ca0e64fa93fc59402c55f8ca"><div class="ttname"><a href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdef"><b>Definition:</b> <a href="jint_8h_source.html#l00009">jint.h:9</a></div></div>
+<div class="ttc" id="ajint_8h_html_ace9d960e74685e2cd84b36132dbbf8aa"><div class="ttname"><a href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a></div><div class="ttdeci">uint16_t u16</div><div class="ttdef"><b>Definition:</b> <a href="jint_8h_source.html#l00011">jint.h:11</a></div></div>
+<div class="ttc" id="ajint_8h_html_afaa62991928fb9fb18ff0db62a040aba"><div class="ttname"><a href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdef"><b>Definition:</b> <a href="jint_8h_source.html#l00013">jint.h:13</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00023">23</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+</div>
+</div>
+<a id="a29ce083cf6270f6c58cf59c8246e902c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ce083cf6270f6c58cf59c8246e902c">&#9670;&nbsp;</a></span>popcount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define popcount</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">_Generic((x),      \</div>
+<div class="line"><a class="code" href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a> : <a class="code" href="jbits_8h.html#aea3b72b5586222cefb7bdb4ad685b251">popcount8</a>,                        \</div>
+<div class="line"><a class="code" href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a>: <a class="code" href="jbits_8h.html#a507aefc83e68392a1368671bc90f2847">popcount16</a>,                       \</div>
+<div class="line"><a class="code" href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>: <a class="code" href="jbits_8h.html#a55f1880e6f89effc960d6b6bf0bbcb96">popcount32</a>,                       \</div>
+<div class="line"><a class="code" href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>: <a class="code" href="jbits_8h.html#ae07f1ac3f8a977ece19b01317f99df1c">popcount64</a>)                       \</div>
+<div class="line">(x)</div>
+<div class="ttc" id="ajbits_8h_html_a507aefc83e68392a1368671bc90f2847"><div class="ttname"><a href="jbits_8h.html#a507aefc83e68392a1368671bc90f2847">popcount16</a></div><div class="ttdeci">uptr popcount16(u16 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00024">jbits.c:24</a></div></div>
+<div class="ttc" id="ajbits_8h_html_a55f1880e6f89effc960d6b6bf0bbcb96"><div class="ttname"><a href="jbits_8h.html#a55f1880e6f89effc960d6b6bf0bbcb96">popcount32</a></div><div class="ttdeci">uptr popcount32(u32 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00028">jbits.c:28</a></div></div>
+<div class="ttc" id="ajbits_8h_html_ae07f1ac3f8a977ece19b01317f99df1c"><div class="ttname"><a href="jbits_8h.html#ae07f1ac3f8a977ece19b01317f99df1c">popcount64</a></div><div class="ttdeci">uptr popcount64(u64 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00032">jbits.c:32</a></div></div>
+<div class="ttc" id="ajbits_8h_html_aea3b72b5586222cefb7bdb4ad685b251"><div class="ttname"><a href="jbits_8h.html#aea3b72b5586222cefb7bdb4ad685b251">popcount8</a></div><div class="ttdeci">uptr popcount8(u8 x)</div><div class="ttdef"><b>Definition:</b> <a href="jbits_8c_source.html#l00020">jbits.c:20</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00011">11</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a5dc7e639150801cfd7ba8b3c87585ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dc7e639150801cfd7ba8b3c87585ff2">&#9670;&nbsp;</a></span>BitArray2dBacker</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> <a class="el" href="jbits_8h.html#a5dc7e639150801cfd7ba8b3c87585ff2">BitArray2dBacker</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00054">54</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+</div>
+</div>
+<a id="af23c66638b5a3b23789cb80cd0945629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23c66638b5a3b23789cb80cd0945629">&#9670;&nbsp;</a></span>BitArrayBacker</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="jint_8h.html#afc58ec9b539b48194919f0340e1d3bf2">fu8</a> <a class="el" href="jbits_8h.html#af23c66638b5a3b23789cb80cd0945629">BitArrayBacker</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00030">30</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a4e0fb11e1209e4ed79454173d2e6b77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0fb11e1209e4ed79454173d2e6b77f">&#9670;&nbsp;</a></span>BitArray2d_count_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray2d_count_off </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray2d.html">BitArray2d</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00232">232</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00062">BitArray2d_BACKER_BITS</a>, <a class="el" href="jbits_8c_source.html#l00157">BitArray2d_get()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::cols</a>, <a class="el" href="jbits_8h_source.html#l00023">pop0count</a>, <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>, and <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::rows</a>.</p>
+
+</div>
+</div>
+<a id="a2365c56a18cde62de0a882a7df4c3326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2365c56a18cde62de0a882a7df4c3326">&#9670;&nbsp;</a></span>BitArray2d_count_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray2d_count_on </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray2d.html">BitArray2d</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00213">213</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00062">BitArray2d_BACKER_BITS</a>, <a class="el" href="jbits_8c_source.html#l00157">BitArray2d_get()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::cols</a>, <a class="el" href="jbits_8h_source.html#l00011">popcount</a>, <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>, and <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::rows</a>.</p>
+
+</div>
+</div>
 <a id="a61a0b3f37317918b57f59f7f205d8e9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61a0b3f37317918b57f59f7f205d8e9a">&#9670;&nbsp;</a></span>BitArray2d_dest()</h2>
 
@@ -143,9 +356,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00026">26</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+<p>Handle cleaning up a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to clean up (by pointer). </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00009">BitArray2d::data</a>, and <a class="el" href="jbits_8h_source.html#l00008">BitArray2d::row_starts</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00146">146</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00059">BitArray2d::data</a>, and <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>.</p>
+
+</div>
+</div>
+<a id="ac831bdc346f3bbf44977792c7caf8fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac831bdc346f3bbf44977792c7caf8fe8">&#9670;&nbsp;</a></span>BitArray2d_flip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitArray2d_flip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray2d.html">BitArray2d</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00251">251</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00062">BitArray2d_BACKER_BITS</a>, <a class="el" href="jbits_8c_source.html#l00194">BitArray2d_off()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::cols</a>, <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>, and <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::rows</a>.</p>
 
 </div>
 </div>
@@ -181,9 +424,22 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00031">31</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+<p>Get the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to retrieve a bit from. </td></tr>
+    <tr><td class="paramname">row</td><td>The row index (0-based) to retrieve the bit from. </td></tr>
+    <tr><td class="paramname">col</td><td>The column index (0-based) to retrieve the bit from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>0</code> or <code>1</code>. </dd></dl>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00018">get_offset()</a>, <a class="el" href="jbits_8h_source.html#l00014">get_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00008">BitArray2d::row_starts</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00157">157</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00068">BitArray2d_offset()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00232">BitArray2d_count_off()</a>, and <a class="el" href="jbits_8c_source.html#l00213">BitArray2d_count_on()</a>.</p>
 
 </div>
 </div>
@@ -203,9 +459,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00005">5</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+<p>Initialise a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> struct. </p>
+<p>This function allocates two arrays - one to store <code>row_starts</code>, which contains pointers to the start of each row, and <code>data</code>, which contains each row. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The array to initialise. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code>, and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00007">BitArray2d::cols</a>, <a class="el" href="jbits_8h_source.html#l00009">BitArray2d::data</a>, <a class="el" href="jbits_8h_source.html#l00014">get_row_width()</a>, <a class="el" href="jbits_8h_source.html#l00008">BitArray2d::row_starts</a>, and <a class="el" href="jbits_8h_source.html#l00007">BitArray2d::rows</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00122">122</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::cols</a>, <a class="el" href="jbits_8h_source.html#l00059">BitArray2d::data</a>, <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>, and <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::rows</a>.</p>
 
 </div>
 </div>
@@ -241,9 +506,53 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00054">54</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+<p>Set the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to <code>0</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to set a bit in. </td></tr>
+    <tr><td class="paramname">row</td><td>The row index (0-based) of the bit to set. </td></tr>
+    <tr><td class="paramname">col</td><td>The column index (0-based) of the bit to set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00018">get_offset()</a>, <a class="el" href="jbits_8h_source.html#l00014">get_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00008">BitArray2d::row_starts</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00194">194</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00068">BitArray2d_offset()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00251">BitArray2d_flip()</a>.</p>
+
+</div>
+</div>
+<a id="a76522fa7b6002eb65452e6cdee564c1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76522fa7b6002eb65452e6cdee564c1e">&#9670;&nbsp;</a></span>BitArray2d_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray2d_offset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
+          <td class="paramname"><em>col</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00068">68</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00062">BitArray2d_BACKER_BITS</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00157">BitArray2d_get()</a>, <a class="el" href="jbits_8c_source.html#l00194">BitArray2d_off()</a>, <a class="el" href="jbits_8c_source.html#l00184">BitArray2d_on()</a>, <a class="el" href="jbits_8c_source.html#l00170">BitArray2d_set()</a>, and <a class="el" href="jbits_8c_source.html#l00207">BitArray2d_toggle()</a>.</p>
 
 </div>
 </div>
@@ -279,14 +588,56 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00048">48</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+<p>Set the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to <code>1</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to set a bit in. </td></tr>
+    <tr><td class="paramname">row</td><td>The row index (0-based) of the bit to set. </td></tr>
+    <tr><td class="paramname">col</td><td>The column index (0-based) of the bit to set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00018">get_offset()</a>, <a class="el" href="jbits_8h_source.html#l00014">get_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00008">BitArray2d::row_starts</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00184">184</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00068">BitArray2d_offset()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>.</p>
 
 </div>
 </div>
-<a id="a8b9d7f3c20ed4d645fdc5f260adb3166"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b9d7f3c20ed4d645fdc5f260adb3166">&#9670;&nbsp;</a></span>BitArray2d_set()</h2>
+<a id="a33717e1a9644188c793f3df17a865fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33717e1a9644188c793f3df17a865fd7">&#9670;&nbsp;</a></span>BitArray2d_row_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray2d_row_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray2d.html">BitArray2d</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00064">64</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00062">BitArray2d_BACKER_BITS</a>, and <a class="el" href="jbits_8h_source.html#l00057">BitArray2d::cols</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00232">BitArray2d_count_off()</a>, <a class="el" href="jbits_8c_source.html#l00213">BitArray2d_count_on()</a>, <a class="el" href="jbits_8c_source.html#l00251">BitArray2d_flip()</a>, <a class="el" href="jbits_8c_source.html#l00157">BitArray2d_get()</a>, <a class="el" href="jbits_8c_source.html#l00122">BitArray2d_init()</a>, <a class="el" href="jbits_8c_source.html#l00194">BitArray2d_off()</a>, <a class="el" href="jbits_8c_source.html#l00184">BitArray2d_on()</a>, <a class="el" href="jbits_8c_source.html#l00170">BitArray2d_set()</a>, and <a class="el" href="jbits_8c_source.html#l00207">BitArray2d_toggle()</a>.</p>
+
+</div>
+</div>
+<a id="ac56c2cffde75300db45b857b8ede2ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac56c2cffde75300db45b857b8ede2ead">&#9670;&nbsp;</a></span>BitArray2d_set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,9 +674,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00038">38</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+<p>Set the value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to set a bit in. </td></tr>
+    <tr><td class="paramname">row</td><td>The row index (0-based) of the bit to set. </td></tr>
+    <tr><td class="paramname">col</td><td>The column index (0-based) of the bit to set. </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set at the given coordinates, <code>0</code> or <code>1</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00018">get_offset()</a>, <a class="el" href="jbits_8h_source.html#l00014">get_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00008">BitArray2d::row_starts</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00170">170</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00068">BitArray2d_offset()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>.</p>
 
 </div>
 </div>
@@ -361,79 +723,186 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00060">60</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+<p>Toggle value in a given cell of a <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code>. </p>
+<p>Cells with a <code>0</code> in them will be set to <code>1</code>, and cells with a <code>1</code> in them will be set to <code>0</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>The <code><a class="el" href="structBitArray2d.html">BitArray2d</a></code> to set a bit in. </td></tr>
+    <tr><td class="paramname">row</td><td>The row index (0-based) of the bit to set. </td></tr>
+    <tr><td class="paramname">col</td><td>The column index (0-based) of the bit to set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00018">get_offset()</a>, <a class="el" href="jbits_8h_source.html#l00014">get_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00008">BitArray2d::row_starts</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00207">207</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00068">BitArray2d_offset()</a>, <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>, and <a class="el" href="jbits_8h_source.html#l00058">BitArray2d::row_starts</a>.</p>
 
 </div>
 </div>
-<a id="ace068db68a006f9e1dbe8d81eeee0826"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace068db68a006f9e1dbe8d81eeee0826">&#9670;&nbsp;</a></span>get_offset()</h2>
+<a id="af322e1f74cb376feef154d79696b981b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af322e1f74cb376feef154d79696b981b">&#9670;&nbsp;</a></span>BitArray_and()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> get_offset </td>
+          <td class="memname">void BitArray_and </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
-          <td class="paramname"><em>col</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00018">18</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00101">101</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00012">BITS</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00031">BitArray2d_get()</a>, <a class="el" href="jbits_8c_source.html#l00054">BitArray2d_off()</a>, <a class="el" href="jbits_8c_source.html#l00048">BitArray2d_on()</a>, <a class="el" href="jbits_8c_source.html#l00038">BitArray2d_set()</a>, and <a class="el" href="jbits_8c_source.html#l00060">BitArray2d_toggle()</a>.</p>
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>, and <a class="el" href="jbits_8h_source.html#l00035">BitArray::length</a>.</p>
 
 </div>
 </div>
-<a id="acd6cb4a626c88dfac9c18db40537f15f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd6cb4a626c88dfac9c18db40537f15f">&#9670;&nbsp;</a></span>get_row_width()</h2>
+<a id="afbf1d98ff7007d65b82160fa126dafac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbf1d98ff7007d65b82160fa126dafac">&#9670;&nbsp;</a></span>BitArray_dest()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> get_row_width </td>
+          <td class="memname">void BitArray_dest </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structBitArray2d.html">BitArray2d</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
           <td class="paramname"><em>arr</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00014">14</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00061">61</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jbits_8h_source.html#l00012">BITS</a>, and <a class="el" href="jbits_8h_source.html#l00007">BitArray2d::cols</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00031">BitArray2d_get()</a>, <a class="el" href="jbits_8c_source.html#l00005">BitArray2d_init()</a>, <a class="el" href="jbits_8c_source.html#l00054">BitArray2d_off()</a>, <a class="el" href="jbits_8c_source.html#l00048">BitArray2d_on()</a>, <a class="el" href="jbits_8c_source.html#l00038">BitArray2d_set()</a>, and <a class="el" href="jbits_8c_source.html#l00060">BitArray2d_toggle()</a>.</p>
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ae2f40c2ff37ff3428b2dd5ad21f09294"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2f40c2ff37ff3428b2dd5ad21f09294">&#9670;&nbsp;</a></span>BITS</h2>
+<a id="a7cf87b27cadf40f626d69d099b645bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf87b27cadf40f626d69d099b645bc6">&#9670;&nbsp;</a></span>BitArray_flip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitArray_flip </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00093">93</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>, and <a class="el" href="jbits_8h_source.html#l00035">BitArray::length</a>.</p>
+
+</div>
+</div>
+<a id="aa7967c54d5584ea56e866c1acb1da121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7967c54d5584ea56e866c1acb1da121">&#9670;&nbsp;</a></span>BitArray_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00065">65</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00039">BitArray_offset()</a>, and <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>.</p>
+
+</div>
+</div>
+<a id="aefc38d53a4497ef2dc6c9130d2342e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc38d53a4497ef2dc6c9130d2342e67">&#9670;&nbsp;</a></span>BitArray_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a> BitArray_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00052">52</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>, and <a class="el" href="jbits_8h_source.html#l00035">BitArray::length</a>.</p>
+
+</div>
+</div>
+<a id="a1ea627a0eb622882003794ea52988556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea627a0eb622882003794ea52988556">&#9670;&nbsp;</a></span>BitArray_off()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitArray_off </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00083">83</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00039">BitArray_offset()</a>, and <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>.</p>
+
+</div>
+</div>
+<a id="a4516647ee496e34e0a79d14e75989210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4516647ee496e34e0a79d14e75989210">&#9670;&nbsp;</a></span>BitArray_offset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,7 +911,340 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BITS = (sizeof(<a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>) * 8)</td>
+          <td class="memname">static <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray_offset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00039">39</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00065">BitArray_get()</a>, <a class="el" href="jbits_8c_source.html#l00083">BitArray_off()</a>, <a class="el" href="jbits_8c_source.html#l00078">BitArray_on()</a>, <a class="el" href="jbits_8c_source.html#l00070">BitArray_set()</a>, and <a class="el" href="jbits_8c_source.html#l00088">BitArray_toggle()</a>.</p>
+
+</div>
+</div>
+<a id="a0468f7c49a384a0541809d846f510bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0468f7c49a384a0541809d846f510bae">&#9670;&nbsp;</a></span>BitArray_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitArray_on </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00078">78</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00039">BitArray_offset()</a>, and <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>.</p>
+
+</div>
+</div>
+<a id="af3a00471cb51a4d0899af82dd746e79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a00471cb51a4d0899af82dd746e79f">&#9670;&nbsp;</a></span>BitArray_popcount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray_popcount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00108">108</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>, <a class="el" href="jbits_8h_source.html#l00035">BitArray::length</a>, and <a class="el" href="jbits_8h_source.html#l00011">popcount</a>.</p>
+
+</div>
+</div>
+<a id="a7ca2130915b917b54528fb8fe58cb74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca2130915b917b54528fb8fe58cb74c">&#9670;&nbsp;</a></span>BitArray_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitArray_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jbits_8h.html#af23c66638b5a3b23789cb80cd0945629">BitArrayBacker</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00070">70</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00039">BitArray_offset()</a>, and <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>.</p>
+
+</div>
+</div>
+<a id="ade6edbb648fd5fa30c595dc5df59afd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6edbb648fd5fa30c595dc5df59afd8">&#9670;&nbsp;</a></span>BitArray_toggle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitArray_toggle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structBitArray.html">BitArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00088">88</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8h_source.html#l00032">BitArray_BACKER_BITS</a>, <a class="el" href="jbits_8h_source.html#l00039">BitArray_offset()</a>, and <a class="el" href="jbits_8h_source.html#l00036">BitArray::data</a>.</p>
+
+</div>
+</div>
+<a id="aa0b063fd3c5dc76d2157616d3cd07bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b063fd3c5dc76d2157616d3cd07bf2">&#9670;&nbsp;</a></span>pop0count16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> pop0count16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00040">40</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00016">pop0count_body</a>.</p>
+
+</div>
+</div>
+<a id="a086a220a53af69dfc0e9841b7d231a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086a220a53af69dfc0e9841b7d231a59">&#9670;&nbsp;</a></span>pop0count32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> pop0count32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00044">44</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00016">pop0count_body</a>.</p>
+
+</div>
+</div>
+<a id="a741fa84b2a282c8783098ee9dccc3257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741fa84b2a282c8783098ee9dccc3257">&#9670;&nbsp;</a></span>pop0count64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> pop0count64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00048">48</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00016">pop0count_body</a>.</p>
+
+</div>
+</div>
+<a id="a4e8b4045b39b5f4575a93f9aabcb34ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8b4045b39b5f4575a93f9aabcb34ef">&#9670;&nbsp;</a></span>pop0count8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> pop0count8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00036">36</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00016">pop0count_body</a>.</p>
+
+</div>
+</div>
+<a id="a507aefc83e68392a1368671bc90f2847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507aefc83e68392a1368671bc90f2847">&#9670;&nbsp;</a></span>popcount16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> popcount16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa">u16</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00024">24</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00008">popcount_body</a>.</p>
+
+</div>
+</div>
+<a id="a55f1880e6f89effc960d6b6bf0bbcb96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f1880e6f89effc960d6b6bf0bbcb96">&#9670;&nbsp;</a></span>popcount32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> popcount32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#afaa62991928fb9fb18ff0db62a040aba">u32</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00028">28</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00008">popcount_body</a>.</p>
+
+</div>
+</div>
+<a id="ae07f1ac3f8a977ece19b01317f99df1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae07f1ac3f8a977ece19b01317f99df1c">&#9670;&nbsp;</a></span>popcount64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> popcount64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00032">32</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00008">popcount_body</a>.</p>
+
+</div>
+</div>
+<a id="aea3b72b5586222cefb7bdb4ad685b251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea3b72b5586222cefb7bdb4ad685b251">&#9670;&nbsp;</a></span>popcount8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> popcount8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca">u8</a>&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8c_source.html#l00020">20</a> of file <a class="el" href="jbits_8c_source.html">jbits.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jbits_8c_source.html#l00008">popcount_body</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a979479a0bbb8b753ce168cbcd6df8709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979479a0bbb8b753ce168cbcd6df8709">&#9670;&nbsp;</a></span>BitArray2d_BACKER_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray2d_BACKER_BITS = (sizeof(<a class="el" href="jbits_8h.html#a5dc7e639150801cfd7ba8b3c87585ff2">BitArray2dBacker</a>) * 8)</td>
         </tr>
       </table>
   </td>
@@ -452,9 +1254,35 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00012">12</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00062">62</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jbits_8h_source.html#l00018">get_offset()</a>, and <a class="el" href="jbits_8h_source.html#l00014">get_row_width()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00232">BitArray2d_count_off()</a>, <a class="el" href="jbits_8c_source.html#l00213">BitArray2d_count_on()</a>, <a class="el" href="jbits_8c_source.html#l00251">BitArray2d_flip()</a>, <a class="el" href="jbits_8h_source.html#l00068">BitArray2d_offset()</a>, and <a class="el" href="jbits_8h_source.html#l00064">BitArray2d_row_width()</a>.</p>
+
+</div>
+</div>
+<a id="a1e67019e1093b0f5ae14911eea2b9eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e67019e1093b0f5ae14911eea2b9eda">&#9670;&nbsp;</a></span>BitArray_BACKER_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> BitArray_BACKER_BITS = (sizeof(<a class="el" href="jbits_8h.html#af23c66638b5a3b23789cb80cd0945629">BitArrayBacker</a>) * 8)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jbits_8h_source.html#l00032">32</a> of file <a class="el" href="jbits_8h_source.html">jbits.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jbits_8c_source.html#l00101">BitArray_and()</a>, <a class="el" href="jbits_8c_source.html#l00093">BitArray_flip()</a>, <a class="el" href="jbits_8c_source.html#l00065">BitArray_get()</a>, <a class="el" href="jbits_8c_source.html#l00052">BitArray_init()</a>, <a class="el" href="jbits_8c_source.html#l00083">BitArray_off()</a>, <a class="el" href="jbits_8h_source.html#l00039">BitArray_offset()</a>, <a class="el" href="jbits_8c_source.html#l00078">BitArray_on()</a>, <a class="el" href="jbits_8c_source.html#l00108">BitArray_popcount()</a>, <a class="el" href="jbits_8c_source.html#l00070">BitArray_set()</a>, and <a class="el" href="jbits_8c_source.html#l00088">BitArray_toggle()</a>.</p>
 
 </div>
 </div>
@@ -464,7 +1292,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jbits_8h.html">jbits.h</a></li>
-    <li class="footer">Generated on Sun Dec 5 2021 00:59:59 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Dec 6 2021 22:06:49 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

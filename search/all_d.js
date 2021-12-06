@@ -1,15 +1,19 @@
 var searchData=
 [
-  ['u16_87',['u16',['../jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa',1,'jint.h']]],
-  ['u16_5fmax_88',['U16_MAX',['../jint_8h.html#ac580728e242e90fe3082dc7fe45ec6c9',1,'jint.h']]],
-  ['u32_89',['u32',['../jint_8h.html#afaa62991928fb9fb18ff0db62a040aba',1,'jint.h']]],
-  ['u32_5fmax_90',['U32_MAX',['../jint_8h.html#a4028a1a55fd7b907a44c48d5ca42d6a6',1,'jint.h']]],
-  ['u64_91',['u64',['../jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234',1,'jint.h']]],
-  ['u64_5fmax_92',['U64_MAX',['../jint_8h.html#aaf73a88ad00da5c878558d6dc80b2f5c',1,'jint.h']]],
-  ['u8_93',['u8',['../jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca',1,'jint.h']]],
-  ['u8_5fmax_94',['U8_MAX',['../jint_8h.html#a1187e707402ca2fca73f06f7beb1e631',1,'jint.h']]],
-  ['umax_95',['umax',['../jint_8h.html#a084a1ac0c1c54d5de6521c96f9973deb',1,'jint.h']]],
-  ['umax_5fmax_96',['UMAX_MAX',['../jint_8h.html#a016919b38a97e1b3defe944d458bd206',1,'jint.h']]],
-  ['uptr_97',['uptr',['../jint_8h.html#a93a1409151dffdb2c15147214279817a',1,'jint.h']]],
-  ['uptr_5fmax_98',['UPTR_MAX',['../jint_8h.html#a6c0313c1e6b47365780adf89246ca2fe',1,'jint.h']]]
+  ['size_111',['size',['../structNDArray.html#a7a3022363f21129779cdf5bf25005808',1,'NDArray']]],
+  ['stat_112',['stat',['../structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61',1,'jc_mmap']]],
+  ['strtoi_113',['strtoi',['../jint_8c.html#ace94060869be7013df8e1a521c83ec1e',1,'strtoi(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#ace94060869be7013df8e1a521c83ec1e',1,'strtoi(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoi16_114',['strtoi16',['../jint_8c.html#a25168f64b1afcc8372ce286b27d79ac4',1,'strtoi16(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a25168f64b1afcc8372ce286b27d79ac4',1,'strtoi16(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoi32_115',['strtoi32',['../jint_8c.html#aa0ad8e4634fc033035bdf8abe96d2115',1,'strtoi32(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#aa0ad8e4634fc033035bdf8abe96d2115',1,'strtoi32(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoi64_116',['strtoi64',['../jint_8c.html#a6b1beb07dfeb0c27a9ce1ebefe69bab5',1,'strtoi64(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a6b1beb07dfeb0c27a9ce1ebefe69bab5',1,'strtoi64(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoi8_117',['strtoi8',['../jint_8c.html#a04efe848645fe971cd64a617480ed1e4',1,'strtoi8(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a04efe848645fe971cd64a617480ed1e4',1,'strtoi8(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoimax_118',['strtoimax',['../jint_8c.html#a843a48f12dcfb9c839f2e6eae0769fa2',1,'strtoimax(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a843a48f12dcfb9c839f2e6eae0769fa2',1,'strtoimax(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoiptr_119',['strtoiptr',['../jint_8h.html#ad6f6793d59a5056fdcd2fbd1ddd16cf9',1,'strtoiptr(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8c.html#ad6f6793d59a5056fdcd2fbd1ddd16cf9',1,'strtoiptr(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtou16_120',['strtou16',['../jint_8c.html#a13919f96448fe3d39e398250763b16f6',1,'strtou16(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a13919f96448fe3d39e398250763b16f6',1,'strtou16(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtou32_121',['strtou32',['../jint_8c.html#ad7cd00093636d24a4bcd0f4cff93f517',1,'strtou32(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#ad7cd00093636d24a4bcd0f4cff93f517',1,'strtou32(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtou64_122',['strtou64',['../jint_8c.html#ad3e50d8d95a53c8a127b680d8cd435b6',1,'strtou64(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#ad3e50d8d95a53c8a127b680d8cd435b6',1,'strtou64(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtou8_123',['strtou8',['../jint_8c.html#a0bf4a820681ddc4b4230554d1d2311ae',1,'strtou8(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a0bf4a820681ddc4b4230554d1d2311ae',1,'strtou8(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoui_124',['strtoui',['../jint_8c.html#a6a3eaced5b31d3830ca1d35acc49dd8d',1,'strtoui(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a6a3eaced5b31d3830ca1d35acc49dd8d',1,'strtoui(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtoumax_125',['strtoumax',['../jint_8c.html#a9d918304d580f9370f66aeb6ef4bd104',1,'strtoumax(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a9d918304d580f9370f66aeb6ef4bd104',1,'strtoumax(const char *nptr, char **endptr, int base):&#160;jint.c']]],
+  ['strtouptr_126',['strtouptr',['../jint_8c.html#a180db886281ced9e0703dcf9c938aeb7',1,'strtouptr(const char *nptr, char **endptr, int base):&#160;jint.c'],['../jint_8h.html#a180db886281ced9e0703dcf9c938aeb7',1,'strtouptr(const char *nptr, char **endptr, int base):&#160;jint.c']]]
 ];

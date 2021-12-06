@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.2.0</span>
+   &#160;<span id="projectnumber">v1.3.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('jmmap_8h_source.html',''); initResizab
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structjc__mmap.html">    9</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structjc__mmap.html">jc_mmap</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structjc__mmap.html#aa04f7e7cd15e9621f0a228e4867508d6">   11</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">char</span>* <a class="code" href="structjc__mmap.html#aa04f7e7cd15e9621f0a228e4867508d6">address</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">   11</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">address</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">   13</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">fd</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">stat</a> <a class="code" href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">stat</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;} <a class="code" href="structjc__mmap.html">jc_mmap</a>;</div>
@@ -106,8 +106,8 @@ $(document).ready(function(){initNavTree('jmmap_8h_source.html',''); initResizab
 <div class="ttc" id="ajmmap_8h_html_aaa8c11dbc4154fba5d1ba419e5f654bb"><div class="ttname"><a href="jmmap_8h.html#aaa8c11dbc4154fba5d1ba419e5f654bb">mmap_read</a></div><div class="ttdeci">iptr mmap_read(const char *filepath, jc_mmap *buf)</div><div class="ttdoc">Memory map a file for reading only.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8c_source.html#l00015">jmmap.c:15</a></div></div>
 <div class="ttc" id="ajmmap_8h_html_acec9df393777e7c1ecf46a742ea70660"><div class="ttname"><a href="jmmap_8h.html#acec9df393777e7c1ecf46a742ea70660">mmap_close</a></div><div class="ttdeci">iptr mmap_close(jc_mmap *buf)</div><div class="ttdoc">Close a memory-mapped jc_mmap file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8c_source.html#l00039">jmmap.c:39</a></div></div>
 <div class="ttc" id="astructjc__mmap_html"><div class="ttname"><a href="structjc__mmap.html">jc_mmap</a></div><div class="ttdoc">Struct containing data about a memory-mapped file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00009">jmmap.h:9</a></div></div>
+<div class="ttc" id="astructjc__mmap_html_a02111253a120ce223de919123bf328e9"><div class="ttname"><a href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">jc_mmap::address</a></div><div class="ttdeci">char * address</div><div class="ttdoc">Pointer to the start of the file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00011">jmmap.h:11</a></div></div>
 <div class="ttc" id="astructjc__mmap_html_a5ddec57cd6da0b4560b54311cc639a61"><div class="ttname"><a href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">jc_mmap::stat</a></div><div class="ttdeci">struct stat stat</div><div class="ttdoc">Results of fstat.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00013">jmmap.h:15</a></div></div>
-<div class="ttc" id="astructjc__mmap_html_aa04f7e7cd15e9621f0a228e4867508d6"><div class="ttname"><a href="structjc__mmap.html#aa04f7e7cd15e9621f0a228e4867508d6">jc_mmap::address</a></div><div class="ttdeci">volatile char * address</div><div class="ttdoc">Pointer to the start of the file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00011">jmmap.h:11</a></div></div>
 <div class="ttc" id="astructjc__mmap_html_ab6014096760276a801c41dde9f4b0e1d"><div class="ttname"><a href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">jc_mmap::fd</a></div><div class="ttdeci">int fd</div><div class="ttdoc">File descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00013">jmmap.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('jmmap_8h_source.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jmmap_8h.html">jmmap.h</a></li>
-    <li class="footer">Generated on Sun Dec 5 2021 00:59:59 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Dec 6 2021 22:06:49 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

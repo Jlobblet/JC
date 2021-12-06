@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['li16_59',['li16',['../jint_8h.html#a335e7fe290cb8801705609c7bd8632a4',1,'jint.h']]],
-  ['li32_60',['li32',['../jint_8h.html#a22db9db58308c761b2b76a89ad10495a',1,'jint.h']]],
-  ['li64_61',['li64',['../jint_8h.html#a5d1f7b2389991252ad0aefae07f307e9',1,'jint.h']]],
-  ['li8_62',['li8',['../jint_8h.html#a4157abae2d3c7720dd356d216255dc83',1,'jint.h']]],
-  ['lu16_63',['lu16',['../jint_8h.html#a9ff639323bef9060669677ec6505cbc3',1,'jint.h']]],
-  ['lu32_64',['lu32',['../jint_8h.html#a8499cbd1f07a3cdd1681e9c8aec2ab00',1,'jint.h']]],
-  ['lu64_65',['lu64',['../jint_8h.html#a8caee69fb510cced7d688af68d2bf151',1,'jint.h']]],
-  ['lu8_66',['lu8',['../jint_8h.html#a8db971ed87438e4b7f30f7a8c1f1d962',1,'jint.h']]]
+  ['mmap_5fclose_89',['mmap_close',['../jmmap_8c.html#acec9df393777e7c1ecf46a742ea70660',1,'mmap_close(jc_mmap *buf):&#160;jmmap.c'],['../jmmap_8h.html#acec9df393777e7c1ecf46a742ea70660',1,'mmap_close(jc_mmap *buf):&#160;jmmap.c']]],
+  ['mmap_5fread_90',['mmap_read',['../jmmap_8c.html#aaa8c11dbc4154fba5d1ba419e5f654bb',1,'mmap_read(const char *filepath, jc_mmap *buf):&#160;jmmap.c'],['../jmmap_8h.html#aaa8c11dbc4154fba5d1ba419e5f654bb',1,'mmap_read(const char *filepath, jc_mmap *buf):&#160;jmmap.c']]]
 ];
