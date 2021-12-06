@@ -47,6 +47,7 @@ void BitArray_set(BitArray *arr, uptr index, BitArrayBacker value);
 void BitArray_on(BitArray *arr, uptr index);
 void BitArray_off(BitArray *arr, uptr index);
 void BitArray_toggle(BitArray *arr, uptr index);
+void BitArray_flip(BitArray *arr);
 
 typedef uptr BitArray2dBacker;
 

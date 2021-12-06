@@ -84,9 +84,19 @@ void BitArray_off(BitArray *arr, uptr index) {
     assert(index < arr->length);
     arr->data[index / BitArray_BACKER_BITS] &= ~(1U << BitArray_offset(index));
 }
+
 void BitArray_toggle(BitArray *arr, uptr index) {
     assert(index < arr->length);
     arr->data[index / BitArray_BACKER_BITS] ^= 1U << BitArray_offset(index);
+}
+
+void BitArray_flip(BitArray *arr) {
+    for (uptr i = 0; i < arr->length / BitArray_BACKER_BITS; i++) {
+        arr->data[i] = ~arr->data[i];
+    }
+    for (uptr i = BitArray_BACKER_BITS * (arr->length / BitArray_BACKER_BITS); i++) {
+        BitArray_off(arr, i);
+    }
 }
 
 /// Initialise a `BitArray2d` struct.
