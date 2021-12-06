@@ -3,24 +3,6 @@
 
 #include "jint.h"
 
-typedef uptr BitArray2dBacker;
-
-typedef struct BitArray2d {
-    uptr rows, cols;
-    uptr **row_starts;
-    BitArray2dBacker *data;
-} BitArray2d;
-
-static const uptr BITS = (sizeof(BitArray2dBacker) * 8);
-
-static inline uptr get_row_width(BitArray2d *arr) {
-    return (arr->cols + BITS - 1) / BITS;
-}
-
-static inline uptr get_offset(uptr col) {
-    return col % BITS;
-}
-
 uptr popcount8(u8 x);
 uptr popcount16(u16 x);
 uptr popcount32(u32 x);
@@ -44,6 +26,45 @@ u16: pop0count16,                       \
 u32: pop0count32,                       \
 u64: pop0count64)                       \
 (x)
+
+typedef fu8 BitArrayBacker;
+
+static const uptr BitArray_BACKER_BITS = (sizeof(BitArrayBacker) * 8);
+
+typedef struct BitArray {
+    uptr length;
+    BitArrayBacker* data;
+} BitArray;
+
+static inline uptr BitArray_offset(uptr index) {
+    return index % BitArray_BACKER_BITS;
+}
+
+iptr BitArray_init(BitArray *arr);
+void BitArray_dest(BitArray *arr);
+uptr BitArray_get(BitArray *arr, uptr index);
+void BitArray_set(BitArray *arr, uptr index, BitArrayBacker value);
+void BitArray_on(BitArray *arr, uptr index);
+void BitArray_off(BitArray *arr, uptr index);
+void BitArray_toggle(BitArray *arr, uptr index);
+
+typedef uptr BitArray2dBacker;
+
+typedef struct BitArray2d {
+    uptr rows, cols;
+    uptr **row_starts;
+    BitArray2dBacker *data;
+} BitArray2d;
+
+static const uptr BitArray2d_BACKER_BITS = (sizeof(BitArray2dBacker) * 8);
+
+static inline uptr BitArray2d_row_width(BitArray2d *arr) {
+    return (arr->cols + BitArray2d_BACKER_BITS - 1) / BitArray2d_BACKER_BITS;
+}
+
+static inline uptr BitArray2d_offset(uptr col) {
+    return col % BitArray2d_BACKER_BITS;
+}
 
 iptr BitArray2d_init(BitArray2d *arr);
 void BitArray2d_dest(BitArray2d *arr);

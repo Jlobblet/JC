@@ -49,6 +49,46 @@ uptr pop0count64(u64 x) {
     pop0count_body
 }
 
+iptr BitArray_init(BitArray *arr) {
+    assert(arr->length > 0);
+    arr->data = calloc((arr->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS, sizeof(BitArrayBacker));
+    if (arr->data == NULL) {
+        return -1;
+    }
+    return 0;
+}
+
+void BitArray_dest(BitArray *arr) {
+    free(arr->data);
+}
+
+uptr BitArray_get(BitArray *arr, uptr index) {
+    assert(index < arr->length);
+    return (arr->data[index / BitArray_BACKER_BITS] >> BitArray_offset(index)) & 1U;
+}
+
+void BitArray_set(BitArray *arr, uptr index, BitArrayBacker value) {
+    assert(index < arr->length);
+    assert(value == 0U || value == 1U);
+    arr->data[index / BitArray_BACKER_BITS] =
+            (arr->data[index / BitArray_BACKER_BITS] & ~(1U << BitArray_offset(index)))
+            | (value << BitArray_offset(index));
+}
+
+void BitArray_on(BitArray *arr, uptr index) {
+    assert(index < arr->length);
+    arr->data[index / BitArray_BACKER_BITS] |= 1U << BitArray_offset(index);
+}
+
+void BitArray_off(BitArray *arr, uptr index) {
+    assert(index < arr->length);
+    arr->data[index / BitArray_BACKER_BITS] &= ~(1U << BitArray_offset(index));
+}
+void BitArray_toggle(BitArray *arr, uptr index) {
+    assert(index < arr->length);
+    arr->data[index / BitArray_BACKER_BITS] ^= 1U << BitArray_offset(index);
+}
+
 /// Initialise a `BitArray2d` struct.
 ///
 /// This function allocates two arrays - one to store `row_starts`, which contains
@@ -63,7 +103,7 @@ iptr BitArray2d_init(BitArray2d* arr) {
         return -1;
     }
 
-    uptr row_width = get_row_width(arr);
+    uptr row_width = BitArray2d_row_width(arr);
     arr->data = calloc(row_width, sizeof(BitArray2dBacker));
     if (arr->data == NULL) {
         return -1;
@@ -93,8 +133,8 @@ void BitArray2d_dest(BitArray2d* arr) {
 BitArray2dBacker BitArray2d_get(BitArray2d* arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    uptr row_width = get_row_width(arr);
-    return (arr->row_starts[row][col / row_width] >> get_offset(col)) & 1U;
+    uptr row_width = BitArray2d_row_width(arr);
+    return (arr->row_starts[row][col / row_width] >> BitArray2d_offset(col)) & 1U;
 }
 
 /// Set the value in a given cell of a `BitArray2d`.
@@ -107,10 +147,10 @@ void BitArray2d_set(BitArray2d* arr, uptr row, uptr col, uptr value) {
     assert(row < arr->rows);
     assert(col < arr->cols);
     assert(value == 0U || value == 1U);
-    uptr row_width = get_row_width(arr);
-    arr->row_starts[row][col / get_row_width(arr)] =
-            (arr->row_starts[row][col / row_width] & ~(1U << get_offset(col)))
-            | (value << get_offset(col));
+    uptr row_width = BitArray2d_row_width(arr);
+    arr->row_starts[row][col / row_width] =
+            (arr->row_starts[row][col / row_width] & ~(1U << BitArray2d_offset(col)))
+            | (value << BitArray2d_offset(col));
 }
 
 /// Set the value in a given cell of a `BitArray2d` to `1`.
@@ -120,7 +160,7 @@ void BitArray2d_set(BitArray2d* arr, uptr row, uptr col, uptr value) {
 void BitArray2d_on(BitArray2d* arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    arr->row_starts[row][col / get_row_width(arr)] |= 1U << get_offset(col);
+    arr->row_starts[row][col / BitArray2d_row_width(arr)] |= 1U << BitArray2d_offset(col);
 }
 
 /// Set the value in a given cell of a `BitArray2d` to `0`.
@@ -130,7 +170,7 @@ void BitArray2d_on(BitArray2d* arr, uptr row, uptr col) {
 void BitArray2d_off(BitArray2d* arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    arr->row_starts[row][col / get_row_width(arr)] &= ~(1U << get_offset(col));
+    arr->row_starts[row][col / BitArray2d_row_width(arr)] &= ~(1U << BitArray2d_offset(col));
 }
 
 /// Toggle value in a given cell of a `BitArray2d`.
@@ -143,21 +183,21 @@ void BitArray2d_off(BitArray2d* arr, uptr row, uptr col) {
 void BitArray2d_toggle(BitArray2d *arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    arr->row_starts[row][col / get_row_width(arr)] ^= 1U << get_offset(col);
+    arr->row_starts[row][col / BitArray2d_row_width(arr)] ^= 1U << BitArray2d_offset(col);
 }
 
 uptr BitArray2d_count_on(BitArray2d* arr) {
     uptr sum = 0;
     for (uptr i = 0; i < arr->rows; i++) {
-        for (uptr j = 0; j < get_row_width(arr)
-#ifndef NDEBUG
-        - 1
+        for (uptr j = 0; j < BitArray2d_row_width(arr)
+                             #ifndef NDEBUG
+                             - 1
 #endif //NDEBUG
         ; j++) {
             sum += popcount(arr->row_starts[i][j]);
         }
 #ifndef NDEBUG
-        for (uptr c = BITS * (arr->cols / BITS); c < arr->cols; c++) {
+        for (uptr c = BitArray2d_BACKER_BITS * (arr->cols / BitArray2d_BACKER_BITS); c < arr->cols; c++) {
             sum += BitArray2d_get(arr, i, c);
         }
 #endif // NDEBUG
@@ -168,16 +208,16 @@ uptr BitArray2d_count_on(BitArray2d* arr) {
 uptr BitArray2d_count_off(BitArray2d* arr) {
     uptr sum = 0;
     for (uptr i = 0; i < arr->rows; i++) {
-        for (uptr j = 0; j < get_row_width(arr)
-#ifndef NDEBUG
-        - 1
+        for (uptr j = 0; j < BitArray2d_row_width(arr)
+                             #ifndef NDEBUG
+                             - 1
 #endif // NDEBUG
         ; j++) {
             sum += pop0count(arr->row_starts[i][j]);
         }
 #ifndef NDEBUG
-        for (uptr c = BITS * (arr->cols / BITS); c < arr->cols; c++) {
-            sum += BitArray2d_get(arr, i, c);
+        for (uptr c = BitArray2d_BACKER_BITS * (arr->cols / BitArray2d_BACKER_BITS); c < arr->cols; c++) {
+            sum += ~BitArray2d_get(arr, i, c);
         }
 #endif
     }
@@ -186,15 +226,15 @@ uptr BitArray2d_count_off(BitArray2d* arr) {
 
 void BitArray2d_flip(BitArray2d* arr) {
     for (uptr i = 0; i < arr->rows; i++) {
-        for (uptr j = 0; j < get_row_width(arr)
-#ifndef NDEBUG
-        - 1
+        for (uptr j = 0; j < BitArray2d_row_width(arr)
+                             #ifndef NDEBUG
+                             - 1
 #endif // NDEBUG
         ; j++) {
             arr->row_starts[i][j] = ~arr->row_starts[i][j];
         }
 #ifndef NDEBUG
-        for (uptr c = BITS * (arr->cols / BITS); c < arr->cols; c++) {
+        for (uptr c = BitArray2d_BACKER_BITS * (arr->cols / BitArray2d_BACKER_BITS); c < arr->cols; c++) {
             BitArray2d_off(arr, i, c);
         }
 #endif // NDEBUG
