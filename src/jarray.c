@@ -14,7 +14,7 @@ iptr NDArray_init(NDArray* arr) {
         assert(arr->size[i]);
         n *= arr->size[i];
     }
-    arr->data = calloc(n, sizeof(fi64));
+    arr->data = calloc(n, sizeof(NDArray_Backer));
     if (arr->data == NULL) {
         return -1;
     }
@@ -32,7 +32,7 @@ void NDArray_dest(NDArray* arr) {
 /// \param index The index of the value to retrieve.
 /// \param ...
 /// \return The value.
-fi64 NDArray_get(NDArray* arr, uptr index, ...) {
+NDArray_Backer NDArray_get(NDArray* arr, uptr index, ...) {
     assert(index < arr->size[0]);
     uptr i = index;
     va_list args;
@@ -51,7 +51,7 @@ fi64 NDArray_get(NDArray* arr, uptr index, ...) {
 /// \param value The value.
 /// \param index The index to set the value of.
 /// \param ...
-void NDArray_set(NDArray* arr, fi64 value, uptr index, ...) {
+void NDArray_set(NDArray* arr, NDArray_Backer value, uptr index, ...) {
     assert(index < arr->size[0]);
     uptr i = index;
     va_list args;
