@@ -99,6 +99,13 @@ void BitArray_flip(BitArray *arr) {
     }
 }
 
+void BitArray_and(BitArray *left, BitArray *right) {
+    assert(left->length == right->length);
+    for (uptr i = 0; i < (left->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS; i++) {
+        left->data[i] &= right->data[i];
+    }
+}
+
 /// Initialise a `BitArray2d` struct.
 ///
 /// This function allocates two arrays - one to store `row_starts`, which contains
