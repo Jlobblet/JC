@@ -91,12 +91,11 @@ void BitArray_toggle(BitArray *arr, uptr index) {
 }
 
 void BitArray_flip(BitArray *arr) {
-    for (uptr i = 0; i < arr->length / BitArray_BACKER_BITS; i++) {
+    uptr i;
+    for (i = 0; i < arr->length / BitArray_BACKER_BITS; i++) {
         arr->data[i] = ~arr->data[i];
     }
-    for (uptr i = arr->length % BitArray_BACKER_BITS + BitArray_BACKER_BITS * (arr->length / BitArray_BACKER_BITS); i < arr->length; i++) {
-        BitArray_off(arr, i);
-    }
+    arr->data[i] &= ~0U << (BitArray_BACKER_BITS - arr->length % BitArray_BACKER_BITS);
 }
 
 void BitArray_and(BitArray *left, BitArray *right) {
