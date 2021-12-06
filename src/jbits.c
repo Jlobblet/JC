@@ -8,7 +8,7 @@
 #define popcount_body \
 uptr sum = 0;         \
 while(x) {            \
-    sum += sum & 1U;  \
+    sum += x & 1U;    \
     x >>= 1;          \
 }                     \
 return sum;
