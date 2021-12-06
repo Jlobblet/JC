@@ -92,7 +92,7 @@ void BitArray_toggle(BitArray *arr, uptr index) {
 
 void BitArray_flip(BitArray *arr) {
     uptr i;
-    for (i = 0; i < arr->length / BitArray_BACKER_BITS; i++) {
+    for (i = 0; i < (arr->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS; i++) {
         arr->data[i] = ~arr->data[i];
     }
     arr->data[i] &= ~0U << (BitArray_BACKER_BITS - arr->length % BitArray_BACKER_BITS);
