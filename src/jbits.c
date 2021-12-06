@@ -106,6 +106,14 @@ void BitArray_and(BitArray *left, BitArray *right) {
     }
 }
 
+uptr BitArray_popcount(BitArray *arr) {
+    uptr sum = 0;
+    for (uptr i = 0; i < (arr->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS; i++) {
+        sum += popcount(arr->data[i]);
+    }
+    return sum;
+}
+
 /// Initialise a `BitArray2d` struct.
 ///
 /// This function allocates two arrays - one to store `row_starts`, which contains
