@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.3.0</span>
+   &#160;<span id="projectnumber">v1.4.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -98,20 +98,386 @@ $(document).ready(function(){initNavTree('jarray_8c.html',''); initResizable(); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:abf0beee7848cc7ddbee8abdb99e2e595"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#abf0beee7848cc7ddbee8abdb99e2e595">NDArray_total_size</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr)</td></tr>
+<tr class="separator:abf0beee7848cc7ddbee8abdb99e2e595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53221aa8130b5b129da6e570f90bc8af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a53221aa8130b5b129da6e570f90bc8af">NDArray_init</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr)</td></tr>
 <tr class="memdesc:a53221aa8130b5b129da6e570f90bc8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise an N-dimensional array.  <a href="jarray_8c.html#a53221aa8130b5b129da6e570f90bc8af">More...</a><br /></td></tr>
 <tr class="separator:a53221aa8130b5b129da6e570f90bc8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a106ae398bbf3fd820d168c2eb8f4800d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a106ae398bbf3fd820d168c2eb8f4800d">NDArray_dest</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr)</td></tr>
 <tr class="memdesc:a106ae398bbf3fd820d168c2eb8f4800d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clean up an <a class="el" href="structNDArray.html">NDArray</a>.  <a href="jarray_8c.html#a106ae398bbf3fd820d168c2eb8f4800d">More...</a><br /></td></tr>
 <tr class="separator:a106ae398bbf3fd820d168c2eb8f4800d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f07b7bb85b604b702f2544e120f1241"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#ae460f9ef73d253da0b2f03db44dee951">fi64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a2f07b7bb85b604b702f2544e120f1241">NDArray_get</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index,...)</td></tr>
-<tr class="memdesc:a2f07b7bb85b604b702f2544e120f1241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value in a given cell of an N-dimensional array.  <a href="jarray_8c.html#a2f07b7bb85b604b702f2544e120f1241">More...</a><br /></td></tr>
-<tr class="separator:a2f07b7bb85b604b702f2544e120f1241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a350b064147a52880cb44752ac6a04952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a350b064147a52880cb44752ac6a04952">NDArray_set</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jint_8h.html#ae460f9ef73d253da0b2f03db44dee951">fi64</a> value, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index,...)</td></tr>
-<tr class="memdesc:a350b064147a52880cb44752ac6a04952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value in a given cell of an N-dimensional array.  <a href="jarray_8c.html#a350b064147a52880cb44752ac6a04952">More...</a><br /></td></tr>
-<tr class="separator:a350b064147a52880cb44752ac6a04952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004f0078c213bae73906dfc3168cbdb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a004f0078c213bae73906dfc3168cbdb4">NDArray_get</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index,...)</td></tr>
+<tr class="memdesc:a004f0078c213bae73906dfc3168cbdb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value in a given cell of an N-dimensional array.  <a href="jarray_8c.html#a004f0078c213bae73906dfc3168cbdb4">More...</a><br /></td></tr>
+<tr class="separator:a004f0078c213bae73906dfc3168cbdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b8a0119aa2ac9104f4534d1d5a50a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a92b8a0119aa2ac9104f4534d1d5a50a4">NDArray_set</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value, <a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> index,...)</td></tr>
+<tr class="memdesc:a92b8a0119aa2ac9104f4534d1d5a50a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value in a given cell of an N-dimensional array.  <a href="jarray_8c.html#a92b8a0119aa2ac9104f4534d1d5a50a4">More...</a><br /></td></tr>
+<tr class="separator:a92b8a0119aa2ac9104f4534d1d5a50a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7512dfb0a67bae2566202a88a24db350"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a7512dfb0a67bae2566202a88a24db350">NDArray_map</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a5824075d56495ef5eacd8ef2d4e54302">NDArray_mapping_t</a> mapping)</td></tr>
+<tr class="separator:a7512dfb0a67bae2566202a88a24db350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50bb10049510db1151edd636e779f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#af50bb10049510db1151edd636e779f39">NDArray_add</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value)</td></tr>
+<tr class="separator:af50bb10049510db1151edd636e779f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fe5ca63e8f0fd18b4e759f7d0e7cdfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a6fe5ca63e8f0fd18b4e759f7d0e7cdfa">NDArray_sub</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value)</td></tr>
+<tr class="separator:a6fe5ca63e8f0fd18b4e759f7d0e7cdfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29f89a7d14129019b644b8c6b9bed20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#aa29f89a7d14129019b644b8c6b9bed20">NDArray_mul</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value)</td></tr>
+<tr class="separator:aa29f89a7d14129019b644b8c6b9bed20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901d7cdd31f7c104a700d2641f5a91a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a901d7cdd31f7c104a700d2641f5a91a1">NDArray_div</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value)</td></tr>
+<tr class="separator:a901d7cdd31f7c104a700d2641f5a91a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113bd813ced45c0e5b3e57efddf67af5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a113bd813ced45c0e5b3e57efddf67af5">NDArray_and</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value)</td></tr>
+<tr class="separator:a113bd813ced45c0e5b3e57efddf67af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4496e873a05e7b5f5732c356db32f9a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a4496e873a05e7b5f5732c356db32f9a2">NDArray_or</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value)</td></tr>
+<tr class="separator:a4496e873a05e7b5f5732c356db32f9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757d9cf08ffa9ec9f540c4a106b32139"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a757d9cf08ffa9ec9f540c4a106b32139">NDArray_xor</a> (<a class="el" href="structNDArray.html">NDArray</a> *arr, <a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> value)</td></tr>
+<tr class="separator:a757d9cf08ffa9ec9f540c4a106b32139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0566246e976e0af93ab6966f2380c3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#aec0566246e976e0af93ab6966f2380c3">NDArray_assert2</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:aec0566246e976e0af93ab6966f2380c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001535582c22d2db58884639489780b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a001535582c22d2db58884639489780b7">NDArray_map2</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right, <a class="el" href="jarray_8h.html#a2af259fae255bf53d1e8d09f67036e56">NDArray_map2ing_t</a> map2ing)</td></tr>
+<tr class="separator:a001535582c22d2db58884639489780b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b7ed8793d7c4a4198b8055f6863c5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a08b7ed8793d7c4a4198b8055f6863c5c">NDArray_arr_add</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:a08b7ed8793d7c4a4198b8055f6863c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955adbf852209f929516fdef1e14ac12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a955adbf852209f929516fdef1e14ac12">NDArray_arr_sub</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:a955adbf852209f929516fdef1e14ac12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addebdaafc3ec6f40498b46975f35f62a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#addebdaafc3ec6f40498b46975f35f62a">NDArray_arr_mul</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:addebdaafc3ec6f40498b46975f35f62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967faab1efdcb23ffa757f6f294b5469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a967faab1efdcb23ffa757f6f294b5469">NDArray_arr_div</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:a967faab1efdcb23ffa757f6f294b5469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad664b93166df90206ade3b8fed28197b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#ad664b93166df90206ade3b8fed28197b">NDArray_arr_and</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:ad664b93166df90206ade3b8fed28197b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9334697c3970ae8d0ab2dea3abe6c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a6c9334697c3970ae8d0ab2dea3abe6c3">NDArray_arr_or</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:a6c9334697c3970ae8d0ab2dea3abe6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c2638c0636b182241fb24e5eb976c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jarray_8c.html#a65c2638c0636b182241fb24e5eb976c9">NDArray_arr_xor</a> (<a class="el" href="structNDArray.html">NDArray</a> *left, <a class="el" href="structNDArray.html">NDArray</a> *right)</td></tr>
+<tr class="separator:a65c2638c0636b182241fb24e5eb976c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af50bb10049510db1151edd636e779f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50bb10049510db1151edd636e779f39">&#9670;&nbsp;</a></span>NDArray_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00082">82</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a113bd813ced45c0e5b3e57efddf67af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113bd813ced45c0e5b3e57efddf67af5">&#9670;&nbsp;</a></span>NDArray_and()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_and </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00110">110</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a08b7ed8793d7c4a4198b8055f6863c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b7ed8793d7c4a4198b8055f6863c5c">&#9670;&nbsp;</a></span>NDArray_arr_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_arr_add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00148">148</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="ad664b93166df90206ade3b8fed28197b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad664b93166df90206ade3b8fed28197b">&#9670;&nbsp;</a></span>NDArray_arr_and()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_arr_and </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00180">180</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a967faab1efdcb23ffa757f6f294b5469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967faab1efdcb23ffa757f6f294b5469">&#9670;&nbsp;</a></span>NDArray_arr_div()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_arr_div </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00172">172</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="addebdaafc3ec6f40498b46975f35f62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addebdaafc3ec6f40498b46975f35f62a">&#9670;&nbsp;</a></span>NDArray_arr_mul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_arr_mul </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00164">164</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a6c9334697c3970ae8d0ab2dea3abe6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9334697c3970ae8d0ab2dea3abe6c3">&#9670;&nbsp;</a></span>NDArray_arr_or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_arr_or </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00188">188</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a955adbf852209f929516fdef1e14ac12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955adbf852209f929516fdef1e14ac12">&#9670;&nbsp;</a></span>NDArray_arr_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_arr_sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00156">156</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a65c2638c0636b182241fb24e5eb976c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c2638c0636b182241fb24e5eb976c9">&#9670;&nbsp;</a></span>NDArray_arr_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_arr_xor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00196">196</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="aec0566246e976e0af93ab6966f2380c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0566246e976e0af93ab6966f2380c3">&#9670;&nbsp;</a></span>NDArray_assert2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void NDArray_assert2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00131">131</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00010">NDArray::dims</a>, and <a class="el" href="jarray_8h_source.html#l00011">NDArray::size</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jarray_8c_source.html#l00148">NDArray_arr_add()</a>, <a class="el" href="jarray_8c_source.html#l00180">NDArray_arr_and()</a>, <a class="el" href="jarray_8c_source.html#l00172">NDArray_arr_div()</a>, <a class="el" href="jarray_8c_source.html#l00164">NDArray_arr_mul()</a>, <a class="el" href="jarray_8c_source.html#l00188">NDArray_arr_or()</a>, <a class="el" href="jarray_8c_source.html#l00156">NDArray_arr_sub()</a>, <a class="el" href="jarray_8c_source.html#l00196">NDArray_arr_xor()</a>, and <a class="el" href="jarray_8c_source.html#l00140">NDArray_map2()</a>.</p>
+
+</div>
+</div>
 <a id="a106ae398bbf3fd820d168c2eb8f4800d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a106ae398bbf3fd820d168c2eb8f4800d">&#9670;&nbsp;</a></span>NDArray_dest()</h2>
 
@@ -136,20 +502,52 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00026">26</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00032">32</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jarray_8h_source.html#l00010">NDArray::data</a>.</p>
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>.</p>
 
 </div>
 </div>
-<a id="a2f07b7bb85b604b702f2544e120f1241"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f07b7bb85b604b702f2544e120f1241">&#9670;&nbsp;</a></span>NDArray_get()</h2>
+<a id="a901d7cdd31f7c104a700d2641f5a91a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a901d7cdd31f7c104a700d2641f5a91a1">&#9670;&nbsp;</a></span>NDArray_div()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="jint_8h.html#ae460f9ef73d253da0b2f03db44dee951">fi64</a> NDArray_get </td>
+          <td class="memname">void NDArray_div </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00103">103</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a004f0078c213bae73906dfc3168cbdb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a004f0078c213bae73906dfc3168cbdb4">&#9670;&nbsp;</a></span>NDArray_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a> NDArray_get </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
           <td class="paramname"><em>arr</em>, </td>
@@ -185,9 +583,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00035">35</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00042">42</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jarray_8h_source.html#l00010">NDArray::data</a>, <a class="el" href="jarray_8h_source.html#l00008">NDArray::dims</a>, and <a class="el" href="jarray_8h_source.html#l00009">NDArray::size</a>.</p>
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8h_source.html#l00010">NDArray::dims</a>, and <a class="el" href="jarray_8h_source.html#l00011">NDArray::size</a>.</p>
 
 </div>
 </div>
@@ -216,14 +614,148 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00010">10</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00021">21</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jarray_8h_source.html#l00010">NDArray::data</a>, <a class="el" href="jarray_8h_source.html#l00008">NDArray::dims</a>, and <a class="el" href="jarray_8h_source.html#l00009">NDArray::size</a>.</p>
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
 
 </div>
 </div>
-<a id="a350b064147a52880cb44752ac6a04952"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a350b064147a52880cb44752ac6a04952">&#9670;&nbsp;</a></span>NDArray_set()</h2>
+<a id="a7512dfb0a67bae2566202a88a24db350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7512dfb0a67bae2566202a88a24db350">&#9670;&nbsp;</a></span>NDArray_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a5824075d56495ef5eacd8ef2d4e54302">NDArray_mapping_t</a>&#160;</td>
+          <td class="paramname"><em>mapping</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00075">75</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a001535582c22d2db58884639489780b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001535582c22d2db58884639489780b7">&#9670;&nbsp;</a></span>NDArray_map2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_map2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>right</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a2af259fae255bf53d1e8d09f67036e56">NDArray_map2ing_t</a>&#160;</td>
+          <td class="paramname"><em>map2ing</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00140">140</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8c_source.html#l00131">NDArray_assert2()</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="aa29f89a7d14129019b644b8c6b9bed20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa29f89a7d14129019b644b8c6b9bed20">&#9670;&nbsp;</a></span>NDArray_mul()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_mul </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00096">96</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a4496e873a05e7b5f5732c356db32f9a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4496e873a05e7b5f5732c356db32f9a2">&#9670;&nbsp;</a></span>NDArray_or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_or </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00117">117</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="a92b8a0119aa2ac9104f4534d1d5a50a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b8a0119aa2ac9104f4534d1d5a50a4">&#9670;&nbsp;</a></span>NDArray_set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +769,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="jint_8h.html#ae460f9ef73d253da0b2f03db44dee951">fi64</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
@@ -271,9 +803,105 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00054">54</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00061">61</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jarray_8h_source.html#l00010">NDArray::data</a>, <a class="el" href="jarray_8h_source.html#l00008">NDArray::dims</a>, and <a class="el" href="jarray_8h_source.html#l00009">NDArray::size</a>.</p>
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, <a class="el" href="jarray_8h_source.html#l00010">NDArray::dims</a>, and <a class="el" href="jarray_8h_source.html#l00011">NDArray::size</a>.</p>
+
+</div>
+</div>
+<a id="a6fe5ca63e8f0fd18b4e759f7d0e7cdfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe5ca63e8f0fd18b4e759f7d0e7cdfa">&#9670;&nbsp;</a></span>NDArray_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_sub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00089">89</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
+
+</div>
+</div>
+<a id="abf0beee7848cc7ddbee8abdb99e2e595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0beee7848cc7ddbee8abdb99e2e595">&#9670;&nbsp;</a></span>NDArray_total_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> NDArray_total_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00006">6</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00010">NDArray::dims</a>, and <a class="el" href="jarray_8h_source.html#l00011">NDArray::size</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jarray_8c_source.html#l00082">NDArray_add()</a>, <a class="el" href="jarray_8c_source.html#l00110">NDArray_and()</a>, <a class="el" href="jarray_8c_source.html#l00148">NDArray_arr_add()</a>, <a class="el" href="jarray_8c_source.html#l00180">NDArray_arr_and()</a>, <a class="el" href="jarray_8c_source.html#l00172">NDArray_arr_div()</a>, <a class="el" href="jarray_8c_source.html#l00164">NDArray_arr_mul()</a>, <a class="el" href="jarray_8c_source.html#l00188">NDArray_arr_or()</a>, <a class="el" href="jarray_8c_source.html#l00156">NDArray_arr_sub()</a>, <a class="el" href="jarray_8c_source.html#l00196">NDArray_arr_xor()</a>, <a class="el" href="jarray_8c_source.html#l00103">NDArray_div()</a>, <a class="el" href="jarray_8c_source.html#l00021">NDArray_init()</a>, <a class="el" href="jarray_8c_source.html#l00075">NDArray_map()</a>, <a class="el" href="jarray_8c_source.html#l00140">NDArray_map2()</a>, <a class="el" href="jarray_8c_source.html#l00096">NDArray_mul()</a>, <a class="el" href="jarray_8c_source.html#l00117">NDArray_or()</a>, <a class="el" href="jarray_8c_source.html#l00089">NDArray_sub()</a>, and <a class="el" href="jarray_8c_source.html#l00124">NDArray_xor()</a>.</p>
+
+</div>
+</div>
+<a id="a757d9cf08ffa9ec9f540c4a106b32139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a757d9cf08ffa9ec9f540c4a106b32139">&#9670;&nbsp;</a></span>NDArray_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NDArray_xor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNDArray.html">NDArray</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416">NDArray_Backer</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jarray_8c_source.html#l00124">124</a> of file <a class="el" href="jarray_8c_source.html">jarray.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jarray_8h_source.html#l00012">NDArray::data</a>, and <a class="el" href="jarray_8c_source.html#l00006">NDArray_total_size()</a>.</p>
 
 </div>
 </div>
@@ -283,7 +911,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jarray_8c.html">jarray.c</a></li>
-    <li class="footer">Generated on Mon Dec 6 2021 22:06:49 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Dec 7 2021 16:25:03 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

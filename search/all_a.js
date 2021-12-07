@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['ndarray_91',['NDArray',['../structNDArray.html',1,'']]],
-  ['ndarray_5fdest_92',['NDArray_dest',['../jarray_8c.html#a106ae398bbf3fd820d168c2eb8f4800d',1,'jarray.c']]],
-  ['ndarray_5fget_93',['NDArray_get',['../jarray_8c.html#a2f07b7bb85b604b702f2544e120f1241',1,'NDArray_get(NDArray *arr, uptr index,...):&#160;jarray.c'],['../jarray_8h.html#a2f07b7bb85b604b702f2544e120f1241',1,'NDArray_get(NDArray *arr, uptr index,...):&#160;jarray.c']]],
-  ['ndarray_5finit_94',['NDArray_init',['../jarray_8c.html#a53221aa8130b5b129da6e570f90bc8af',1,'NDArray_init(NDArray *arr):&#160;jarray.c'],['../jarray_8h.html#a53221aa8130b5b129da6e570f90bc8af',1,'NDArray_init(NDArray *arr):&#160;jarray.c']]],
-  ['ndarray_5fset_95',['NDArray_set',['../jarray_8c.html#a350b064147a52880cb44752ac6a04952',1,'NDArray_set(NDArray *arr, fi64 value, uptr index,...):&#160;jarray.c'],['../jarray_8h.html#a350b064147a52880cb44752ac6a04952',1,'NDArray_set(NDArray *arr, fi64 value, uptr index,...):&#160;jarray.c']]]
+  ['mmap_5fclose_93',['mmap_close',['../jmmap_8c.html#acec9df393777e7c1ecf46a742ea70660',1,'mmap_close(jc_mmap *buf):&#160;jmmap.c'],['../jmmap_8h.html#acec9df393777e7c1ecf46a742ea70660',1,'mmap_close(jc_mmap *buf):&#160;jmmap.c']]],
+  ['mmap_5fread_94',['mmap_read',['../jmmap_8c.html#aaa8c11dbc4154fba5d1ba419e5f654bb',1,'mmap_read(const char *filepath, jc_mmap *buf):&#160;jmmap.c'],['../jmmap_8h.html#aaa8c11dbc4154fba5d1ba419e5f654bb',1,'mmap_read(const char *filepath, jc_mmap *buf):&#160;jmmap.c']]]
 ];

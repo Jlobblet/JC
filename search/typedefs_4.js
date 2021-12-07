@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['u16_250',['u16',['../jint_8h.html#ace9d960e74685e2cd84b36132dbbf8aa',1,'jint.h']]],
-  ['u32_251',['u32',['../jint_8h.html#afaa62991928fb9fb18ff0db62a040aba',1,'jint.h']]],
-  ['u64_252',['u64',['../jint_8h.html#a3f7e2bcbb0b4c338f3c4f6c937cd4234',1,'jint.h']]],
-  ['u8_253',['u8',['../jint_8h.html#a92c50087ca0e64fa93fc59402c55f8ca',1,'jint.h']]],
-  ['umax_254',['umax',['../jint_8h.html#a084a1ac0c1c54d5de6521c96f9973deb',1,'jint.h']]],
-  ['uptr_255',['uptr',['../jint_8h.html#a93a1409151dffdb2c15147214279817a',1,'jint.h']]]
+  ['ndarray_5fbacker_329',['NDArray_Backer',['../jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416',1,'jarray.h']]],
+  ['ndarray_5fmap2ing_5ft_330',['NDArray_map2ing_t',['../jarray_8h.html#a2af259fae255bf53d1e8d09f67036e56',1,'jarray.h']]],
+  ['ndarray_5fmapping_5ft_331',['NDArray_mapping_t',['../jarray_8h.html#a5824075d56495ef5eacd8ef2d4e54302',1,'jarray.h']]]
 ];

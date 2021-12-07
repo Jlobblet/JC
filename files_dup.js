@@ -13,5 +13,7 @@ var files_dup =
     [ "jstring.c", "jstring_8c.html", "jstring_8c" ],
     [ "jstring.h", "jstring_8h.html", "jstring_8h" ],
     [ "jtime.c", "jtime_8c.html", "jtime_8c" ],
-    [ "jtime.h", "jtime_8h.html", "jtime_8h" ]
+    [ "jtime.h", "jtime_8h.html", "jtime_8h" ],
+    [ "jvector.c", "jvector_8c.html", "jvector_8c" ],
+    [ "jvector.h", "jvector_8h.html", "jvector_8h" ]
 ];

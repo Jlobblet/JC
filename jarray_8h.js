@@ -1,7 +1,28 @@
 var jarray_8h =
 [
     [ "NDArray", "structNDArray.html", "structNDArray" ],
-    [ "NDArray_get", "jarray_8h.html#a2f07b7bb85b604b702f2544e120f1241", null ],
+    [ "NDArray_Backer", "jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416", null ],
+    [ "NDArray_map2ing_t", "jarray_8h.html#a2af259fae255bf53d1e8d09f67036e56", null ],
+    [ "NDArray_mapping_t", "jarray_8h.html#a5824075d56495ef5eacd8ef2d4e54302", null ],
+    [ "NDArray_add", "jarray_8h.html#af50bb10049510db1151edd636e779f39", null ],
+    [ "NDArray_and", "jarray_8h.html#a113bd813ced45c0e5b3e57efddf67af5", null ],
+    [ "NDArray_arr_add", "jarray_8h.html#a08b7ed8793d7c4a4198b8055f6863c5c", null ],
+    [ "NDArray_arr_and", "jarray_8h.html#ad664b93166df90206ade3b8fed28197b", null ],
+    [ "NDArray_arr_div", "jarray_8h.html#a967faab1efdcb23ffa757f6f294b5469", null ],
+    [ "NDArray_arr_mul", "jarray_8h.html#addebdaafc3ec6f40498b46975f35f62a", null ],
+    [ "NDArray_arr_or", "jarray_8h.html#a6c9334697c3970ae8d0ab2dea3abe6c3", null ],
+    [ "NDArray_arr_sub", "jarray_8h.html#a955adbf852209f929516fdef1e14ac12", null ],
+    [ "NDArray_arr_xor", "jarray_8h.html#a65c2638c0636b182241fb24e5eb976c9", null ],
+    [ "NDArray_dest", "jarray_8h.html#a106ae398bbf3fd820d168c2eb8f4800d", null ],
+    [ "NDArray_div", "jarray_8h.html#a901d7cdd31f7c104a700d2641f5a91a1", null ],
+    [ "NDArray_get", "jarray_8h.html#a004f0078c213bae73906dfc3168cbdb4", null ],
     [ "NDArray_init", "jarray_8h.html#a53221aa8130b5b129da6e570f90bc8af", null ],
-    [ "NDArray_set", "jarray_8h.html#a350b064147a52880cb44752ac6a04952", null ]
+    [ "NDArray_map", "jarray_8h.html#a7512dfb0a67bae2566202a88a24db350", null ],
+    [ "NDArray_map2", "jarray_8h.html#a001535582c22d2db58884639489780b7", null ],
+    [ "NDArray_mul", "jarray_8h.html#aa29f89a7d14129019b644b8c6b9bed20", null ],
+    [ "NDArray_or", "jarray_8h.html#a4496e873a05e7b5f5732c356db32f9a2", null ],
+    [ "NDArray_set", "jarray_8h.html#a92b8a0119aa2ac9104f4534d1d5a50a4", null ],
+    [ "NDArray_sub", "jarray_8h.html#a6fe5ca63e8f0fd18b4e759f7d0e7cdfa", null ],
+    [ "NDArray_total_size", "jarray_8h.html#abf0beee7848cc7ddbee8abdb99e2e595", null ],
+    [ "NDArray_xor", "jarray_8h.html#a757d9cf08ffa9ec9f540c4a106b32139", null ]
 ];

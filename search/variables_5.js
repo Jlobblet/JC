@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['length_221',['length',['../structBitArray.html#a9bbae17f3ebdfb254b36cf25c58f05a5',1,'BitArray']]]
+  ['growth_5ffactor_299',['growth_factor',['../structVector.html#aecc8fb862fcd6d3514553f00faaf7ebd',1,'Vector']]]
 ];
