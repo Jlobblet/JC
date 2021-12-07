@@ -40,11 +40,10 @@ void NDArray_dest(NDArray* arr) {
 /// \param ...
 /// \return The value.
 NDArray_Backer NDArray_get(NDArray* arr, uptr index, ...) {
-    assert(index < arr->size[0]);
-    uptr i = index;
     va_list args;
     va_start(args, index);
-    for (uptr n = 1; n < arr->dims; n++) {
+    uptr i = 1;
+    for (uptr n = 0; n < arr->dims; n++) {
         uptr i_n = va_arg(args, uptr);
         assert(i_n < arr->size[n]);
         i = i * arr->size[n] + i_n;
@@ -59,11 +58,10 @@ NDArray_Backer NDArray_get(NDArray* arr, uptr index, ...) {
 /// \param index The index to set the value of.
 /// \param ...
 void NDArray_set(NDArray* arr, NDArray_Backer value, uptr index, ...) {
-    assert(index < arr->size[0]);
-    uptr i = index;
     va_list args;
     va_start(args, index);
-    for (uptr n = 1; n < arr->dims; n++) {
+    uptr i = 1;
+    for (uptr n = 0; n < arr->dims; n++) {
         uptr i_n = va_arg(args, uptr);
         assert(i_n < arr->size[n]);
         i = i * arr->size[n] + i_n;
