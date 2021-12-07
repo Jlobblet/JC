@@ -179,12 +179,10 @@ iptr Vector_reserve(Vector* vec, uptr capacity) {
     while (vec->capacity < capacity) {
         vec->capacity *= vec->growth_factor;
     }
-    void** tmp = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (tmp == NULL) {
+    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
+    if (vec->data == NULL) {
         return -1;
     }
-    free(vec->data);
-    vec->data = tmp;
     memset(vec->data + vec->length, 0, (vec->capacity - vec->length) * sizeof(void*));
     return 0;
 }
@@ -200,10 +198,8 @@ iptr Vector_reserve_exact(Vector* vec, uptr capacity) {
     assert(capacity >= vec->capacity);
     if (capacity == vec->capacity) { return 0; }
     vec->capacity = capacity;
-    void** tmp = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (tmp == NULL) { return -1; }
-    free(vec->data);
-    vec->data = tmp;
+    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
+    if (vec->data == NULL) { return -1; }
     return 0;
 }
 
@@ -212,9 +208,7 @@ iptr Vector_reserve_exact(Vector* vec, uptr capacity) {
 /// \return On success, `0`. On error, `-1` and `errno` is set to indicate the error.
 iptr Vector_shrink_to_fit(Vector* vec) {
     vec->capacity = vec->length;
-    void** tmp = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (tmp == NULL) { return -1; }
-    free(vec->data);
-    vec->data = tmp;
+    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
+    if (vec->data == NULL) { return -1; }
     return 0;
 }
