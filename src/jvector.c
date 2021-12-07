@@ -93,12 +93,10 @@ iptr Vector_from(Vector* vec, uptr count, void** elts) {
 /// \return On success, `0`. On error, `-1` and `errno` is set to indicate the error.
 iptr Vector_grow(Vector* vec) {
     vec->capacity *= vec->growth_factor;
-    void** tmp = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (tmp == NULL) {
+    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
+    if (vec->data == NULL) {
         return -1;
     }
-    free(vec->data);
-    vec->data = tmp;
     memset(vec->data + vec->length, 0, (vec->capacity - vec->length) * sizeof(void*));
     return 0;
 }
