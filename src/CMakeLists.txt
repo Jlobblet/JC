@@ -6,5 +6,6 @@ add_library(JC
     jmmap.c jmmap.h
     jstring.c jstring.h
     jtime.c jtime.h
+    jvector.c jvector.h
 )
 target_compile_options(JC PUBLIC -Wall -Wextra -Werror)
