@@ -1,3 +1,6 @@
+/// \file
+/// Dynamic array that resizes itself as necessary.
+
 #ifndef JC_JVECTOR_H
 #define JC_JVECTOR_H
 

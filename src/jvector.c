@@ -1,3 +1,6 @@
+/// \file
+/// Dynamic array that resizes itself as necessary.
+
 #include <assert.h>
 #include <stdlib.h>
 #include <memory.h>
