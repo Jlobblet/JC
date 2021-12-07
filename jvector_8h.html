@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.4.0</span>
+   &#160;<span id="projectnumber">v1.4.1</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -90,6 +90,9 @@ $(document).ready(function(){initNavTree('jvector_8h.html',''); initResizable();
 <div class="title">jvector.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Dynamic array that resizes itself as necessary.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdarg.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="jint_8h_source.html">jint.h</a>&quot;</code><br />
 </div>
@@ -148,7 +151,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:afdddedae526d84601125c0780aaf0355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shrink a <code><a class="el" href="structVector.html">Vector</a></code> to fit exactly its elements.  <a href="jvector_8h.html#afdddedae526d84601125c0780aaf0355">More...</a><br /></td></tr>
 <tr class="separator:afdddedae526d84601125c0780aaf0355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Dynamic array that resizes itself as necessary. </p>
+
+<p class="definition">Definition in file <a class="el" href="jvector_8h_source.html">jvector.h</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="ad21a5ffed26f5b4101c45b69270329d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad21a5ffed26f5b4101c45b69270329d7">&#9670;&nbsp;</a></span>Vector_append_arr()</h2>
 
@@ -195,9 +202,9 @@ The elements of <code>elts</code> are copied to the <code><a class="el" href="st
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00161">161</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00164">164</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00175">Vector_reserve()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00178">Vector_reserve()</a>.</p>
 
 </div>
 </div>
@@ -252,9 +259,9 @@ The elements of <code>elts</code> are copied to the <code><a class="el" href="st
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00142">142</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00145">145</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00175">Vector_reserve()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00178">Vector_reserve()</a>.</p>
 
 </div>
 </div>
@@ -284,9 +291,9 @@ The elements of <code>elts</code> are copied to the <code><a class="el" href="st
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00010">10</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00013">13</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00010">Vector::growth_factor</a>, <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00020">Vector_init()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00013">Vector::growth_factor</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00023">Vector_init()</a>.</p>
 
 </div>
 </div>
@@ -314,9 +321,9 @@ The elements of <code>elts</code> are copied to the <code><a class="el" href="st
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00045">45</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00048">48</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00010">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00013">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>.</p>
 
 </div>
 </div>
@@ -364,9 +371,9 @@ The elements of <code>elts</code> are copied to the <code><a class="el" href="st
 <dl class="section remark"><dt>Remarks</dt><dd>The values of <code>elts</code> are copied to the <code><a class="el" href="structVector.html">Vector</a></code>'s buffer. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00077">77</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00080">80</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00010">Vector::growth_factor</a>, <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00020">Vector_init()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00013">Vector::growth_factor</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00023">Vector_init()</a>.</p>
 
 </div>
 </div>
@@ -398,11 +405,11 @@ Values past <code>length</code> are set to <code>0</code>. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00091">91</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00094">94</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00010">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00013">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00106">Vector_grow_if_full()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00109">Vector_grow_if_full()</a>.</p>
 
 </div>
 </div>
@@ -431,11 +438,11 @@ Values past <code>length</code> are set to <code>0</code>. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00106">106</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00109">109</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00091">Vector_grow()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00094">Vector_grow()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00118">Vector_push_back()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00121">Vector_push_back()</a>.</p>
 
 </div>
 </div>
@@ -464,11 +471,11 @@ Values past <code>length</code> are set to <code>0</code>. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00020">20</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00023">23</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00010">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00013">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00010">Vector_default()</a>, <a class="el" href="jvector_8c_source.html#l00077">Vector_from()</a>, and <a class="el" href="jvector_8c_source.html#l00036">Vector_with_capacity()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00013">Vector_default()</a>, <a class="el" href="jvector_8c_source.html#l00080">Vector_from()</a>, and <a class="el" href="jvector_8c_source.html#l00039">Vector_with_capacity()</a>.</p>
 
 </div>
 </div>
@@ -522,9 +529,9 @@ Values past <code>length</code> are set to <code>0</code>. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00058">58</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00061">61</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00036">Vector_with_capacity()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00039">Vector_with_capacity()</a>.</p>
 
 </div>
 </div>
@@ -563,9 +570,9 @@ Values past <code>length</code> are set to <code>0</code>. </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00129">129</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00132">132</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, and <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, and <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>.</p>
 
 </div>
 </div>
@@ -606,9 +613,9 @@ Values past <code>length</code> are set to <code>0</code>. </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00118">118</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00121">121</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00106">Vector_grow_if_full()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>, and <a class="el" href="jvector_8c_source.html#l00109">Vector_grow_if_full()</a>.</p>
 
 </div>
 </div>
@@ -653,11 +660,11 @@ If <code>capacity</code> is the same as the <code><a class="el" href="structVect
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00175">175</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00178">178</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00010">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, <a class="el" href="jvector_8h_source.html#l00013">Vector::growth_factor</a>, and <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00161">Vector_append_arr()</a>, and <a class="el" href="jvector_8c_source.html#l00142">Vector_append_many()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00164">Vector_append_arr()</a>, and <a class="el" href="jvector_8c_source.html#l00145">Vector_append_many()</a>.</p>
 
 </div>
 </div>
@@ -702,9 +709,9 @@ If <code>capacity</code> is the same as the <code><a class="el" href="structVect
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00198">198</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00201">201</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, and <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, and <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>.</p>
 
 </div>
 </div>
@@ -733,9 +740,9 @@ If <code>capacity</code> is the same as the <code><a class="el" href="structVect
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00212">212</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00215">215</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00011">Vector::data</a>, and <a class="el" href="jvector_8h_source.html#l00008">Vector::length</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00014">Vector::data</a>, and <a class="el" href="jvector_8h_source.html#l00011">Vector::length</a>.</p>
 
 </div>
 </div>
@@ -776,11 +783,11 @@ If <code>capacity</code> is the same as the <code><a class="el" href="structVect
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>0</code>. On error, <code>-1</code> and <code>errno</code> is set to indicate the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00036">36</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jvector_8c_source.html#l00039">39</a> of file <a class="el" href="jvector_8c_source.html">jvector.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jvector_8h_source.html#l00009">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00010">Vector::growth_factor</a>, and <a class="el" href="jvector_8c_source.html#l00020">Vector_init()</a>.</p>
+<p class="reference">References <a class="el" href="jvector_8h_source.html#l00012">Vector::capacity</a>, <a class="el" href="jvector_8h_source.html#l00013">Vector::growth_factor</a>, and <a class="el" href="jvector_8c_source.html#l00023">Vector_init()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00058">Vector_new()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jvector_8c_source.html#l00061">Vector_new()</a>.</p>
 
 </div>
 </div>
@@ -790,7 +797,7 @@ If <code>capacity</code> is the same as the <code><a class="el" href="structVect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jvector_8h.html">jvector.h</a></li>
-    <li class="footer">Generated on Tue Dec 7 2021 16:25:03 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Dec 7 2021 16:27:01 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
