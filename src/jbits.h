@@ -42,7 +42,7 @@ static inline uptr BitArray_offset(uptr index) {
 
 iptr BitArray_init(BitArray *arr);
 void BitArray_dest(BitArray *arr);
-uptr BitArray_get(BitArray *arr, uptr index);
+BitArrayBacker BitArray_get(BitArray *arr, uptr index);
 void BitArray_set(BitArray *arr, uptr index, BitArrayBacker value);
 void BitArray_on(BitArray *arr, uptr index);
 void BitArray_off(BitArray *arr, uptr index);
@@ -51,11 +51,11 @@ void BitArray_flip(BitArray *arr);
 void BitArray_and(BitArray *left, BitArray *right);
 uptr BitArray_popcount(BitArray *arr);
 
-typedef uptr BitArray2dBacker;
+typedef fu8 BitArray2dBacker;
 
 typedef struct BitArray2d {
     uptr rows, cols;
-    uptr **row_starts;
+    BitArray2dBacker **row_starts;
     BitArray2dBacker *data;
 } BitArray2d;
 
@@ -71,7 +71,7 @@ static inline uptr BitArray2d_offset(uptr col) {
 
 iptr BitArray2d_init(BitArray2d *arr);
 void BitArray2d_dest(BitArray2d *arr);
-uptr BitArray2d_get(BitArray2d *arr, uptr row, uptr col);
+BitArray2dBacker BitArray2d_get(BitArray2d *arr, uptr row, uptr col);
 void BitArray2d_set(BitArray2d *arr, uptr row, uptr col, BitArray2dBacker value);
 void BitArray2d_on(BitArray2d *arr, uptr row, uptr col);
 void BitArray2d_off(BitArray2d *arr, uptr row, uptr col);

@@ -49,7 +49,7 @@ uptr pop0count64(u64 x) {
     pop0count_body
 }
 
-iptr BitArray_init(BitArray *arr) {
+iptr BitArray_init(BitArray* arr) {
     assert(arr->length > 0);
     arr->data = calloc((arr->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS, sizeof(BitArrayBacker));
     if (arr->data == NULL) {
@@ -58,16 +58,16 @@ iptr BitArray_init(BitArray *arr) {
     return 0;
 }
 
-void BitArray_dest(BitArray *arr) {
+void BitArray_dest(BitArray* arr) {
     free(arr->data);
 }
 
-uptr BitArray_get(BitArray *arr, uptr index) {
+BitArrayBacker BitArray_get(BitArray* arr, uptr index) {
     assert(index < arr->length);
     return (arr->data[index / BitArray_BACKER_BITS] >> BitArray_offset(index)) & 1U;
 }
 
-void BitArray_set(BitArray *arr, uptr index, BitArrayBacker value) {
+void BitArray_set(BitArray* arr, uptr index, BitArrayBacker value) {
     assert(index < arr->length);
     assert(value == 0U || value == 1U);
     arr->data[index / BitArray_BACKER_BITS] =
@@ -75,22 +75,22 @@ void BitArray_set(BitArray *arr, uptr index, BitArrayBacker value) {
             | (value << BitArray_offset(index));
 }
 
-void BitArray_on(BitArray *arr, uptr index) {
+void BitArray_on(BitArray* arr, uptr index) {
     assert(index < arr->length);
     arr->data[index / BitArray_BACKER_BITS] |= 1U << BitArray_offset(index);
 }
 
-void BitArray_off(BitArray *arr, uptr index) {
+void BitArray_off(BitArray* arr, uptr index) {
     assert(index < arr->length);
     arr->data[index / BitArray_BACKER_BITS] &= ~(1U << BitArray_offset(index));
 }
 
-void BitArray_toggle(BitArray *arr, uptr index) {
+void BitArray_toggle(BitArray* arr, uptr index) {
     assert(index < arr->length);
     arr->data[index / BitArray_BACKER_BITS] ^= 1U << BitArray_offset(index);
 }
 
-void BitArray_flip(BitArray *arr) {
+void BitArray_flip(BitArray* arr) {
     uptr i;
     for (i = 0; i < (arr->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS; i++) {
         arr->data[i] = ~arr->data[i];
@@ -98,14 +98,14 @@ void BitArray_flip(BitArray *arr) {
     arr->data[i] &= ~0U << (BitArray_BACKER_BITS - arr->length % BitArray_BACKER_BITS);
 }
 
-void BitArray_and(BitArray *left, BitArray *right) {
+void BitArray_and(BitArray* left, BitArray* right) {
     assert(left->length == right->length);
     for (uptr i = 0; i < (left->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS; i++) {
         left->data[i] &= right->data[i];
     }
 }
 
-uptr BitArray_popcount(BitArray *arr) {
+uptr BitArray_popcount(BitArray* arr) {
     uptr sum = 0;
     for (uptr i = 0; i < (arr->length + BitArray_BACKER_BITS - 1) / BitArray_BACKER_BITS; i++) {
         sum += popcount(arr->data[i]);
@@ -122,14 +122,16 @@ uptr BitArray_popcount(BitArray *arr) {
 iptr BitArray2d_init(BitArray2d* arr) {
     assert(arr->rows > 0);
     assert(arr->cols > 0);
-    arr->row_starts = calloc(arr->rows, sizeof(BitArray2dBacker*));
-    if (arr->row_starts == NULL) {
+
+    uptr row_width = BitArray2d_row_width(arr);
+    assert(row_width);
+    arr->data = calloc(arr->rows * row_width, sizeof(BitArray2dBacker));
+    if (arr->data == NULL) {
         return -1;
     }
 
-    uptr row_width = BitArray2d_row_width(arr);
-    arr->data = calloc(row_width, sizeof(BitArray2dBacker));
-    if (arr->data == NULL) {
+    arr->row_starts = calloc(arr->rows, sizeof(BitArray2dBacker*));
+    if (arr->row_starts == NULL) {
         return -1;
     }
 
@@ -157,8 +159,7 @@ void BitArray2d_dest(BitArray2d* arr) {
 BitArray2dBacker BitArray2d_get(BitArray2d* arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    uptr row_width = BitArray2d_row_width(arr);
-    return (arr->row_starts[row][col / row_width] >> BitArray2d_offset(col)) & 1U;
+    return (arr->row_starts[row][col / BitArray2d_BACKER_BITS] >> BitArray2d_offset(col)) & 1U;
 }
 
 /// Set the value in a given cell of a `BitArray2d`.
@@ -167,13 +168,12 @@ BitArray2dBacker BitArray2d_get(BitArray2d* arr, uptr row, uptr col) {
 /// \param row The row index (0-based) of the bit to set.
 /// \param col The column index (0-based) of the bit to set.
 /// \param value The value to set at the given coordinates, `0` or `1`.
-void BitArray2d_set(BitArray2d* arr, uptr row, uptr col, uptr value) {
+void BitArray2d_set(BitArray2d* arr, uptr row, uptr col, BitArray2dBacker value) {
     assert(row < arr->rows);
     assert(col < arr->cols);
     assert(value == 0U || value == 1U);
-    uptr row_width = BitArray2d_row_width(arr);
-    arr->row_starts[row][col / row_width] =
-            (arr->row_starts[row][col / row_width] & ~(1U << BitArray2d_offset(col)))
+    arr->row_starts[row][col / BitArray2d_BACKER_BITS] =
+            (arr->row_starts[row][col / BitArray2d_BACKER_BITS] & ~(1U << BitArray2d_offset(col)))
             | (value << BitArray2d_offset(col));
 }
 
@@ -184,7 +184,7 @@ void BitArray2d_set(BitArray2d* arr, uptr row, uptr col, uptr value) {
 void BitArray2d_on(BitArray2d* arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    arr->row_starts[row][col / BitArray2d_row_width(arr)] |= 1U << BitArray2d_offset(col);
+    arr->row_starts[row][col / BitArray2d_BACKER_BITS] |= 1U << BitArray2d_offset(col);
 }
 
 /// Set the value in a given cell of a `BitArray2d` to `0`.
@@ -194,7 +194,7 @@ void BitArray2d_on(BitArray2d* arr, uptr row, uptr col) {
 void BitArray2d_off(BitArray2d* arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    arr->row_starts[row][col / BitArray2d_row_width(arr)] &= ~(1U << BitArray2d_offset(col));
+    arr->row_starts[row][col / BitArray2d_BACKER_BITS] &= ~(1U << BitArray2d_offset(col));
 }
 
 /// Toggle value in a given cell of a `BitArray2d`.
@@ -204,63 +204,33 @@ void BitArray2d_off(BitArray2d* arr, uptr row, uptr col) {
 /// \param arr The `BitArray2d` to set a bit in.
 /// \param row The row index (0-based) of the bit to set.
 /// \param col The column index (0-based) of the bit to set.
-void BitArray2d_toggle(BitArray2d *arr, uptr row, uptr col) {
+void BitArray2d_toggle(BitArray2d* arr, uptr row, uptr col) {
     assert(row < arr->rows);
     assert(col < arr->cols);
-    arr->row_starts[row][col / BitArray2d_row_width(arr)] ^= 1U << BitArray2d_offset(col);
+    arr->row_starts[row][col / BitArray2d_BACKER_BITS] ^= 1U << BitArray2d_offset(col);
 }
 
 uptr BitArray2d_count_on(BitArray2d* arr) {
     uptr sum = 0;
     for (uptr i = 0; i < arr->rows; i++) {
-        for (uptr j = 0; j < BitArray2d_row_width(arr)
-                             #ifndef NDEBUG
-                             - 1
-#endif //NDEBUG
-        ; j++) {
+        for (uptr j = 0; j < BitArray2d_row_width(arr); j++) {
             sum += popcount(arr->row_starts[i][j]);
         }
-#ifndef NDEBUG
-        for (uptr c = BitArray2d_BACKER_BITS * (arr->cols / BitArray2d_BACKER_BITS); c < arr->cols; c++) {
-            sum += BitArray2d_get(arr, i, c);
-        }
-#endif // NDEBUG
     }
     return sum;
 }
 
 uptr BitArray2d_count_off(BitArray2d* arr) {
-    uptr sum = 0;
-    for (uptr i = 0; i < arr->rows; i++) {
-        for (uptr j = 0; j < BitArray2d_row_width(arr)
-                             #ifndef NDEBUG
-                             - 1
-#endif // NDEBUG
-        ; j++) {
-            sum += pop0count(arr->row_starts[i][j]);
-        }
-#ifndef NDEBUG
-        for (uptr c = BitArray2d_BACKER_BITS * (arr->cols / BitArray2d_BACKER_BITS); c < arr->cols; c++) {
-            sum += ~BitArray2d_get(arr, i, c);
-        }
-#endif
-    }
-    return sum;
+    return arr->rows * arr->cols - BitArray2d_count_on(arr);
 }
 
 void BitArray2d_flip(BitArray2d* arr) {
     for (uptr i = 0; i < arr->rows; i++) {
-        for (uptr j = 0; j < BitArray2d_row_width(arr)
-                             #ifndef NDEBUG
-                             - 1
-#endif // NDEBUG
-        ; j++) {
+        for (uptr j = 0; j < BitArray2d_row_width(arr); j++) {
             arr->row_starts[i][j] = ~arr->row_starts[i][j];
         }
-#ifndef NDEBUG
         for (uptr c = BitArray2d_BACKER_BITS * (arr->cols / BitArray2d_BACKER_BITS); c < arr->cols; c++) {
             BitArray2d_off(arr, i, c);
         }
-#endif // NDEBUG
     }
 }
