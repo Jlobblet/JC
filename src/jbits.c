@@ -136,7 +136,7 @@ iptr BitArray2d_init(BitArray2d* arr) {
     }
 
     for (uptr i = 0; i < arr->rows; i++) {
-        arr->row_starts[i] = &arr->data[i / row_width];
+        arr->row_starts[i] = &arr->data[i * row_width];
     }
 
     return 0;
