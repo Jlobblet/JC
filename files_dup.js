@@ -10,6 +10,8 @@ var files_dup =
     [ "jio.h", "jio_8h.html", "jio_8h" ],
     [ "jmmap.c", "jmmap_8c.html", "jmmap_8c" ],
     [ "jmmap.h", "jmmap_8h.html", "jmmap_8h" ],
+    [ "jprint.c", "jprint_8c.html", null ],
+    [ "jprint.h", "jprint_8h.html", "jprint_8h" ],
     [ "jstring.c", "jstring_8c.html", "jstring_8c" ],
     [ "jstring.h", "jstring_8h.html", "jstring_8h" ],
     [ "jtime.c", "jtime_8c.html", "jtime_8c" ],
