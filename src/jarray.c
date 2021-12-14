@@ -42,8 +42,8 @@ void NDArray_dest(NDArray* arr) {
 NDArray_Backer NDArray_get(NDArray* arr, uptr index, ...) {
     va_list args;
     va_start(args, index);
-    uptr i = 1;
-    for (uptr n = 0; n < arr->dims; n++) {
+    uptr i = index;
+    for (uptr n = 1; n < arr->dims; n++) {
         uptr i_n = va_arg(args, uptr);
         assert(i_n < arr->size[n]);
         i = i * arr->size[n] + i_n;
@@ -60,8 +60,8 @@ NDArray_Backer NDArray_get(NDArray* arr, uptr index, ...) {
 void NDArray_set(NDArray* arr, NDArray_Backer value, uptr index, ...) {
     va_list args;
     va_start(args, index);
-    uptr i = 1;
-    for (uptr n = 0; n < arr->dims; n++) {
+    uptr i = index;
+    for (uptr n = 1; n < arr->dims; n++) {
         uptr i_n = va_arg(args, uptr);
         assert(i_n < arr->size[n]);
         i = i * arr->size[n] + i_n;
