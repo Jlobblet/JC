@@ -45,19 +45,34 @@ static struct theft_type_info Coords_info = {
 static enum theft_trial_res prop_init_should_be_all_zeroes(struct theft* t, void* arg1) {
     BitArray2d* arr = (BitArray2d*) arg1;
     uptr count = BitArray2d_count_on(arr);
-    return count == 0 ? THEFT_TRIAL_PASS : THEFT_TRIAL_FAIL;
+    return (count == 0) ? THEFT_TRIAL_PASS : THEFT_TRIAL_FAIL;
+}
+
+static enum theft_trial_res prop_init_flip_should_be_all_ones(struct theft* t, void* arg1) {
+    BitArray2d* arr = (BitArray2d*) arg1;
+    BitArray2d_flip(arr);
+    uptr count = BitArray2d_count_on(arr);
+    uptr expected = arr->cols * arr->rows;
+    return (count == expected) ? THEFT_TRIAL_PASS : THEFT_TRIAL_FAIL;
 }
 
 static enum theft_trial_res prop_get_set_should_be_same(struct theft* t, void* arg1) {
     struct BitArray2d_With_Coords* data = (struct BitArray2d_With_Coords*) arg1;
     BitArray2d_set(data->arr, data->row, data->col, 1);
     BitArray2dBacker bit = BitArray2d_get(data->arr, data->row, data->col);
-    return bit == 1 ? THEFT_TRIAL_PASS : THEFT_TRIAL_FAIL;
+    return (bit == 1) ? THEFT_TRIAL_PASS : THEFT_TRIAL_FAIL;
 }
 
 START_TEST(test_BitArray2d_init_all_zeroes)
     {
         ck_assert(test_BitArray2d(prop_init_should_be_all_zeroes, "Initialised BitArray2d should be all 0s"));
+
+    }
+END_TEST
+
+START_TEST(test_BitArray2d_init_flip_all_ones)
+    {
+        ck_assert(test_BitArray2d(prop_init_flip_should_be_all_ones, "Initialised then flipped BitArray2d should be all 1s"));
 
     }
 END_TEST
@@ -76,6 +91,7 @@ Suite* BitArray2d_suite() {
     tc_core = tcase_create("Core");
 
     tcase_add_test(tc_core, test_BitArray2d_init_all_zeroes);
+    tcase_add_test(tc_core, test_BitArray2d_init_flip_all_ones);
     tcase_add_test(tc_core, test_BitArray2d_get_set_same);
     suite_add_tcase(s, tc_core);
 
@@ -84,11 +100,14 @@ Suite* BitArray2d_suite() {
 
 int main() {
 //    BitArray2d arr = {
-//            .rows = 19,
-//            .cols = 1,
+//            .rows = 1,
+//            .cols = 10,
 //    };
 //    BitArray2d_init(&arr);
-//    BitArray2d_set(&arr, 9, 9, 1);
+//    BitArray2d_flip(&arr);
+//    theft_BitArray2d_print(stdout, &arr, NULL);
+//    printf("Count   : %lu\n", BitArray2d_count_on(&arr));
+//    printf("Expected: %lu\n", arr.cols * arr.rows);
 //    BitArray2d_dest(&arr);
 //    return 0;
     Suite* s = BitArray2d_suite();
@@ -131,9 +150,9 @@ void theft_BitArray2d_print(FILE *f, const void *instance, void *env) {
     fprintf(f, "BitArray2d [%lu, %lu]:\n", arr->rows, arr->cols);
     for (uptr i = 0; i < arr->rows; i++) {
         for (uptr j = 0; j < arr->cols; j++) {
-            fprintf(f, "%d", BitArray2d_get(arr, i, j));
+            fputc(BitArray2d_get(arr, i, j) ? '1' : '0', f);
         }
-        fprintf(f, "\n");
+        fputc('\n', f);
     }
 }
 
@@ -164,14 +183,14 @@ void theft_Coords_print(FILE *f, const void *instance, void *env) {
     struct BitArray2d_With_Coords* data = (struct BitArray2d_With_Coords*) instance;
     fprintf(f, "BitArray2d with coords [%lu, %lu]:\n", data->arr->rows, data->arr->cols);
     for (uptr j = 0; j < data->arr->cols; j++) {
-        fprintf(f, "%c", j == data->col ? '|' : ' ');
+        fputc(j == data->col ? '|' : ' ', f);
     }
     for (uptr i = 0; i < data->arr->rows; i++) {
-        fprintf(f, "%c", i == data->row ? '-' : ' ');
+        fputc(i == data->row ? '-' : ' ', f);
         for (uptr j = 0; j < data->arr->cols; j++) {
-            fprintf(f, "%d", BitArray2d_get(data->arr, i, j));
+            fputc(BitArray2d_get(data->arr, i, j) ? '1' : '0', f);
         }
-        fprintf(f, "\n");
+        fputc('\n', f);
     }
 }
 

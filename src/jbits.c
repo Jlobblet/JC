@@ -3,6 +3,7 @@
 
 #include <assert.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "jbits.h"
 
 #define popcount_body \
@@ -225,12 +226,17 @@ uptr BitArray2d_count_off(BitArray2d* arr) {
 }
 
 void BitArray2d_flip(BitArray2d* arr) {
+    uptr row_width = BitArray2d_row_width(arr);
+    uptr hanging_bits = arr->cols % BitArray2d_BACKER_BITS;
+    BitArray2dBacker mask = 0;
+    mask = ~mask;
+    if (hanging_bits) {
+        mask >>= BitArray2d_BACKER_BITS - (arr->cols % BitArray2d_BACKER_BITS);
+    }
     for (uptr i = 0; i < arr->rows; i++) {
-        for (uptr j = 0; j < BitArray2d_row_width(arr); j++) {
+        for (uptr j = 0; j < row_width; j++) {
             arr->row_starts[i][j] = ~arr->row_starts[i][j];
         }
-        for (uptr c = BitArray2d_BACKER_BITS * (arr->cols / BitArray2d_BACKER_BITS); c < arr->cols; c++) {
-            BitArray2d_off(arr, i, c);
-        }
+        arr->row_starts[i][row_width - 1] &= mask;
     }
 }
