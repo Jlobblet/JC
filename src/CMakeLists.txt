@@ -4,6 +4,7 @@ add_library(JC
     jint.c jint.h
     jio.c jio.h
     jmmap.c jmmap.h
+    jprint.c jprint.h
     jstring.c jstring.h
     jtime.c jtime.h
     jvector.c jvector.h
