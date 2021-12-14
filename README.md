@@ -2,14 +2,8 @@
 
 Things that I use in C a bunch and want in a library.
 
-## `jint`
+## [Documentation](https://jlobblet.co.uk/JC)
 
-Fixed-width integer typedefs, macros, and functions.
+## Tests
 
-## `jio`
-
-IO operations.
-
-## `jtime`
-
-Time-related operations.
+Testing is done with [Check](https://github.com/libcheck/check) and [Theft](https://github.com/silentbicycle/theft).
