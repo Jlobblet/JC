@@ -1,5 +1,5 @@
-include_directories(${CMAKE_SOURCE_DIR}/src)
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../src)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../cmake")
 find_package(Check)
 find_package(Threads)
 
