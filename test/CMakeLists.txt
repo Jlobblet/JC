@@ -3,7 +3,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../cmake")
 find_package(Check)
 find_package(Threads)
 
-if (CHECK_FOUND AND Threads_FOUND)
+if (Check_FOUND AND Threads_FOUND)
 
   include_directories(${CHECK_INCLUDE_DIRS})
 
