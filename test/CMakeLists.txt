@@ -67,7 +67,7 @@ if (CHECK_FOUND AND Threads_FOUND)
 
   ###############################################################################
   # Generate "config.h" from "cmake/config.h.cmake"
-  configure_file(${CMAKE_SOURCE_DIR}/cmake/config.h.in
+  configure_file(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/config.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config.h)
   include_directories(BEFORE ${CMAKE_CURRENT_BINARY_DIR})
   add_definitions(-DHAVE_CONFIG_H)
