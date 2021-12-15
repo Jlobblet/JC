@@ -3,7 +3,9 @@
 #ifndef JC_JMMAP_H
 #define JC_JMMAP_H
 
+#include <sys/mman.h>
 #include <sys/stat.h>
+#include "jint.h"
 
 /// Struct containing data about a memory-mapped file.
 typedef struct jc_mmap {
