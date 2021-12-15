@@ -34,6 +34,24 @@ void NDArray_dest(NDArray* arr) {
     arr->data = NULL;
 }
 
+/// Get a pointer the the value in a given cell of an N-dimensional array.
+/// \param arr The array to retrieve a pointer from.
+/// \param index The index of the value to retrieve a pointer to.
+/// \param ...
+/// \return A pointer to that value.
+NDArray_Backer* NDArray_ptr(NDArray* arr, uptr index, ...) {
+    va_list args;
+    va_start(args, index);
+    uptr i = index;
+    for (uptr n = 1; n < arr->dims; n++) {
+        uptr i_n = va_arg(args, uptr);
+        assert(i_n < arr->size[n]);
+        i = i * arr->size[n] + i_n;
+    }
+    va_end(args);
+    return &arr->data[i];
+}
+
 /// Get the value in a given cell of an N-dimensional array.
 /// \param arr The array to retrieve a value from.
 /// \param index The index of the value to retrieve.
