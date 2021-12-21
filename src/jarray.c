@@ -1,6 +1,7 @@
+#include <assert.h>
+#include <memory.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include <assert.h>
 #include "jarray.h"
 
 inline uptr NDArray_total_size(NDArray* arr) {
@@ -32,6 +33,39 @@ iptr NDArray_init(NDArray* arr) {
 void NDArray_dest(NDArray* arr) {
     free(arr->data);
     arr->data = NULL;
+}
+
+iptr NDArray_resize(NDArray* arr, uptr** size) {
+    uptr* tmp = arr->size;
+    arr->size = *size;
+    uptr n = NDArray_total_size(arr);
+    NDArrayBacker* new_data = calloc(n, sizeof(NDArrayBacker));
+    if (new_data == NULL) {
+        arr->size = tmp;
+        return -1;
+    }
+
+    // Count the number of "rows"
+    uptr n_blocks = 1, i;
+    for (i = 0; i < arr->dims - 1; i++) {
+        n_blocks *= tmp[i];
+    }
+
+    // Compare old and new sizes, and pick the smallest
+    // Larger data will be cut off when downsizing, and 0s left in the array when upsizing
+    uptr old_block_size = tmp[i] * sizeof(NDArrayBacker),
+        new_block_size = arr->size[i] * sizeof(NDArrayBacker),
+        block_size = old_block_size > new_block_size ? new_block_size : old_block_size;
+
+    for (uptr j = 0; j < n_blocks; j++) {
+        memcpy(&new_data[arr->size[i] * j], &arr->data[tmp[i] * j], block_size);
+    }
+
+    free(arr->data);
+    arr->data = new_data;
+    // Put the original size into the address given
+    *size = tmp;
+    return 0;
 }
 
 /// Get a pointer the the value in a given cell of an N-dimensional array.

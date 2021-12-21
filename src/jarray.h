@@ -18,6 +18,7 @@ typedef NDArrayBacker(*NDArray_map2ing_t)(NDArrayBacker, NDArrayBacker);
 uptr NDArray_total_size(NDArray* arr);
 iptr NDArray_init(NDArray* arr);
 void NDArray_dest(NDArray* arr);
+iptr NDArray_resize(NDArray* arr, uptr** size);
 NDArrayBacker* NDArray_ptr(NDArray* arr, uptr index, ...);
 NDArrayBacker NDArray_get(NDArray* arr, uptr index, ...);
 void NDArray_set(NDArray* arr, NDArrayBacker value, uptr index, ...);
