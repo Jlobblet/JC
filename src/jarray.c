@@ -53,9 +53,9 @@ iptr NDArray_resize(NDArray* arr, uptr** size) {
 
     // Compare old and new sizes, and pick the smallest
     // Larger data will be cut off when downsizing, and 0s left in the array when upsizing
-    uptr old_block_size = tmp[i] * sizeof(NDArrayBacker),
-        new_block_size = arr->size[i] * sizeof(NDArrayBacker),
-        block_size = old_block_size > new_block_size ? new_block_size : old_block_size;
+    uptr old_last_size = tmp[i],
+        new_last_size = arr->size[i],
+        block_size = (old_last_size > new_last_size ? new_last_size : old_last_size) * sizeof(NDArrayBacker);
 
     for (uptr j = 0; j < n_blocks; j++) {
         memcpy(&new_data[arr->size[i] * j], &arr->data[tmp[i] * j], block_size);
