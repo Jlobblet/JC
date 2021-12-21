@@ -20,7 +20,7 @@ inline uptr NDArray_total_size(NDArray* arr) {
 /// \return On success, `0`. On error, `-1` and `errno` is set to indicate the error.
 iptr NDArray_init(NDArray* arr) {
     uptr n = NDArray_total_size(arr);
-    arr->data = calloc(n, sizeof(NDArray_Backer));
+    arr->data = calloc(n, sizeof(NDArrayBacker));
     if (arr->data == NULL) {
         return -1;
     }
@@ -39,7 +39,7 @@ void NDArray_dest(NDArray* arr) {
 /// \param index The index of the value to retrieve a pointer to.
 /// \param ...
 /// \return A pointer to that value.
-NDArray_Backer* NDArray_ptr(NDArray* arr, uptr index, ...) {
+NDArrayBacker* NDArray_ptr(NDArray* arr, uptr index, ...) {
     va_list args;
     va_start(args, index);
     uptr i = index;
@@ -57,7 +57,7 @@ NDArray_Backer* NDArray_ptr(NDArray* arr, uptr index, ...) {
 /// \param index The index of the value to retrieve.
 /// \param ...
 /// \return The value.
-NDArray_Backer NDArray_get(NDArray* arr, uptr index, ...) {
+NDArrayBacker NDArray_get(NDArray* arr, uptr index, ...) {
     va_list args;
     va_start(args, index);
     uptr i = index;
@@ -75,7 +75,7 @@ NDArray_Backer NDArray_get(NDArray* arr, uptr index, ...) {
 /// \param value The value.
 /// \param index The index to set the value of.
 /// \param ...
-void NDArray_set(NDArray* arr, NDArray_Backer value, uptr index, ...) {
+void NDArray_set(NDArray* arr, NDArrayBacker value, uptr index, ...) {
     va_list args;
     va_start(args, index);
     uptr i = index;
@@ -95,49 +95,49 @@ void NDArray_map(NDArray* arr, NDArray_mapping_t mapping) {
     }
 }
 
-void NDArray_add(NDArray* arr, NDArray_Backer value) {
+void NDArray_add(NDArray* arr, NDArrayBacker value) {
     uptr n = NDArray_total_size(arr);
     for (uptr i = 0; i < n; i++) {
         arr->data[i] += value;
     }
 }
 
-void NDArray_sub(NDArray* arr, NDArray_Backer value) {
+void NDArray_sub(NDArray* arr, NDArrayBacker value) {
     uptr n = NDArray_total_size(arr);
     for (uptr i = 0; i < n; i++) {
         arr->data[i] -= value;
     }
 }
 
-void NDArray_mul(NDArray* arr, NDArray_Backer value) {
+void NDArray_mul(NDArray* arr, NDArrayBacker value) {
     uptr n = NDArray_total_size(arr);
     for (uptr i = 0; i < n; i++) {
         arr->data[i] *= value;
     }
 }
 
-void NDArray_div(NDArray* arr, NDArray_Backer value) {
+void NDArray_div(NDArray* arr, NDArrayBacker value) {
     uptr n = NDArray_total_size(arr);
     for (uptr i = 0; i < n; i++) {
         arr->data[i] /= value;
     }
 }
 
-void NDArray_and(NDArray* arr, NDArray_Backer value) {
+void NDArray_and(NDArray* arr, NDArrayBacker value) {
     uptr n = NDArray_total_size(arr);
     for (uptr i = 0; i < n; i++) {
         arr->data[i] &= value;
     }
 }
 
-void NDArray_or(NDArray* arr, NDArray_Backer value) {
+void NDArray_or(NDArray* arr, NDArrayBacker value) {
     uptr n = NDArray_total_size(arr);
     for (uptr i = 0; i < n; i++) {
         arr->data[i] |= value;
     }
 }
 
-void NDArray_xor(NDArray* arr, NDArray_Backer value) {
+void NDArray_xor(NDArray* arr, NDArrayBacker value) {
     uptr n = NDArray_total_size(arr);
     for (uptr i = 0; i < n; i++) {
         arr->data[i] ^= value;
