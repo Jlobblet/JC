@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -90,32 +90,35 @@ $(document).ready(function(){initNavTree('jmmap_8h_source.html',''); initResizab
 <a href="jmmap_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef JC_JMMAP_H</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define JC_JMMAP_H</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structjc__mmap.html">    9</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structjc__mmap.html">jc_mmap</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">   11</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">address</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">   13</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">fd</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">stat</a> <a class="code" href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">stat</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;} <a class="code" href="structjc__mmap.html">jc_mmap</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<a class="code" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a> <a class="code" href="jmmap_8h.html#aaa8c11dbc4154fba5d1ba419e5f654bb">mmap_read</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath, <a class="code" href="structjc__mmap.html">jc_mmap</a>* buf);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a> <a class="code" href="jmmap_8h.html#acec9df393777e7c1ecf46a742ea70660">mmap_close</a>(<a class="code" href="structjc__mmap.html">jc_mmap</a>* buf);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//JC_JMMAP_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sys/mman.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="jint_8h.html">jint.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structjc__mmap.html">   11</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structjc__mmap.html">jc_mmap</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">   13</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">address</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">fd</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">stat</a> <a class="code" href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">stat</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;} <a class="code" href="structjc__mmap.html">jc_mmap</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a> <a class="code" href="jmmap_8h.html#aaa8c11dbc4154fba5d1ba419e5f654bb">mmap_read</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath, <a class="code" href="structjc__mmap.html">jc_mmap</a>* buf);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a> <a class="code" href="jmmap_8h.html#acec9df393777e7c1ecf46a742ea70660">mmap_close</a>(<a class="code" href="structjc__mmap.html">jc_mmap</a>* buf);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//JC_JMMAP_H</span></div>
+<div class="ttc" id="ajint_8h_html"><div class="ttname"><a href="jint_8h.html">jint.h</a></div><div class="ttdoc">Integral types.</div></div>
 <div class="ttc" id="ajint_8h_html_a1436c3bda94547287cbc2d66af2606e3"><div class="ttname"><a href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a></div><div class="ttdeci">intptr_t iptr</div><div class="ttdef"><b>Definition:</b> <a href="jint_8h_source.html#l00016">jint.h:16</a></div></div>
 <div class="ttc" id="ajmmap_8h_html_aaa8c11dbc4154fba5d1ba419e5f654bb"><div class="ttname"><a href="jmmap_8h.html#aaa8c11dbc4154fba5d1ba419e5f654bb">mmap_read</a></div><div class="ttdeci">iptr mmap_read(const char *filepath, jc_mmap *buf)</div><div class="ttdoc">Memory map a file for reading only.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8c_source.html#l00015">jmmap.c:15</a></div></div>
 <div class="ttc" id="ajmmap_8h_html_acec9df393777e7c1ecf46a742ea70660"><div class="ttname"><a href="jmmap_8h.html#acec9df393777e7c1ecf46a742ea70660">mmap_close</a></div><div class="ttdeci">iptr mmap_close(jc_mmap *buf)</div><div class="ttdoc">Close a memory-mapped jc_mmap file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8c_source.html#l00039">jmmap.c:39</a></div></div>
-<div class="ttc" id="astructjc__mmap_html"><div class="ttname"><a href="structjc__mmap.html">jc_mmap</a></div><div class="ttdoc">Struct containing data about a memory-mapped file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00009">jmmap.h:9</a></div></div>
-<div class="ttc" id="astructjc__mmap_html_a02111253a120ce223de919123bf328e9"><div class="ttname"><a href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">jc_mmap::address</a></div><div class="ttdeci">char * address</div><div class="ttdoc">Pointer to the start of the file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00011">jmmap.h:11</a></div></div>
-<div class="ttc" id="astructjc__mmap_html_a5ddec57cd6da0b4560b54311cc639a61"><div class="ttname"><a href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">jc_mmap::stat</a></div><div class="ttdeci">struct stat stat</div><div class="ttdoc">Results of fstat.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00013">jmmap.h:15</a></div></div>
-<div class="ttc" id="astructjc__mmap_html_ab6014096760276a801c41dde9f4b0e1d"><div class="ttname"><a href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">jc_mmap::fd</a></div><div class="ttdeci">int fd</div><div class="ttdoc">File descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00013">jmmap.h:13</a></div></div>
+<div class="ttc" id="astructjc__mmap_html"><div class="ttname"><a href="structjc__mmap.html">jc_mmap</a></div><div class="ttdoc">Struct containing data about a memory-mapped file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00011">jmmap.h:11</a></div></div>
+<div class="ttc" id="astructjc__mmap_html_a02111253a120ce223de919123bf328e9"><div class="ttname"><a href="structjc__mmap.html#a02111253a120ce223de919123bf328e9">jc_mmap::address</a></div><div class="ttdeci">char * address</div><div class="ttdoc">Pointer to the start of the file.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00013">jmmap.h:13</a></div></div>
+<div class="ttc" id="astructjc__mmap_html_a5ddec57cd6da0b4560b54311cc639a61"><div class="ttname"><a href="structjc__mmap.html#a5ddec57cd6da0b4560b54311cc639a61">jc_mmap::stat</a></div><div class="ttdeci">struct stat stat</div><div class="ttdoc">Results of fstat.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00015">jmmap.h:17</a></div></div>
+<div class="ttc" id="astructjc__mmap_html_ab6014096760276a801c41dde9f4b0e1d"><div class="ttname"><a href="structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d">jc_mmap::fd</a></div><div class="ttdeci">int fd</div><div class="ttdoc">File descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="jmmap_8h_source.html#l00015">jmmap.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jmmap_8h.html">jmmap.h</a></li>
-    <li class="footer">Generated on Tue Dec 14 2021 19:23:07 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Dec 21 2021 20:06:44 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

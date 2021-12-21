@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ndarray_5fbacker_341',['NDArray_Backer',['../jarray_8h.html#a8643b07f4bd8a5ef25de8e4612c5b416',1,'jarray.h']]],
-  ['ndarray_5fmap2ing_5ft_342',['NDArray_map2ing_t',['../jarray_8h.html#a2af259fae255bf53d1e8d09f67036e56',1,'jarray.h']]],
-  ['ndarray_5fmapping_5ft_343',['NDArray_mapping_t',['../jarray_8h.html#a5824075d56495ef5eacd8ef2d4e54302',1,'jarray.h']]]
+  ['ndarray_5fmap2ing_5ft_345',['NDArray_map2ing_t',['../jarray_8h.html#ae175c455127f019d9e9ebce8020f5d99',1,'jarray.h']]],
+  ['ndarray_5fmapping_5ft_346',['NDArray_mapping_t',['../jarray_8h.html#ad6e7e3f0407ac446e2cb707be4458057',1,'jarray.h']]],
+  ['ndarraybacker_347',['NDArrayBacker',['../jarray_8h.html#a85615ac53f7cf17115a1d922fd62694b',1,'jarray.h']]]
 ];

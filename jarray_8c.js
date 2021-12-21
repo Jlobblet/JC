@@ -1,7 +1,7 @@
 var jarray_8c =
 [
-    [ "NDArray_add", "jarray_8c.html#af50bb10049510db1151edd636e779f39", null ],
-    [ "NDArray_and", "jarray_8c.html#a113bd813ced45c0e5b3e57efddf67af5", null ],
+    [ "NDArray_add", "jarray_8c.html#a3bdd8cb60182817c9a9e10ca088589bc", null ],
+    [ "NDArray_and", "jarray_8c.html#a3e6dae3212ba46881cdffbb964691bb2", null ],
     [ "NDArray_arr_add", "jarray_8c.html#a08b7ed8793d7c4a4198b8055f6863c5c", null ],
     [ "NDArray_arr_and", "jarray_8c.html#ad664b93166df90206ade3b8fed28197b", null ],
     [ "NDArray_arr_div", "jarray_8c.html#a967faab1efdcb23ffa757f6f294b5469", null ],
@@ -11,15 +11,17 @@ var jarray_8c =
     [ "NDArray_arr_xor", "jarray_8c.html#a65c2638c0636b182241fb24e5eb976c9", null ],
     [ "NDArray_assert2", "jarray_8c.html#aec0566246e976e0af93ab6966f2380c3", null ],
     [ "NDArray_dest", "jarray_8c.html#a106ae398bbf3fd820d168c2eb8f4800d", null ],
-    [ "NDArray_div", "jarray_8c.html#a901d7cdd31f7c104a700d2641f5a91a1", null ],
-    [ "NDArray_get", "jarray_8c.html#a004f0078c213bae73906dfc3168cbdb4", null ],
+    [ "NDArray_div", "jarray_8c.html#a5aa80f5c20fe45d37afeccba43014b79", null ],
+    [ "NDArray_get", "jarray_8c.html#ad904df80125d3e489b0e4f45b9a70317", null ],
     [ "NDArray_init", "jarray_8c.html#a53221aa8130b5b129da6e570f90bc8af", null ],
     [ "NDArray_map", "jarray_8c.html#a7512dfb0a67bae2566202a88a24db350", null ],
     [ "NDArray_map2", "jarray_8c.html#a001535582c22d2db58884639489780b7", null ],
-    [ "NDArray_mul", "jarray_8c.html#aa29f89a7d14129019b644b8c6b9bed20", null ],
-    [ "NDArray_or", "jarray_8c.html#a4496e873a05e7b5f5732c356db32f9a2", null ],
-    [ "NDArray_set", "jarray_8c.html#a92b8a0119aa2ac9104f4534d1d5a50a4", null ],
-    [ "NDArray_sub", "jarray_8c.html#a6fe5ca63e8f0fd18b4e759f7d0e7cdfa", null ],
+    [ "NDArray_mul", "jarray_8c.html#ae991822de8da07999d33ef94a47c4f28", null ],
+    [ "NDArray_or", "jarray_8c.html#ab2452f9153ad9b77f2944fb7807c8456", null ],
+    [ "NDArray_ptr", "jarray_8c.html#ae9e0d5b6b2e24b34f8c5128371bce8ef", null ],
+    [ "NDArray_resize", "jarray_8c.html#a555c62962816c2bd2d6344900fe184dc", null ],
+    [ "NDArray_set", "jarray_8c.html#a52199399ec3d4fbaa09e60b0310f7580", null ],
+    [ "NDArray_sub", "jarray_8c.html#a13385b17b84ac4296c666e44687e311d", null ],
     [ "NDArray_total_size", "jarray_8c.html#abf0beee7848cc7ddbee8abdb99e2e595", null ],
-    [ "NDArray_xor", "jarray_8c.html#a757d9cf08ffa9ec9f540c4a106b32139", null ]
+    [ "NDArray_xor", "jarray_8c.html#a67bf2f04bf725e715e4621eba52b0076", null ]
 ];
