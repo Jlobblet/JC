@@ -2,7 +2,7 @@
 
 Things that I use in C a bunch and want in a library.
 
-## [Documentation](https://jlobblet.co.uk/JC)
+## [Documentation](https://www.jlobblet.co.uk/JC)
 
 ## Tests
 
