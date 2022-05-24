@@ -212,3 +212,144 @@ iptr Vector_shrink_to_fit(Vector* vec) {
     if (vec->data == NULL) { return -1; }
     return 0;
 }
+
+/// Map a function over a `Vector`.
+/// \remark The function is called for each element in the `Vector`, in order.
+/// \param vec The `Vector` to map over.
+/// \param mapping The function to call for each element.
+/// \param ... Extra arguments to pass to `mapping`.
+void Vector_map(Vector* vec, vector_mapping_t mapping, ...) {
+    va_list args;
+    va_start(args, mapping);
+    for (uptr i = 0; i < vec->length; i++) {
+        vec->data[i] = mapping(vec->data[i], args);
+    }
+    va_end(args);
+}
+
+/// Filter a `Vector` by removing elements for which the predicate returns `false`.
+/// \remark The predicate is called for each element in the `Vector`, in reverse order.
+/// \param vec The `Vector` to predicate.
+/// \param predicate The predicate to call for each element.
+/// \param ... Extra arguments to pass to `predicate`.
+void Vector_filter(Vector* vec, vector_filter_t predicate, ...) {
+    va_list args;
+    va_start(args, predicate);
+    for (uptr i = 0; i < vec->length; i++) {
+        if (predicate(vec->data[i], args)) { continue; }
+        // Shift all elements after `i` to the left.
+        // This is done in reverse order to avoid shifting elements that are not yet visited.
+        // This removes the ith element.
+        memcpy(vec->data + i, vec->data + i + 1, (vec->length - i - 1) * sizeof(void*));
+        // Decrement the length.
+        vec->length--;
+        // Decrement `i` to account for the shift.
+        i--;
+    }
+    va_end(args);
+}
+
+/// Apply a function to each element of a `Vector`, threading an accumulator value through.
+/// Apply the function to the first two elements of the vector.
+/// Then feed the result of the first application into the second application, and so on.
+/// \param vec The `Vector` to apply the function to.
+/// \param reduce The function to apply to each element.
+/// \param ... Extra arguments to pass to `reduce`.
+/// \return The final value of the accumulator.
+const void* Vector_reduce(Vector* vec, vector_reduce_t reduce, ...) {
+    assert(vec->length > 0);
+    va_list args;
+    va_start(args, reduce);
+    const void* result = vec->data[0];
+    for (uptr i = 1; i < vec->length; i++) {
+        result = reduce(result, vec->data[i], args);
+    }
+    va_end(args);
+    return result;
+}
+
+/// Apply a function to each element of a `Vector`, threading an accumulator value through.
+/// Apply the function to the initial value and the first element of the vector.
+/// Then feed the result of the first application into the second application, and so on.
+/// \param vec The `Vector` to apply the function to.
+/// \param fold The function to apply to each element.
+/// \param initial The initial value to thread through.
+/// \param ... Extra arguments to pass to `fold`.
+/// \return The final value of the accumulator.
+const void* Vector_fold(Vector* vec, vector_fold_t fold, const void* initial, ...) {
+    va_list args;
+    va_start(args, initial);
+    for (uptr i = 0; i < vec->length; i++) {
+        initial = fold(initial, vec->data[i], args);
+    }
+    va_end(args);
+    return initial;
+}
+
+static const void* keep_greater(const void* a, const void* b, ...) {
+    va_list args;
+    va_start(args, b);
+    vector_compare_t* compare = va_arg(args, vector_compare_t*);
+    return compare(a, b, args) < 0 ? b : a;
+}
+
+static const void* keep_lesser(const void* a, const void* b, ...) {
+    va_list args;
+    va_start(args, b);
+    vector_compare_t* compare = va_arg(args, vector_compare_t*);
+    return compare(a, b, args) >= 0 ? b : a;
+}
+
+// We violate the `const` rule here because it's the easiest way to pass around a struct with two pointers.
+static const void* keep_min_and_max(const void* a, const void* b, ...) {
+    struct Vector_minmax* minmax = (struct Vector_minmax*)a;
+    va_list args;
+    va_start(args, b);
+    vector_compare_t* compare = va_arg(args, vector_compare_t*);
+    if (compare(b, minmax->min, args) < 0) {
+        minmax->min = b;
+    }
+    if (compare(b, minmax->max, args) > 0) {
+        minmax->max = b;
+    }
+    return minmax;
+}
+
+/// Find the maximum element of a `Vector`.
+/// \param vec The `Vector` to find the maximum element of.
+/// \param compare The function to compare elements.
+/// \remark `compare` should return a negative value if the first argument is less than the second,
+/// a positive value if the first argument is greater than the second, and 0 if the arguments are equal.
+/// \remark If two elements are equal, the first one is retained.
+/// \return The maximum element of `vec`.
+const void* Vector_max(Vector* vec, vector_compare_t compare, ...) {
+    va_list args;
+    va_start(args, compare);
+    const void* max = Vector_reduce(vec, keep_greater, compare, args);
+    va_end(args);
+    return max;
+}
+
+/// Find the minimum element of a `Vector`.
+/// \param vec The `Vector` to find the minimum element of.
+/// \param compare The function to compare elements.
+/// \remark `compare` should return a negative value if the first argument is less than the second,
+/// a positive value if the first argument is greater than the second, and 0 if the arguments are equal.
+/// \remark If two elements are equal, the first one is retained.
+/// \return The minimum element of `vec`.
+const void* Vector_min(Vector* vec, vector_compare_t compare, ...) {
+    va_list args;
+    va_start(args, compare);
+    const void* min = Vector_reduce(vec, keep_lesser, compare, args);
+    va_end(args);
+    return min;
+}
+
+struct Vector_minmax Vector_minmax(Vector* vec, vector_compare_t compare, ...) {
+    va_list args;
+    va_start(args, compare);
+    struct Vector_minmax minmax = {};
+    minmax = *(struct Vector_minmax*)Vector_fold(vec, keep_min_and_max, &minmax, compare, args);
+    va_end(args);
+    return minmax;
+}
