@@ -125,6 +125,7 @@ void jiterator_iota_init(jiterator *self, iptr start, iptr step) {
     jiterator_iota_state* state = (jiterator_iota_state*) self->state;
     state->current = start;
     state->step = step;
+    state->started = false;
     self->next = jiterator_iota_next;
 }
 
@@ -347,5 +348,6 @@ void jiterator_pairwise_init(jiterator *self, jiterator *source) {
     state->source = source;
     state->current.first = NULL;
     state->current.second = NULL;
+    state->started = false;
     self->next = jiterator_pairwise_next;
 }
