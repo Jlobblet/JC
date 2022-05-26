@@ -36,21 +36,28 @@ void jiterator_map_init(jiterator *self, jiterator *source, jiterator_map_fn *ma
 typedef void jiterator_action_fn(void *element);
 void jiterator_action_init(jiterator *self, jiterator *source, jiterator_action_fn *action);
 
-typedef bool jiterator_filter_fn(void *element);
-void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter);
+typedef bool jiterator_predicate_fn(void *element);
+void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_predicate_fn *filter);
 
 typedef void *jiterator_reduce_fn(void *acc, void *elt);
-bool jiterator_reduce_init(jiterator *source, jiterator_reduce_fn *reduce, void **result);
+bool jiterator_reduce(jiterator *source, jiterator_reduce_fn *reduce, void **result);
 
 typedef void *jiterator_fold_fn(void *acc, void *elt);
-void *jiterator_fold_init(jiterator *source, jiterator_fold_fn *fold, void *initial);
-void jiterator_scan_init(jiterator *self, jiterator *source, jiterator_fold_fn *fold, void *initial);
+void *jiterator_fold(jiterator *source, jiterator_fold_fn *fold, void *initial);
+void jiterator_scan_init(jiterator *self, jiterator *source, jiterator_fold_fn *scan, void *initial);
+
+typedef int jiterator_compare_fn(void *a, void *b);
+bool jiterator_min_max(jiterator *source, jiterator_compare_fn *compare, pair *result);
+bool jiterator_min(jiterator *source, jiterator_compare_fn *compare, void **result);
+bool jiterator_max(jiterator *source, jiterator_compare_fn *compare, void **result);
+bool jiterator_all(jiterator *source, jiterator_predicate_fn *predicate);
+bool jiterator_any(jiterator *source, jiterator_predicate_fn *predicate);
 
 void jiterator_iota_init(jiterator *self, iptr start, iptr step);
 void jiterator_take_init(jiterator *self, jiterator *source, uptr count);
 void jiterator_drop_init(jiterator *self, jiterator *source, uptr count);
-void jiterator_take_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter);
-void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter);
+void jiterator_take_while_init(jiterator *self, jiterator *source, jiterator_predicate_fn *filter);
+void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_predicate_fn *filter);
 void jiterator_zip_init(jiterator *self, jiterator *source1, jiterator *source2);
 void jiterator_enumerate_init(jiterator *self, jiterator *source);
 void jiterator_pairwise_init(jiterator *self, jiterator *source);

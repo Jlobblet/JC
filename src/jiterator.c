@@ -102,7 +102,7 @@ void jiterator_action_init(jiterator *self, jiterator *source, jiterator_action_
 }
 
 typedef struct jiterator_filter_state {
-    jiterator_filter_fn *filter;
+    jiterator_predicate_fn *filter;
     jiterator *it;
 } jiterator_filter_state;
 
@@ -121,7 +121,7 @@ bool filter_iterator_next(jiterator *self) {
     }
 }
 
-void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
+void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_predicate_fn *filter) {
     self->state = calloc(1, sizeof(jiterator_filter_state));
     jiterator_filter_state* state = (jiterator_filter_state*) self->state;
     state->filter = filter;
@@ -129,7 +129,7 @@ void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_filter_
     self->next = filter_iterator_next;
 }
 
-bool jiterator_reduce_init(jiterator *source, jiterator_reduce_fn *reduce, void **result) {
+bool jiterator_reduce(jiterator *source, jiterator_reduce_fn *reduce, void **result) {
     if (!source->next(source)) {
         return false;
     }
@@ -140,11 +140,93 @@ bool jiterator_reduce_init(jiterator *source, jiterator_reduce_fn *reduce, void 
     return true;
 }
 
-void *jiterator_fold_init(jiterator *source, jiterator_fold_fn *fold, void *initial) {
+void *jiterator_fold(jiterator *source, jiterator_fold_fn *fold, void *initial) {
     while (source->next(source)) {
         initial = fold(initial, source->current);
     }
     return initial;
+}
+
+typedef struct jiterator_scan_state {
+    jiterator_fold_fn *scan;
+    jiterator *it;
+    void *accumulator;
+} jiterator_scan_state;
+
+bool jiterator_scan_next(jiterator *self) {
+    jiterator_scan_state *state = (jiterator_scan_state *)self->state;
+
+    if (!state->it->next(state->it)) {
+        return false;
+    }
+
+    state->accumulator = state->scan(state->accumulator, state->it->current);
+    self->current = state->accumulator;
+    return true;
+}
+
+void jiterator_scan_init(jiterator *self, jiterator *source, jiterator_fold_fn *scan, void *initial) {
+    self->state = calloc(1, sizeof(jiterator_scan_state));
+    jiterator_scan_state* state = (jiterator_scan_state*) self->state;
+    state->scan = scan;
+    state->it = source;
+    state->accumulator = initial;
+    self->next = jiterator_scan_next;
+}
+
+bool jiterator_min_max(jiterator *source, jiterator_compare_fn *compare, pair *result) {
+    if (!source->next(source)) {
+        return false;
+    }
+    result->first = source->current;
+    result->second = source->current;
+    while (source->next(source)) {
+        if (compare(source->current, result->first) < 0) {
+            result->first = source->current;
+        }
+        if (compare(source->current, result->second) > 0) {
+            result->second = source->current;
+        }
+    }
+    return true;
+}
+
+bool jiterator_min(jiterator *source, jiterator_compare_fn *compare, void **result) {
+    pair pair;
+    bool ret;
+    ret = jiterator_min_max(source, compare, &pair);
+    if (ret) {
+        *result = pair.first;
+    }
+    return ret;
+}
+
+bool jiterator_max(jiterator *source, jiterator_compare_fn *compare, void **result) {
+    pair pair;
+    bool ret;
+    ret = jiterator_min_max(source, compare, &pair);
+    if (ret) {
+        *result = pair.second;
+    }
+    return ret;
+}
+
+bool jiterator_all(jiterator *source, jiterator_predicate_fn *predicate) {
+    while (source->next(source)) {
+        if (!predicate(source->current)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool jiterator_any(jiterator *source, jiterator_predicate_fn *predicate) {
+    while (source->next(source)) {
+        if (predicate(source->current)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 typedef struct jiterator_iota_state {
@@ -230,7 +312,7 @@ void jiterator_drop_init(jiterator *self, jiterator *source, uptr count) {
 }
 
 typedef struct jiterator_take_while_state {
-    jiterator_filter_fn *filter;
+    jiterator_predicate_fn *filter;
     jiterator *it;
     bool finished;
 } jiterator_take_while_state;
@@ -251,7 +333,7 @@ bool jiterator_take_while_next(jiterator *self) {
     }
 }
 
-void jiterator_take_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
+void jiterator_take_while_init(jiterator *self, jiterator *source, jiterator_predicate_fn *filter) {
     self->state = calloc(1, sizeof(jiterator_take_while_state));
     jiterator_take_while_state* state = (jiterator_take_while_state*) self->state;
     state->filter = filter;
@@ -285,7 +367,7 @@ bool jiterator_drop_while_next(jiterator *self) {
     }
 }
 
-void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
+void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_predicate_fn *filter) {
     self->state = calloc(1, sizeof(jiterator_drop_while_state));
     jiterator_drop_while_state* state = (jiterator_drop_while_state*) self->state;
     state->filter = filter;
