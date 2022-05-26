@@ -1,6 +1,7 @@
 #ifndef JC_JBITS_H
 #define JC_JBITS_H
 
+#include <values.h>
 #include "jint.h"
 
 uptr popcount8(u8 x);
@@ -29,7 +30,7 @@ u64: pop0count64)                       \
 
 typedef fu8 BitArrayBacker;
 
-static const uptr BitArray_BACKER_BITS = (sizeof(BitArrayBacker) * 8);
+static const uptr BitArray_BACKER_BITS = (sizeof(BitArrayBacker) * CHAR_BIT);
 
 typedef struct BitArray {
     uptr length;
@@ -59,7 +60,7 @@ typedef struct BitArray2d {
     BitArray2dBacker *data;
 } BitArray2d;
 
-static const uptr BitArray2d_BACKER_BITS = (sizeof(BitArray2dBacker) * 8);
+static const uptr BitArray2d_BACKER_BITS = (sizeof(BitArray2dBacker) * CHAR_BIT);
 
 static inline uptr BitArray2d_row_width(BitArray2d *arr) {
     return (arr->cols + BitArray2d_BACKER_BITS - 1) / BitArray2d_BACKER_BITS;
