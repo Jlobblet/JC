@@ -53,7 +53,7 @@ void jiterator_vector_init(jiterator *self, Vector *vec) {
 }
 
 typedef struct jiterator_map_state {
-    map_iterator_fn *map;
+    jiterator_map_fn *map;
     jiterator *it;
 } jiterator_map_state;
 
@@ -68,7 +68,7 @@ bool map_iterator_next(jiterator *self) {
     return true;
 }
 
-void jiterator_map_init(jiterator *self, jiterator *source, map_iterator_fn *map) {
+void jiterator_map_init(jiterator *self, jiterator *source, jiterator_map_fn *map) {
     self->state = malloc(sizeof(jiterator_map_state));
     jiterator_map_state* state = (jiterator_map_state*) self->state;
     state->map = map;
@@ -78,7 +78,7 @@ void jiterator_map_init(jiterator *self, jiterator *source, map_iterator_fn *map
 
 typedef struct jiterator_action_state {
     jiterator *it;
-    action_iterator_fn *action;
+    jiterator_action_fn *action;
 } jiterator_action_state;
 
 bool jiterator_action_next(jiterator *self) {
@@ -93,7 +93,7 @@ bool jiterator_action_next(jiterator *self) {
     return true;
 }
 
-void jiterator_action_init(jiterator *self, jiterator *source, action_iterator_fn *action) {
+void jiterator_action_init(jiterator *self, jiterator *source, jiterator_action_fn *action) {
     self->state = malloc(sizeof(jiterator_action_state));
     jiterator_action_state* state = (jiterator_action_state*) self->state;
     state->it = source;
@@ -102,7 +102,7 @@ void jiterator_action_init(jiterator *self, jiterator *source, action_iterator_f
 }
 
 typedef struct jiterator_filter_state {
-    filter_iterator_fn *filter;
+    jiterator_filter_fn *filter;
     jiterator *it;
 } jiterator_filter_state;
 
@@ -121,7 +121,7 @@ bool filter_iterator_next(jiterator *self) {
     }
 }
 
-void jiterator_filter_init(jiterator *self, jiterator *source, filter_iterator_fn *filter) {
+void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
     self->state = malloc(sizeof(jiterator_filter_state));
     jiterator_filter_state* state = (jiterator_filter_state*) self->state;
     state->filter = filter;
@@ -212,7 +212,7 @@ void jiterator_drop_init(jiterator *self, jiterator *source, uptr count) {
 }
 
 typedef struct jiterator_take_while_state {
-    filter_iterator_fn *filter;
+    jiterator_filter_fn *filter;
     jiterator *it;
     bool finished;
 } jiterator_take_while_state;
@@ -233,7 +233,7 @@ bool jiterator_take_while_next(jiterator *self) {
     }
 }
 
-void jiterator_take_while_init(jiterator *self, jiterator *source, filter_iterator_fn *filter) {
+void jiterator_take_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
     self->state = malloc(sizeof(jiterator_take_while_state));
     jiterator_take_while_state* state = (jiterator_take_while_state*) self->state;
     state->filter = filter;
@@ -267,7 +267,7 @@ bool jiterator_drop_while_next(jiterator *self) {
     }
 }
 
-void jiterator_drop_while_init(jiterator *self, jiterator *source, filter_iterator_fn *filter) {
+void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
     self->state = malloc(sizeof(jiterator_drop_while_state));
     jiterator_drop_while_state* state = (jiterator_drop_while_state*) self->state;
     state->filter = filter;
