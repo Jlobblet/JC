@@ -15,5 +15,6 @@
 #define drop_while jiterator_drop_while_init
 #define zip jiterator_zip_init
 #define enumerate jiterator_enumerate_init
+#define pairwise jiterator_pairwise_init
 
 #endif //JC_JITERATOR_SHORT_H

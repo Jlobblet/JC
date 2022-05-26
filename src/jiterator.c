@@ -315,3 +315,37 @@ void jiterator_enumerate_init(jiterator *self, jiterator *source) {
     state->started = false;
     self->next = jiterator_enumerate_next;
 }
+
+typedef struct jiterator_pairwise_state {
+    jiterator *source;
+    pair current;
+    bool started;
+} jiterator_pairwise_state;
+
+bool jiterator_pairwise_next(jiterator *self) {
+    jiterator_pairwise_state *state = (jiterator_pairwise_state *)self->state;
+    if (!state->started) {
+        state->started = true;
+        if (!state->source->next(state->source)) {
+            return false;
+        }
+        state->current.first = state->source->current;
+    }
+
+    if (!state->source->next(state->source)) {
+        return false;
+    }
+    state->current.first = state->current.second;
+    state->current.second = state->source->current;
+    self->current = &state->current;
+    return true;
+}
+
+void jiterator_pairwise_init(jiterator *self, jiterator *source) {
+    self->state = malloc(sizeof(jiterator_pairwise_state));
+    jiterator_pairwise_state* state = (jiterator_pairwise_state*) self->state;
+    state->source = source;
+    state->current.first = NULL;
+    state->current.second = NULL;
+    self->next = jiterator_pairwise_next;
+}

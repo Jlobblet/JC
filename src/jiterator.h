@@ -43,5 +43,6 @@ void jiterator_take_while_init(jiterator *self, jiterator *source, filter_iterat
 void jiterator_drop_while_init(jiterator *self, jiterator *source, filter_iterator_fn *filter);
 void jiterator_zip_init(jiterator *self, jiterator *source1, jiterator *source2);
 void jiterator_enumerate_init(jiterator *self, jiterator *source);
+void jiterator_pairwise_init(jiterator *self, jiterator *source);
 
 #endif //JC_JITERATOR_H
