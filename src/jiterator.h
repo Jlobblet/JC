@@ -33,6 +33,9 @@ typedef void *map_iterator_fn(void *element);
 typedef void *map2_iterator_fn(void *a, void *b);
 void jiterator_map_init(jiterator *self, jiterator *source, map_iterator_fn *map);
 
+typedef void action_iterator_fn(void *element);
+void jiterator_action_init(jiterator *self, jiterator *source, action_iterator_fn *action);
+
 typedef bool filter_iterator_fn(void *element);
 void jiterator_filter_init(jiterator *self, jiterator *source, filter_iterator_fn *filter);
 

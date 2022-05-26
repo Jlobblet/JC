@@ -76,6 +76,31 @@ void jiterator_map_init(jiterator *self, jiterator *source, map_iterator_fn *map
     self->next = map_iterator_next;
 }
 
+typedef struct jiterator_action_state {
+    jiterator *it;
+    action_iterator_fn *action;
+} jiterator_action_state;
+
+bool jiterator_action_next(jiterator *self) {
+    jiterator_action_state *state = (jiterator_action_state *)self->state;
+
+    if (!state->it->next(state->it)) {
+        return false;
+    }
+
+    state->action(state->it->current);
+    self->current = state->it->current;
+    return true;
+}
+
+void jiterator_action_init(jiterator *self, jiterator *source, action_iterator_fn *action) {
+    self->state = malloc(sizeof(jiterator_action_state));
+    jiterator_action_state* state = (jiterator_action_state*) self->state;
+    state->it = source;
+    state->action = action;
+    self->next = jiterator_action_next;
+}
+
 typedef struct jiterator_filter_state {
     filter_iterator_fn *filter;
     jiterator *it;

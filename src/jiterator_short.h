@@ -7,6 +7,7 @@
 #define vector_reset jiterator_vector_reset
 #define vector jiterator_vector_init
 #define map jiterator_map_init
+#define action jiterator_action_init
 #define filter jiterator_filter_init
 #define iota jiterator_iota_init
 #define take jiterator_take_init
