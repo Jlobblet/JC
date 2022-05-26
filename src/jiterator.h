@@ -24,7 +24,7 @@ typedef struct pair {
 
 void jiterator_collect(jiterator *source, Vector *vec);
 
-void jiterator_malloc_dest(jiterator *self);
+void jiterator_alloc_dest(jiterator *self);
 
 void jiterator_vector_reset(jiterator *self);
 void jiterator_vector_init(jiterator *self, Vector *vec);
@@ -38,6 +38,13 @@ void jiterator_action_init(jiterator *self, jiterator *source, jiterator_action_
 
 typedef bool jiterator_filter_fn(void *element);
 void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter);
+
+typedef void *jiterator_reduce_fn(void *acc, void *elt);
+bool jiterator_reduce_init(jiterator *source, jiterator_reduce_fn *reduce, void **result);
+
+typedef void *jiterator_fold_fn(void *acc, void *elt);
+void *jiterator_fold_init(jiterator *source, jiterator_fold_fn *fold, void *initial);
+void jiterator_scan_init(jiterator *self, jiterator *source, jiterator_fold_fn *fold, void *initial);
 
 void jiterator_iota_init(jiterator *self, iptr start, iptr step);
 void jiterator_take_init(jiterator *self, jiterator *source, uptr count);

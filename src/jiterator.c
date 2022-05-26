@@ -1,4 +1,4 @@
-#include <malloc.h>
+#include <stdlib.h>
 #include "jiterator.h"
 #include "jvector.h"
 
@@ -11,7 +11,7 @@ void jiterator_collect(jiterator *source, Vector *vec) {
     }
 }
 
-void jiterator_malloc_dest(jiterator *self) {
+void jiterator_alloc_dest(jiterator *self) {
     free(self->state);
 }
 
@@ -45,7 +45,7 @@ void jiterator_vector_reset(jiterator *self) {
 }
 
 void jiterator_vector_init(jiterator *self, Vector *vec) {
-    self->state = malloc(sizeof(jiterator_vector_state));
+    self->state = calloc(1, sizeof(jiterator_vector_state));
     jiterator_vector_state* state = (jiterator_vector_state*) self->state;
     state->vec = vec;
     state->current_index = 0;
@@ -69,7 +69,7 @@ bool map_iterator_next(jiterator *self) {
 }
 
 void jiterator_map_init(jiterator *self, jiterator *source, jiterator_map_fn *map) {
-    self->state = malloc(sizeof(jiterator_map_state));
+    self->state = calloc(1, sizeof(jiterator_map_state));
     jiterator_map_state* state = (jiterator_map_state*) self->state;
     state->map = map;
     state->it = source;
@@ -94,7 +94,7 @@ bool jiterator_action_next(jiterator *self) {
 }
 
 void jiterator_action_init(jiterator *self, jiterator *source, jiterator_action_fn *action) {
-    self->state = malloc(sizeof(jiterator_action_state));
+    self->state = calloc(1, sizeof(jiterator_action_state));
     jiterator_action_state* state = (jiterator_action_state*) self->state;
     state->it = source;
     state->action = action;
@@ -122,11 +122,29 @@ bool filter_iterator_next(jiterator *self) {
 }
 
 void jiterator_filter_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
-    self->state = malloc(sizeof(jiterator_filter_state));
+    self->state = calloc(1, sizeof(jiterator_filter_state));
     jiterator_filter_state* state = (jiterator_filter_state*) self->state;
     state->filter = filter;
     state->it = source;
     self->next = filter_iterator_next;
+}
+
+bool jiterator_reduce_init(jiterator *source, jiterator_reduce_fn *reduce, void **result) {
+    if (!source->next(source)) {
+        return false;
+    }
+    *result = source->current;
+    while (source->next(source)) {
+        *result = reduce(*result, source->current);
+    }
+    return true;
+}
+
+void *jiterator_fold_init(jiterator *source, jiterator_fold_fn *fold, void *initial) {
+    while (source->next(source)) {
+        initial = fold(initial, source->current);
+    }
+    return initial;
 }
 
 typedef struct jiterator_iota_state {
@@ -146,7 +164,7 @@ bool jiterator_iota_next(jiterator *self) {
 }
 
 void jiterator_iota_init(jiterator *self, iptr start, iptr step) {
-    self->state = malloc(sizeof(jiterator_iota_state));
+    self->state = calloc(1, sizeof(jiterator_iota_state));
     jiterator_iota_state* state = (jiterator_iota_state*) self->state;
     state->current = start;
     state->step = step;
@@ -174,7 +192,7 @@ bool jiterator_take_next(jiterator *self) {
 }
 
 void jiterator_take_init(jiterator *self, jiterator *source, uptr count) {
-    self->state = malloc(sizeof(jiterator_take_state));
+    self->state = calloc(1, sizeof(jiterator_take_state));
     jiterator_take_state* state = (jiterator_take_state*) self->state;
     state->it = source;
     state->remaining = count;
@@ -203,7 +221,7 @@ bool jiterator_drop_next(jiterator *self) {
 }
 
 void jiterator_drop_init(jiterator *self, jiterator *source, uptr count) {
-    self->state = malloc(sizeof(jiterator_drop_state));
+    self->state = calloc(1, sizeof(jiterator_drop_state));
     jiterator_drop_state* state = (jiterator_drop_state*) self->state;
     state->it = source;
     state->remaining = count;
@@ -234,7 +252,7 @@ bool jiterator_take_while_next(jiterator *self) {
 }
 
 void jiterator_take_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
-    self->state = malloc(sizeof(jiterator_take_while_state));
+    self->state = calloc(1, sizeof(jiterator_take_while_state));
     jiterator_take_while_state* state = (jiterator_take_while_state*) self->state;
     state->filter = filter;
     state->it = source;
@@ -268,7 +286,7 @@ bool jiterator_drop_while_next(jiterator *self) {
 }
 
 void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_filter_fn *filter) {
-    self->state = malloc(sizeof(jiterator_drop_while_state));
+    self->state = calloc(1, sizeof(jiterator_drop_while_state));
     jiterator_drop_while_state* state = (jiterator_drop_while_state*) self->state;
     state->filter = filter;
     state->it = source;
@@ -297,7 +315,7 @@ bool jiterator_zip_next(jiterator *self) {
 }
 
 void jiterator_zip_init(jiterator *self, jiterator *source1, jiterator *source2) {
-    self->state = malloc(sizeof(jiterator_zip_state));
+    self->state = calloc(1, sizeof(jiterator_zip_state));
     jiterator_zip_state* state = (jiterator_zip_state*) self->state;
     state->source1 = source1;
     state->source2 = source2;
@@ -332,7 +350,7 @@ bool jiterator_enumerate_next(jiterator *self) {
 }
 
 void jiterator_enumerate_init(jiterator *self, jiterator *source) {
-    self->state = malloc(sizeof(jiterator_enumerate_state));
+    self->state = calloc(1, sizeof(jiterator_enumerate_state));
     jiterator_enumerate_state* state = (jiterator_enumerate_state*) self->state;
     state->source = source;
     state->index = 0;
@@ -368,7 +386,7 @@ bool jiterator_pairwise_next(jiterator *self) {
 }
 
 void jiterator_pairwise_init(jiterator *self, jiterator *source) {
-    self->state = malloc(sizeof(jiterator_pairwise_state));
+    self->state = calloc(1, sizeof(jiterator_pairwise_state));
     jiterator_pairwise_state* state = (jiterator_pairwise_state*) self->state;
     state->source = source;
     state->current.first = NULL;
