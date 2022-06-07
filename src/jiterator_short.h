@@ -31,4 +31,11 @@
 #define enumerate jiterator_enumerate_init
 #define pairwise jiterator_pairwise_init
 
+#define once jiterator_once_init
+#define once_with jiterator_once_with_init
+#define repeat jiterator_repeat_init
+#define repeat_with jiterator_repeat_with_init
+
+#define concat jiterator_concat_init
+
 #endif //JC_JITERATOR_SHORT_H

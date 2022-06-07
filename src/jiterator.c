@@ -2,6 +2,24 @@
 #include "jiterator.h"
 #include "jvector.h"
 
+void *pair_first(void *pair) {
+    union {
+        void *p;
+        struct pair *pair;
+    } u;
+    u.p = pair;
+    return u.pair->first;
+}
+
+void *pair_second(void *pair) {
+    union {
+        void *p;
+        struct pair *pair;
+    } u;
+    u.p = pair;
+    return u.pair->second;
+}
+
 void jiterator_collect(jiterator *source, Vector *vec) {
     Vector_default(vec);
     while (source->next(source)) {
@@ -475,4 +493,103 @@ void jiterator_pairwise_init(jiterator *self, jiterator *source) {
     state->current.second = NULL;
     state->started = false;
     self->next = jiterator_pairwise_next;
+}
+
+typedef struct jiterator_once_state {
+    void *value;
+    bool done;
+} jiterator_once_state;
+
+bool jiterator_once_next(jiterator *self) {
+    jiterator_once_state *state = (jiterator_once_state *)self->state;
+    if (state->done) {
+        return false;
+    }
+    state->done = true;
+    self->current = state->value;
+    return true;
+}
+
+void jiterator_once_init(jiterator *self, void *value) {
+    self->state = calloc(1, sizeof(jiterator_once_state));
+    jiterator_once_state* state = (jiterator_once_state*) self->state;
+    state->value = value;
+    state->done = false;
+    self->current = state->value;
+    self->next = jiterator_once_next;
+}
+
+typedef struct jiterator_once_with_state {
+    jiterator_generator_fn *generator;
+    bool done;
+} jiterator_once_with_state;
+
+bool jiterator_once_with_next(jiterator *self) {
+    jiterator_once_with_state *state = (jiterator_once_with_state *)self->state;
+    if (state->done) {
+        return false;
+    }
+    state->done = true;
+    self->current = state->generator();
+    return true;
+}
+
+void jiterator_once_with_init(jiterator *self, jiterator_generator_fn *action) {
+    self->state = calloc(1, sizeof(jiterator_once_with_state));
+    jiterator_once_with_state* state = (jiterator_once_with_state*) self->state;
+    state->generator = action;
+    state->done = false;
+    self->current = NULL;
+    self->next = jiterator_once_with_next;
+}
+
+bool jiterator_repeat_next(jiterator *self) {
+    self->current = self->state;
+    return true;
+}
+
+void jiterator_repeat_init(jiterator *self, void *value) {
+    // Since we only need to store a single value, we don't need to allocate a struct
+    self->state = value;
+    self->current = value;
+    self->next = jiterator_repeat_next;
+}
+
+bool jiterator_repeat_with_next(jiterator *self) {
+    jiterator_generator_fn *generator = (jiterator_generator_fn *)self->state;
+    self->current = generator();
+    return true;
+}
+
+void jiterator_repeat_with_init(jiterator *self, jiterator_generator_fn *action) {
+    // Since we only need to store a single function pointer, we don't need to allocate a struct
+    self->state = action;
+    self->current = NULL;
+    self->next = jiterator_repeat_with_next;
+}
+
+typedef struct jiterator_concat_state {
+    jiterator *source1, *source2;
+} jiterator_concat_state;
+
+bool jiterator_concat_next(jiterator *self) {
+    jiterator_concat_state *state = (jiterator_concat_state *)self->state;
+    if (state->source1->next(state->source1)) {
+        self->current = state->source1->current;
+        return true;
+    } else if (state->source2->next(state->source2)) {
+        self->current = state->source2->current;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void jiterator_concat_init(jiterator *self, jiterator *source1, jiterator *source2) {
+    self->state = calloc(1, sizeof(jiterator_concat_state));
+    jiterator_concat_state* state = (jiterator_concat_state*) self->state;
+    state->source1 = source1;
+    state->source2 = source2;
+    self->current = NULL;
+    self->next = jiterator_concat_next;
 }

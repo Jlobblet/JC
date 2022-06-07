@@ -8,10 +8,11 @@ typedef struct jiterator jiterator;
 
 typedef bool jiterator_next(jiterator* self);
 
+/// A struct that exposes two functions to allow iteration of elements, one at a time.
 typedef struct jiterator {
     /// The current element in the iterator.
     void *current;
-    /// A function to advance the iterator to the next element.
+    /// A function to advance the iterator to the next element. It should also update the value in `current` if applicable.
     jiterator_next *next;
     /// Any data that the iterator needs to keep track of.
     void *state;
@@ -61,5 +62,13 @@ void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_pre
 void jiterator_zip_init(jiterator *self, jiterator *source1, jiterator *source2);
 void jiterator_enumerate_init(jiterator *self, jiterator *source);
 void jiterator_pairwise_init(jiterator *self, jiterator *source);
+
+typedef void *jiterator_generator_fn(void);
+void jiterator_once_init(jiterator *self, void *value);
+void jiterator_once_with_init(jiterator *self, jiterator_generator_fn *action);
+void jiterator_repeat_init(jiterator *self, void *action);
+void jiterator_repeat_with_init(jiterator *self, jiterator_generator_fn *action);
+
+void jiterator_concat_init(jiterator *self, jiterator *source1, jiterator *source2);
 
 #endif //JC_JITERATOR_H
