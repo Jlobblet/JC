@@ -5,6 +5,7 @@ add_library(JC
     jio.c jio.h
     jiterator.c jiterator.h
     jiterator_short.c jiterator_short.h
+    jlog.c jlog.h
     jmmap.c jmmap.h
     jprint.c jprint.h
     jstring.c jstring.h
