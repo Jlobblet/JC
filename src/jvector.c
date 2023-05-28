@@ -93,10 +93,11 @@ iptr Vector_from(Vector* vec, uptr count, void** elts) {
 /// \return On success, `0`. On error, `-1` and `errno` is set to indicate the error.
 iptr Vector_grow(Vector* vec) {
     vec->capacity *= vec->growth_factor;
-    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (vec->data == NULL) {
+    void** new_data = realloc(vec->data, vec->capacity * sizeof(void*));
+    if (new_data == NULL) {
         return -1;
     }
+    vec->data = new_data;
     memset(vec->data + vec->length, 0, (vec->capacity - vec->length) * sizeof(void*));
     return 0;
 }
@@ -179,10 +180,11 @@ iptr Vector_reserve(Vector* vec, uptr capacity) {
     while (vec->capacity < capacity) {
         vec->capacity *= vec->growth_factor;
     }
-    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (vec->data == NULL) {
+    void** new_data = realloc(vec->data, vec->capacity * sizeof(void*));
+    if (new_data == NULL) {
         return -1;
     }
+    vec->data = new_data;
     memset(vec->data + vec->length, 0, (vec->capacity - vec->length) * sizeof(void*));
     return 0;
 }
@@ -198,8 +200,9 @@ iptr Vector_reserve_exact(Vector* vec, uptr capacity) {
     assert(capacity >= vec->capacity);
     if (capacity == vec->capacity) { return 0; }
     vec->capacity = capacity;
-    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (vec->data == NULL) { return -1; }
+    void** new_data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
+    if (new_data == NULL) { return -1; }
+    vec->data = new_data;
     return 0;
 }
 
@@ -208,8 +211,9 @@ iptr Vector_reserve_exact(Vector* vec, uptr capacity) {
 /// \return On success, `0`. On error, `-1` and `errno` is set to indicate the error.
 iptr Vector_shrink_to_fit(Vector* vec) {
     vec->capacity = vec->length;
-    vec->data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
-    if (vec->data == NULL) { return -1; }
+    void** new_data = (void**)realloc(vec->data, vec->capacity * sizeof(void*));
+    if (new_data == NULL) { return -1; }
+    vec->data = new_data;
     return 0;
 }
 
