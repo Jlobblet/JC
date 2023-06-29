@@ -96,24 +96,56 @@ void jlogger_log_fatal(jlogger_t self, const char *fmt, ...) {
     va_end(args);
 }
 
-void jlogger_stdout_sink(__attribute__((unused)) jlogger_sink_t self, jlog_level level, const char *fmt, ...) {
+void stream_log(const jlog_level *level, const char *fmt, FILE *stream, va_list args) {
     time_t t = time(NULL);
 
     struct tm *info = localtime(&t);
     char buffer[80];
     strftime(buffer, 80, "%Y-%m-%d %H:%M:%S", info);
-    printf("%s [%s]: ", buffer, jlog_level_to_string(level));
 
+    fprintf(stream, "%s [%s]: ", buffer, jlog_level_to_string((*level)));
+    vfprintf(stream, fmt, args);
+    fprintf(stream, "\n");
+}
+
+void jlogger_stdout_sink(__attribute__((unused)) jlogger_sink_t self, jlog_level level, const char *fmt, ...) {
     va_list args;
     va_start(args, fmt);
-    vprintf(fmt, args);
+    stream_log(&level, fmt, stdout, args);
     va_end(args);
-
-    printf("\n");
 }
 
 void jlogger_stdout_sink_new(jlogger_sink_t sink) {
     sink->sink = jlogger_stdout_sink;
-    sink->filter = NULL;
+    Vector_default(&sink->filters);
 }
 
+void jlogger_stderr_sink(__attribute__((unused)) jlogger_sink_t self, jlog_level level, const char *fmt, ...) {
+    va_list args;
+    va_start(args, fmt);
+    stream_log(&level, fmt, stderr, args);
+    va_end(args);
+}
+
+void jlogger_stderr_sink_new(jlogger_sink_t sink) {
+    sink->sink = jlogger_stderr_sink;
+    Vector_default(&sink->filters);
+}
+
+void jlogger_std_hybrid_sink(__attribute__((unused)) jlogger_sink_t self, jlog_level level, const char *fmt, ...) {
+    FILE *stream = level >= JLOG_LEVEL_WARN ? stderr : stdout;
+
+    va_list args;
+    va_start(args, fmt);
+    stream_log(&level, fmt, stream, args);
+    va_end(args);
+}
+
+void jlogger_std_hybrid_sink_new(jlogger_sink_t sink) {
+    sink->sink = jlogger_std_hybrid_sink;
+    Vector_default(&sink->filters);
+}
+
+void jlogger_sink_add_filter(jlogger_sink_t self, jlogger_sink_filter *filter) {
+    Vector_push_back(&self->filters, filter);
+}
