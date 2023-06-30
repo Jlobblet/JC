@@ -30,6 +30,7 @@ typedef bool jlogger_sink_filter(jlogger_sink_t self, jlog_level level, const ch
 struct jlogger_sink {
     jlogger_sink_fn *sink;
     Vector filters;
+    void *data;
 };
 void jlogger_sink_add_filter(jlogger_sink_t self, jlogger_sink_filter *filter);
 
@@ -48,5 +49,6 @@ void jlogger_log_fatal(jlogger_t self, const char *fmt, ...);
 void jlogger_stdout_sink_new(jlogger_sink_t sink);
 void jlogger_stderr_sink_new(jlogger_sink_t sink);
 void jlogger_std_hybrid_sink_new(jlogger_sink_t sink);
+void jlogger_file_sink_new(jlogger_sink_t sink, char *path);
 
 #endif //JC_JLOG_H

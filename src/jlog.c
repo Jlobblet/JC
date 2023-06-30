@@ -149,3 +149,25 @@ void jlogger_std_hybrid_sink_new(jlogger_sink_t sink) {
 void jlogger_sink_add_filter(jlogger_sink_t self, jlogger_sink_filter *filter) {
     Vector_push_back(&self->filters, filter);
 }
+
+typedef struct jloggger_file_sink_data {
+    char *path;
+    FILE *file;
+} jloggger_file_sink_data_s;
+
+void jlogger_file_sink(jlogger_sink_t self, jlog_level level, const char *fmt, ...) {
+    va_list args;
+    va_start(args, fmt);
+    jloggger_file_sink_data_s *data = self->data;
+    stream_log(&level, fmt, data->file, args);
+    va_end(args);
+}
+
+void jlogger_file_sink_new(jlogger_sink_t sink, char *path) {
+    sink->sink = jlogger_file_sink;
+    sink->data = calloc(1, sizeof(jloggger_file_sink_data_s));
+    jloggger_file_sink_data_s *data = sink->data;
+    data->path = path;
+    data->file = fopen(path, "a");
+    Vector_default(&sink->filters);
+}
