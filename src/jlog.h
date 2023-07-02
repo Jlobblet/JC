@@ -27,7 +27,7 @@ typedef struct jlogger_sink jlogger_sink_s;
 typedef jlogger_sink_s *jlogger_sink_t;
 typedef void jlogger_sink_free_fn(jlogger_sink_t self);
 typedef bool jlogger_sink_fn(jlogger_sink_t self, jlog_level level, const char *fmt, ...);
-typedef bool jlogger_sink_filter(jlogger_sink_t self, jlog_level level, const char *fmt, ...);
+typedef bool jlogger_sink_filter(jlogger_sink_t self, jlog_level level, const char *fmt, va_list args);
 struct jlogger_sink {
     jlogger_sink_fn *sink;
     Vector filters;

@@ -50,7 +50,12 @@ static bool jlogger_vlog(jlogger_t self, jlog_level level, const char *fmt, va_l
     bool result = true;
     for (uptr i = 0; i < self->sinks->length; i++) {
         jlogger_sink_t sink = self->sinks->data[i];
-        result &= sink->sink(sink, level, fmt, args);
+        bool filter_result = true;
+        for (uptr j = 0; j < sink->filters.length; j++) {
+            jlogger_sink_filter *filter = sink->filters.data[j];
+            filter_result &= filter(sink, level, fmt, args);
+        }
+        if (filter_result) result &= sink->sink(sink, level, fmt, args);
     }
     return result;
 }
