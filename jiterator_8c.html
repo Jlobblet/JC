@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.7.0</span>
+   &#160;<span id="projectnumber">v1.8</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -169,6 +169,10 @@ Functions</h2></td></tr>
 <tr class="separator:ac8f3526656ae8d72e675cd5f1d0741b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648030e3f365ea8a426f6bccfb80ce46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jiterator_8c.html#a648030e3f365ea8a426f6bccfb80ce46">jiterator_drop_while_init</a> (<a class="el" href="structjiterator.html">jiterator</a> *self, <a class="el" href="structjiterator.html">jiterator</a> *source, <a class="el" href="jiterator_8h.html#a0e872888d5c0ce9f865302c4bc89e252">jiterator_predicate_fn</a> *<a class="el" href="jiterator__short_8h.html#aa0d4588dab46c6697345446b7904e786">filter</a>)</td></tr>
 <tr class="separator:a648030e3f365ea8a426f6bccfb80ce46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1817bb13afacd04040b71c357f18b61a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jiterator_8c.html#a1817bb13afacd04040b71c357f18b61a">jiterator_zip_with_next</a> (<a class="el" href="structjiterator.html">jiterator</a> *self)</td></tr>
+<tr class="separator:a1817bb13afacd04040b71c357f18b61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea38a8c5fca9c2cca31855ce3a05c557"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jiterator_8c.html#aea38a8c5fca9c2cca31855ce3a05c557">jiterator_zip_with_init</a> (<a class="el" href="structjiterator.html">jiterator</a> *self, <a class="el" href="structjiterator.html">jiterator</a> *source1, <a class="el" href="structjiterator.html">jiterator</a> *source2, <a class="el" href="jiterator_8h.html#a6e879a7f90168117a9404a57624b4dca">jiterator_map2_fn</a> *zipper)</td></tr>
+<tr class="separator:aea38a8c5fca9c2cca31855ce3a05c557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50b923efc95e813eb64062daea0a761"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jiterator_8c.html#aa50b923efc95e813eb64062daea0a761">jiterator_zip_next</a> (<a class="el" href="structjiterator.html">jiterator</a> *self)</td></tr>
 <tr class="separator:aa50b923efc95e813eb64062daea0a761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae72837df1820c30c50259208bbf0fa01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jiterator_8c.html#ae72837df1820c30c50259208bbf0fa01">jiterator_zip_init</a> (<a class="el" href="structjiterator.html">jiterator</a> *self, <a class="el" href="structjiterator.html">jiterator</a> *source1, <a class="el" href="structjiterator.html">jiterator</a> *source2)</td></tr>
@@ -466,9 +470,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00588">588</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00617">617</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00575">jiterator_concat_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00604">jiterator_concat_next()</a>.</p>
 
 </div>
 </div>
@@ -488,9 +492,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00575">575</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00604">604</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00588">jiterator_concat_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00617">jiterator_concat_init()</a>.</p>
 
 </div>
 </div>
@@ -640,9 +644,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00452">452</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00481">481</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00434">jiterator_enumerate_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00463">jiterator_enumerate_next()</a>.</p>
 
 </div>
 </div>
@@ -662,9 +666,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00434">434</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00463">463</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00452">jiterator_enumerate_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00481">jiterator_enumerate_init()</a>.</p>
 
 </div>
 </div>
@@ -984,9 +988,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00513">513</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00542">542</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator_8c_source.html#l00503">jiterator_once_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator_8c_source.html#l00532">jiterator_once_next()</a>.</p>
 
 </div>
 </div>
@@ -1006,9 +1010,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00503">503</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00532">532</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00513">jiterator_once_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00542">jiterator_once_init()</a>.</p>
 
 </div>
 </div>
@@ -1038,9 +1042,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00537">537</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00566">566</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator__short_8h_source.html#l00012">action</a>, and <a class="el" href="jiterator_8c_source.html#l00527">jiterator_once_with_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator__short_8h_source.html#l00012">action</a>, and <a class="el" href="jiterator_8c_source.html#l00556">jiterator_once_with_next()</a>.</p>
 
 </div>
 </div>
@@ -1060,9 +1064,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00527">527</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00556">556</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00537">jiterator_once_with_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00566">jiterator_once_with_init()</a>.</p>
 
 </div>
 </div>
@@ -1092,9 +1096,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00488">488</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00517">517</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00469">jiterator_pairwise_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00498">jiterator_pairwise_next()</a>.</p>
 
 </div>
 </div>
@@ -1114,9 +1118,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00469">469</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00498">498</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00488">jiterator_pairwise_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00517">jiterator_pairwise_init()</a>.</p>
 
 </div>
 </div>
@@ -1184,9 +1188,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00551">551</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00580">580</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator_8c_source.html#l00546">jiterator_repeat_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator_8c_source.html#l00575">jiterator_repeat_next()</a>.</p>
 
 </div>
 </div>
@@ -1206,9 +1210,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00546">546</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00575">575</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00551">jiterator_repeat_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00580">jiterator_repeat_init()</a>.</p>
 
 </div>
 </div>
@@ -1238,9 +1242,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00564">564</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00593">593</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator__short_8h_source.html#l00012">action</a>, and <a class="el" href="jiterator_8c_source.html#l00558">jiterator_repeat_with_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator__short_8h_source.html#l00012">action</a>, and <a class="el" href="jiterator_8c_source.html#l00587">jiterator_repeat_with_next()</a>.</p>
 
 </div>
 </div>
@@ -1260,9 +1264,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00558">558</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00587">587</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00564">jiterator_repeat_with_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00593">jiterator_repeat_with_init()</a>.</p>
 
 </div>
 </div>
@@ -1558,9 +1562,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00417">417</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00446">446</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00403">jiterator_zip_next()</a>.</p>
+<p class="reference">References <a class="el" href="jiterator_8h_source.html#l00014">jiterator::current</a>, and <a class="el" href="jiterator_8c_source.html#l00432">jiterator_zip_next()</a>.</p>
 
 </div>
 </div>
@@ -1580,9 +1584,75 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00403">403</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00432">432</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00417">jiterator_zip_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00446">jiterator_zip_init()</a>.</p>
+
+</div>
+</div>
+<a id="aea38a8c5fca9c2cca31855ce3a05c557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea38a8c5fca9c2cca31855ce3a05c557">&#9670;&nbsp;</a></span>jiterator_zip_with_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jiterator_zip_with_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structjiterator.html">jiterator</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structjiterator.html">jiterator</a> *&#160;</td>
+          <td class="paramname"><em>source1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structjiterator.html">jiterator</a> *&#160;</td>
+          <td class="paramname"><em>source2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jiterator_8h.html#a6e879a7f90168117a9404a57624b4dca">jiterator_map2_fn</a> *&#160;</td>
+          <td class="paramname"><em>zipper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00417">417</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jiterator_8c_source.html#l00404">jiterator_zip_with_next()</a>, and <a class="el" href="jiterator_8h_source.html#l00016">jiterator::next</a>.</p>
+
+</div>
+</div>
+<a id="a1817bb13afacd04040b71c357f18b61a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1817bb13afacd04040b71c357f18b61a">&#9670;&nbsp;</a></span>jiterator_zip_with_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool jiterator_zip_with_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structjiterator.html">jiterator</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="jiterator_8c_source.html#l00404">404</a> of file <a class="el" href="jiterator_8c_source.html">jiterator.c</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="jiterator_8c_source.html#l00417">jiterator_zip_with_init()</a>.</p>
 
 </div>
 </div>
@@ -1658,7 +1728,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jiterator_8c.html">jiterator.c</a></li>
-    <li class="footer">Generated on Wed Dec 20 2023 19:27:56 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Wed Dec 20 2023 19:34:31 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

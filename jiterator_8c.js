@@ -47,6 +47,8 @@ var jiterator_8c =
     [ "jiterator_vector_reset", "jiterator_8c.html#a433ae9ecb2b1a28e44719b349b762897", null ],
     [ "jiterator_zip_init", "jiterator_8c.html#ae72837df1820c30c50259208bbf0fa01", null ],
     [ "jiterator_zip_next", "jiterator_8c.html#aa50b923efc95e813eb64062daea0a761", null ],
+    [ "jiterator_zip_with_init", "jiterator_8c.html#aea38a8c5fca9c2cca31855ce3a05c557", null ],
+    [ "jiterator_zip_with_next", "jiterator_8c.html#a1817bb13afacd04040b71c357f18b61a", null ],
     [ "map_iterator_next", "jiterator_8c.html#a6ae0ef07a1691c191a85a1491408ef07", null ],
     [ "pair_first", "jiterator_8c.html#a2b194748882028f023e7babdd884a378", null ],
     [ "pair_second", "jiterator_8c.html#a1e8914beafec60dfeadb5971bafeb74d", null ]

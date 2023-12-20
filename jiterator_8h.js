@@ -38,5 +38,6 @@ var jiterator_8h =
     [ "jiterator_take_while_init", "jiterator_8h.html#a2a165fe743676708166aac09675b446d", null ],
     [ "jiterator_vector_init", "jiterator_8h.html#adc2305272702a6cb8818403f95357f03", null ],
     [ "jiterator_vector_reset", "jiterator_8h.html#a433ae9ecb2b1a28e44719b349b762897", null ],
-    [ "jiterator_zip_init", "jiterator_8h.html#ae72837df1820c30c50259208bbf0fa01", null ]
+    [ "jiterator_zip_init", "jiterator_8h.html#ae72837df1820c30c50259208bbf0fa01", null ],
+    [ "jiterator_zip_with_init", "jiterator_8h.html#aea38a8c5fca9c2cca31855ce3a05c557", null ]
 ];
