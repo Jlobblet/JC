@@ -394,6 +394,35 @@ void jiterator_drop_while_init(jiterator *self, jiterator *source, jiterator_pre
     self->next = jiterator_drop_while_next;
 }
 
+typedef struct jiterator_zip_with_state {
+    jiterator *source1;
+    jiterator *source2;
+    jiterator_map2_fn *zipper;
+    void *current;
+} jiterator_zip_with_state;
+
+bool jiterator_zip_with_next(jiterator *self) {
+    jiterator_zip_with_state *state = (jiterator_zip_with_state *)self->state;
+    if (!state->source1->next(state->source1)) {
+        return false;
+    }
+    if (!state->source2->next(state->source2)) {
+        return false;
+    }
+    state->current = state->zipper(state->source1->current, state->source2->current);
+    self->current = &state->current;
+    return true;
+}
+
+void jiterator_zip_with_init(jiterator *self, jiterator *source1, jiterator *source2, jiterator_map2_fn *zipper) {
+    self->state = calloc(1, sizeof(jiterator_zip_with_state));
+    jiterator_zip_with_state* state = (jiterator_zip_with_state*) self->state;
+    state->source1 = source1;
+    state->source2 = source2;
+    state->zipper = zipper;
+    self->next = jiterator_zip_with_next;
+}
+
 typedef struct jiterator_zip_state {
     jiterator *source1;
     jiterator *source2;
