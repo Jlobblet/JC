@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['format_5fspecifier_357',['format_specifier',['../jprint_8h.html#a5b62986c0eb75c5e952c50b9913420c3',1,'jprint.h']]],
-  ['fputv_358',['fputv',['../jprint_8h.html#a97731ddb2df816f152eb475d98660d82',1,'jprint.h']]],
-  ['fputvln_359',['fputvln',['../jprint_8h.html#a296bd2a71d65e16153399bf923cf5e33',1,'jprint.h']]]
+  ['collect_655',['collect',['../jiterator__short_8h.html#abef47979da63ab6a80757f58679e1a7e',1,'jiterator_short.h']]],
+  ['concat_656',['concat',['../jiterator__short_8h.html#aa8cec9de05455b62fb70f0871ff58d12',1,'jiterator_short.h']]]
 ];

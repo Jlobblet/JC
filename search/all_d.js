@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['read_5fall_5flines_145',['read_all_lines',['../jio_8c.html#a12b761ef58e2d61b3851fed37b7ebefd',1,'read_all_lines(const char *filepath, char ***lines, uptr **lengths, uptr n):&#160;jio.c'],['../jio_8h.html#a12b761ef58e2d61b3851fed37b7ebefd',1,'read_all_lines(const char *filepath, char ***lines, uptr **lengths, uptr n):&#160;jio.c']]],
-  ['row_5fstarts_146',['row_starts',['../structBitArray2d.html#a900caec0e92a436eba17d83600c1b797',1,'BitArray2d']]],
-  ['rows_147',['rows',['../structBitArray2d.html#a4168864669970d5c301987685cbf759e',1,'BitArray2d']]]
+  ['once_261',['once',['../jiterator__short_8h.html#ab060fd7f0b93249ad2bc5b44c7151872',1,'jiterator_short.h']]],
+  ['once_5fwith_262',['once_with',['../jiterator__short_8h.html#af9ec5e163f24a953dcb6af4d85a3fb69',1,'jiterator_short.h']]]
 ];

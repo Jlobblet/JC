@@ -1,15 +1,21 @@
 var searchData=
 [
-  ['fd_42',['fd',['../structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d',1,'jc_mmap']]],
-  ['fi16_43',['fi16',['../jint_8h.html#a242be2f42465d0b4870a331f5fe943e9',1,'jint.h']]],
-  ['fi32_44',['fi32',['../jint_8h.html#a30a9ef3d9f91a7db3faf01ca6f57c186',1,'jint.h']]],
-  ['fi64_45',['fi64',['../jint_8h.html#ae460f9ef73d253da0b2f03db44dee951',1,'jint.h']]],
-  ['fi8_46',['fi8',['../jint_8h.html#a7bb80c6334f09a2d5637485e7612b3ae',1,'jint.h']]],
-  ['format_5fspecifier_47',['format_specifier',['../jprint_8h.html#a5b62986c0eb75c5e952c50b9913420c3',1,'jprint.h']]],
-  ['fputv_48',['fputv',['../jprint_8h.html#a97731ddb2df816f152eb475d98660d82',1,'jprint.h']]],
-  ['fputvln_49',['fputvln',['../jprint_8h.html#a296bd2a71d65e16153399bf923cf5e33',1,'jprint.h']]],
-  ['fu16_50',['fu16',['../jint_8h.html#ae3e1fc408eaa85c20992ba8577d03945',1,'jint.h']]],
-  ['fu32_51',['fu32',['../jint_8h.html#a228f2ebad1c48fe2ba75ff2b26563a52',1,'jint.h']]],
-  ['fu64_52',['fu64',['../jint_8h.html#a85ea03441af2fd3fbf48956dbfc3c83f',1,'jint.h']]],
-  ['fu8_53',['fu8',['../jint_8h.html#afc58ec9b539b48194919f0340e1d3bf2',1,'jint.h']]]
+  ['fd_51',['fd',['../structjc__mmap.html#ab6014096760276a801c41dde9f4b0e1d',1,'jc_mmap']]],
+  ['fi16_52',['fi16',['../jint_8h.html#a242be2f42465d0b4870a331f5fe943e9',1,'jint.h']]],
+  ['fi32_53',['fi32',['../jint_8h.html#a30a9ef3d9f91a7db3faf01ca6f57c186',1,'jint.h']]],
+  ['fi64_54',['fi64',['../jint_8h.html#ae460f9ef73d253da0b2f03db44dee951',1,'jint.h']]],
+  ['fi8_55',['fi8',['../jint_8h.html#a7bb80c6334f09a2d5637485e7612b3ae',1,'jint.h']]],
+  ['filter_56',['filter',['../jiterator__short_8h.html#aa0d4588dab46c6697345446b7904e786',1,'jiterator_short.h']]],
+  ['filter_5fiterator_5fnext_57',['filter_iterator_next',['../jiterator_8c.html#afcac1f9ddd9e8047040383ecd7c0fe35',1,'jiterator.c']]],
+  ['filters_58',['filters',['../structjlogger__sink.html#aee67e339a3ff97ac826a096f52ad8c3a',1,'jlogger_sink']]],
+  ['first_59',['first',['../structpair.html#aadf0b760dd9c104124c9d5d3c89cbe58',1,'pair']]],
+  ['fold_60',['fold',['../jiterator__short_8h.html#a638abddb1fdd4dcb89024b03d0754c69',1,'jiterator_short.h']]],
+  ['format_5fspecifier_61',['format_specifier',['../jprint_8h.html#a5b62986c0eb75c5e952c50b9913420c3',1,'jprint.h']]],
+  ['fputv_62',['fputv',['../jprint_8h.html#a97731ddb2df816f152eb475d98660d82',1,'jprint.h']]],
+  ['fputvln_63',['fputvln',['../jprint_8h.html#a296bd2a71d65e16153399bf923cf5e33',1,'jprint.h']]],
+  ['free_64',['free',['../structjlogger__sink.html#ab86208b45fe46f2ef4524b8eeabd5a2a',1,'jlogger_sink']]],
+  ['fu16_65',['fu16',['../jint_8h.html#ae3e1fc408eaa85c20992ba8577d03945',1,'jint.h']]],
+  ['fu32_66',['fu32',['../jint_8h.html#a228f2ebad1c48fe2ba75ff2b26563a52',1,'jint.h']]],
+  ['fu64_67',['fu64',['../jint_8h.html#a85ea03441af2fd3fbf48956dbfc3c83f',1,'jint.h']]],
+  ['fu8_68',['fu8',['../jint_8h.html#afc58ec9b539b48194919f0340e1d3bf2',1,'jint.h']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['row_5fstarts_317',['row_starts',['../structBitArray2d.html#a900caec0e92a436eba17d83600c1b797',1,'BitArray2d']]],
-  ['rows_318',['rows',['../structBitArray2d.html#a4168864669970d5c301987685cbf759e',1,'BitArray2d']]]
+  ['max_580',['max',['../structVector__minmax.html#a9f757e48c961b7e8afd4d9ad3dd3b4ed',1,'Vector_minmax']]],
+  ['min_581',['min',['../structVector__minmax.html#af12a006a4671c23f7d03053f5f6968e0',1,'Vector_minmax']]]
 ];

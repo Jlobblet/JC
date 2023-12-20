@@ -1,0 +1,35 @@
+var jlog_8h =
+[
+    [ "jlogger_s", "structjlogger.html", "structjlogger" ],
+    [ "jlogger_sink_s", "structjlogger__sink.html", "structjlogger__sink" ],
+    [ "jlogger_sink_filter", "jlog_8h.html#a2c430df079170e7100d469322c8f48aa", null ],
+    [ "jlogger_sink_fn", "jlog_8h.html#aab2830b216715cb64318bcd203be3bcc", null ],
+    [ "jlogger_sink_free_fn", "jlog_8h.html#a12b0a7946248cccaa7127efca552d619", null ],
+    [ "jlogger_sink_t", "jlog_8h.html#a7bd7f6fd9c54e400f44c351b4824de3a", null ],
+    [ "jlogger_t", "jlog_8h.html#a2ab3a28b578a4ec9e10f39673622b60e", null ],
+    [ "jlog_level", "jlog_8h.html#a9f2fcb899ada900b443fe7b01a89e2d9", [
+      [ "JLOG_LEVEL_TRACE", "jlog_8h.html#a9f2fcb899ada900b443fe7b01a89e2d9a126d98dff741fcccabe197667ca4010d", null ],
+      [ "JLOG_LEVEL_DEBUG", "jlog_8h.html#a9f2fcb899ada900b443fe7b01a89e2d9ae5716715f50f7791cbc862c04fdc477e", null ],
+      [ "JLOG_LEVEL_INFO", "jlog_8h.html#a9f2fcb899ada900b443fe7b01a89e2d9ac0bd42f4cca94f6c1608cde85aebb59b", null ],
+      [ "JLOG_LEVEL_WARN", "jlog_8h.html#a9f2fcb899ada900b443fe7b01a89e2d9a4473af8c8939d00bc0e34f521ace7ab4", null ],
+      [ "JLOG_LEVEL_ERROR", "jlog_8h.html#a9f2fcb899ada900b443fe7b01a89e2d9a28259a2dfc23590026049b8d11e5bce5", null ],
+      [ "JLOG_LEVEL_FATAL", "jlog_8h.html#a9f2fcb899ada900b443fe7b01a89e2d9ae47b764c9b6bb60606726c1ee6cbe3aa", null ]
+    ] ],
+    [ "jlog_level_to_string", "jlog_8h.html#a98f12b7858524709cf582c6f708b2d8b", null ],
+    [ "jlogger_add_sink", "jlog_8h.html#ac781849173ae97970b43f059f7bbbc21", null ],
+    [ "jlogger_file_sink_new", "jlog_8h.html#ab9da5b39c5a6ef49f597e02fef26832c", null ],
+    [ "jlogger_free", "jlog_8h.html#af450108904929413085c8e245115348f", null ],
+    [ "jlogger_log", "jlog_8h.html#afa3044ef8af0f20eebaccc5ae0694109", null ],
+    [ "jlogger_log_debug", "jlog_8h.html#a27462c331db711ad5454b6288b2be2c0", null ],
+    [ "jlogger_log_error", "jlog_8h.html#a3a8411e2d06a611261e1dce3500005fc", null ],
+    [ "jlogger_log_fatal", "jlog_8h.html#a5dc72b075e8cb27a463ada8a57bbadf4", null ],
+    [ "jlogger_log_info", "jlog_8h.html#a1d29a450d6c2bb3ec69fb13a45cd0a87", null ],
+    [ "jlogger_log_trace", "jlog_8h.html#a82da2bdf21e78708541e10273aa6114b", null ],
+    [ "jlogger_log_warn", "jlog_8h.html#a904d4af7c4fd8ae0855aeecd6070115e", null ],
+    [ "jlogger_new", "jlog_8h.html#a51b4e8abee99f310d4d9f96a45459e95", null ],
+    [ "jlogger_rotating_file_sink_new", "jlog_8h.html#a8bd425021fecfc6c55542db3c767bd52", null ],
+    [ "jlogger_sink_add_filter", "jlog_8h.html#a73497a408627a5872c8c9592ba91642a", null ],
+    [ "jlogger_std_hybrid_sink_new", "jlog_8h.html#ad79cbfea214a1a5bb108283bb035b05e", null ],
+    [ "jlogger_stderr_sink_new", "jlog_8h.html#aaed42206b334dc2044e2a2f7cfeb6f33", null ],
+    [ "jlogger_stdout_sink_new", "jlog_8h.html#a0a05a470d68e643c2e151af08bcfc052", null ]
+];

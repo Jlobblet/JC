@@ -1,0 +1,26 @@
+var jlog_8c =
+[
+    [ "jlogger_log_level_impl", "jlog_8c.html#ae454916bc2bab4e8db03db2caaafa12c", null ],
+    [ "jlog_level_to_string", "jlog_8c.html#a98f12b7858524709cf582c6f708b2d8b", null ],
+    [ "jlogger_add_sink", "jlog_8c.html#ac781849173ae97970b43f059f7bbbc21", null ],
+    [ "jlogger_file_sink", "jlog_8c.html#a824b632595f7644991f93d4521b6c508", null ],
+    [ "jlogger_file_sink_free", "jlog_8c.html#ae69333fb5724ffc2cc9e0b6e908e31cb", null ],
+    [ "jlogger_file_sink_new", "jlog_8c.html#ab9da5b39c5a6ef49f597e02fef26832c", null ],
+    [ "jlogger_free", "jlog_8c.html#af450108904929413085c8e245115348f", null ],
+    [ "jlogger_log", "jlog_8c.html#afa3044ef8af0f20eebaccc5ae0694109", null ],
+    [ "jlogger_log_level_impl", "jlog_8c.html#a7e25ea041c44dcfddcef7bfac1440eca", null ],
+    [ "jlogger_new", "jlog_8c.html#a51b4e8abee99f310d4d9f96a45459e95", null ],
+    [ "jlogger_rotating_file_sink", "jlog_8c.html#afa3f97f01d1db643cc072423e985409d", null ],
+    [ "jlogger_rotating_file_sink_maybe_rotate", "jlog_8c.html#a25abd3deebc95fcc75aeae0bc085c57e", null ],
+    [ "jlogger_rotating_file_sink_new", "jlog_8c.html#a8bd425021fecfc6c55542db3c767bd52", null ],
+    [ "jlogger_rotating_file_sink_rotate", "jlog_8c.html#ac19a2fc4c12b91adf3b95fe3ec7b1d6b", null ],
+    [ "jlogger_sink_add_filter", "jlog_8c.html#a73497a408627a5872c8c9592ba91642a", null ],
+    [ "jlogger_std_hybrid_sink", "jlog_8c.html#afa2e84f81696b1332c53620f73702a27", null ],
+    [ "jlogger_std_hybrid_sink_new", "jlog_8c.html#ad79cbfea214a1a5bb108283bb035b05e", null ],
+    [ "jlogger_stderr_sink", "jlog_8c.html#a2cfd3a0726e9cadeda7d12e420b22dd4", null ],
+    [ "jlogger_stderr_sink_new", "jlog_8c.html#aaed42206b334dc2044e2a2f7cfeb6f33", null ],
+    [ "jlogger_stdout_sink", "jlog_8c.html#af64c145549194bb66b28d16be51141a3", null ],
+    [ "jlogger_stdout_sink_new", "jlog_8c.html#a0a05a470d68e643c2e151af08bcfc052", null ],
+    [ "jlogger_vlog", "jlog_8c.html#a9efd45aa5148ffdfee999573a34aadb4", null ],
+    [ "jloggger_rotating_file_sink_free", "jlog_8c.html#aaa47cf7a6adf06f1f955f46a26322829", null ]
+];

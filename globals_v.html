@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.6.0</span>
+   &#160;<span id="projectnumber">v1.7.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -86,13 +86,19 @@ $(document).ready(function(){initNavTree('globals_v.html',''); initResizable(); 
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a id="index_v"></a>- v -</h3><ul>
+<li>vector
+: <a class="el" href="jiterator__short_8h.html#add93f942eb3d18a8f8e108404869156f">jiterator_short.h</a>
+</li>
 <li>Vector_append_arr()
-: <a class="el" href="jvector_8h.html#ad21a5ffed26f5b4101c45b69270329d7">jvector.h</a>
-, <a class="el" href="jvector_8c.html#ad21a5ffed26f5b4101c45b69270329d7">jvector.c</a>
+: <a class="el" href="jvector_8c.html#ad21a5ffed26f5b4101c45b69270329d7">jvector.c</a>
+, <a class="el" href="jvector_8h.html#ad21a5ffed26f5b4101c45b69270329d7">jvector.h</a>
 </li>
 <li>Vector_append_many()
 : <a class="el" href="jvector_8c.html#a29b45eb8b58cdcd7699782e77a4bfb4b">jvector.c</a>
 , <a class="el" href="jvector_8h.html#a29b45eb8b58cdcd7699782e77a4bfb4b">jvector.h</a>
+</li>
+<li>vector_compare_t
+: <a class="el" href="jvector_8h.html#ae8d28ca1470885b8b77a1241cb5a85f9">jvector.h</a>
 </li>
 <li>Vector_default()
 : <a class="el" href="jvector_8c.html#a04bc3bf3c74d5712bdb352764cc1bfcb">jvector.c</a>
@@ -101,6 +107,20 @@ $(document).ready(function(){initNavTree('globals_v.html',''); initResizable(); 
 <li>Vector_dest()
 : <a class="el" href="jvector_8c.html#a3b41cba43159f113f496071d29002cb9">jvector.c</a>
 , <a class="el" href="jvector_8h.html#a3b41cba43159f113f496071d29002cb9">jvector.h</a>
+</li>
+<li>Vector_filter()
+: <a class="el" href="jvector_8c.html#ad5f54952413938d456954fcd26ee541b">jvector.c</a>
+, <a class="el" href="jvector_8h.html#ad5f54952413938d456954fcd26ee541b">jvector.h</a>
+</li>
+<li>vector_filter_t
+: <a class="el" href="jvector_8h.html#ada77374e26921aae4088b0b54719c22c">jvector.h</a>
+</li>
+<li>Vector_fold()
+: <a class="el" href="jvector_8c.html#ab0ea266b4525ebcca7da3bce17b9ff3f">jvector.c</a>
+, <a class="el" href="jvector_8h.html#ab0ea266b4525ebcca7da3bce17b9ff3f">jvector.h</a>
+</li>
+<li>vector_fold_t
+: <a class="el" href="jvector_8h.html#a19fe724b4c8147dd1698212c33c77fdc">jvector.h</a>
 </li>
 <li>Vector_from()
 : <a class="el" href="jvector_8c.html#a6429f03ae05268daf3da078c19b3abd4">jvector.c</a>
@@ -115,8 +135,27 @@ $(document).ready(function(){initNavTree('globals_v.html',''); initResizable(); 
 , <a class="el" href="jvector_8h.html#ad164d559eb204ff6a58636958ef07a0a">jvector.h</a>
 </li>
 <li>Vector_init()
-: <a class="el" href="jvector_8h.html#a42954c1391eee8dcc61622cbf26d51fc">jvector.h</a>
-, <a class="el" href="jvector_8c.html#a42954c1391eee8dcc61622cbf26d51fc">jvector.c</a>
+: <a class="el" href="jvector_8c.html#a42954c1391eee8dcc61622cbf26d51fc">jvector.c</a>
+, <a class="el" href="jvector_8h.html#a42954c1391eee8dcc61622cbf26d51fc">jvector.h</a>
+</li>
+<li>Vector_map()
+: <a class="el" href="jvector_8h.html#a400843a938520cde8f9048d1600e8f37">jvector.h</a>
+, <a class="el" href="jvector_8c.html#a400843a938520cde8f9048d1600e8f37">jvector.c</a>
+</li>
+<li>vector_mapping_t
+: <a class="el" href="jvector_8h.html#a82e1a335e1440ff7be238fb8b89732d7">jvector.h</a>
+</li>
+<li>Vector_max()
+: <a class="el" href="jvector_8c.html#aa508ce1b363abdb6af3b2959140ce4ef">jvector.c</a>
+, <a class="el" href="jvector_8h.html#aa508ce1b363abdb6af3b2959140ce4ef">jvector.h</a>
+</li>
+<li>Vector_min()
+: <a class="el" href="jvector_8c.html#ac3ba5f54000449e430ef924501f2f686">jvector.c</a>
+, <a class="el" href="jvector_8h.html#ac3ba5f54000449e430ef924501f2f686">jvector.h</a>
+</li>
+<li>Vector_minmax()
+: <a class="el" href="jvector_8c.html#a19b38be10eca3e3446465383d1be1683">jvector.c</a>
+, <a class="el" href="jvector_8h.html#a19b38be10eca3e3446465383d1be1683">jvector.h</a>
 </li>
 <li>Vector_new()
 : <a class="el" href="jvector_8c.html#a42ff4915a92593cc45a16ad4ed4b567b">jvector.c</a>
@@ -127,8 +166,15 @@ $(document).ready(function(){initNavTree('globals_v.html',''); initResizable(); 
 , <a class="el" href="jvector_8h.html#a5b65a727df3d13c2085150ad27e110a9">jvector.h</a>
 </li>
 <li>Vector_push_back()
-: <a class="el" href="jvector_8c.html#a34ca25e1377dcdf48debebdab4141da8">jvector.c</a>
-, <a class="el" href="jvector_8h.html#a34ca25e1377dcdf48debebdab4141da8">jvector.h</a>
+: <a class="el" href="jvector_8h.html#a34ca25e1377dcdf48debebdab4141da8">jvector.h</a>
+, <a class="el" href="jvector_8c.html#a34ca25e1377dcdf48debebdab4141da8">jvector.c</a>
+</li>
+<li>Vector_reduce()
+: <a class="el" href="jvector_8c.html#ab0540bdbd702f5dd72c01868968f034a">jvector.c</a>
+, <a class="el" href="jvector_8h.html#ab0540bdbd702f5dd72c01868968f034a">jvector.h</a>
+</li>
+<li>vector_reduce_t
+: <a class="el" href="jvector_8h.html#a8616d7e75a451410b54c6c180b53dd7a">jvector.h</a>
 </li>
 <li>Vector_reserve()
 : <a class="el" href="jvector_8c.html#a920f82437923b4c42f154bc66c601d7b">jvector.c</a>
@@ -137,6 +183,9 @@ $(document).ready(function(){initNavTree('globals_v.html',''); initResizable(); 
 <li>Vector_reserve_exact()
 : <a class="el" href="jvector_8c.html#a50d385e9692b9f7fe6dae27fbaeeca16">jvector.c</a>
 , <a class="el" href="jvector_8h.html#a50d385e9692b9f7fe6dae27fbaeeca16">jvector.h</a>
+</li>
+<li>vector_reset
+: <a class="el" href="jiterator__short_8h.html#ad4f9d4b70995c8ab6deeb17362555334">jiterator_short.h</a>
 </li>
 <li>Vector_shrink_to_fit()
 : <a class="el" href="jvector_8c.html#afdddedae526d84601125c0780aaf0355">jvector.c</a>
@@ -152,7 +201,7 @@ $(document).ready(function(){initNavTree('globals_v.html',''); initResizable(); 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Dec 21 2021 20:06:45 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Wed Dec 20 2023 19:27:56 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

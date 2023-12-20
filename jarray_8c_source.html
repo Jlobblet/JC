@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.6.0</span>
+   &#160;<span id="projectnumber">v1.7.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -136,9 +136,9 @@ $(document).ready(function(){initNavTree('jarray_8c_source.html',''); initResiza
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Compare old and new sizes, and pick the smallest</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// Larger data will be cut off when downsizing, and 0s left in the array when upsizing</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> old_block_size = tmp[i] * <span class="keyword">sizeof</span>(<a class="code" href="jarray_8h.html#a85615ac53f7cf17115a1d922fd62694b">NDArrayBacker</a>),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        new_block_size = arr-&gt;<a class="code" href="structNDArray.html#a7a3022363f21129779cdf5bf25005808">size</a>[i] * <span class="keyword">sizeof</span>(<a class="code" href="jarray_8h.html#a85615ac53f7cf17115a1d922fd62694b">NDArrayBacker</a>),</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        block_size = old_block_size &gt; new_block_size ? new_block_size : old_block_size;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> old_last_size = tmp[i],</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        new_last_size = arr-&gt;<a class="code" href="structNDArray.html#a7a3022363f21129779cdf5bf25005808">size</a>[i],</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        block_size = (old_last_size &gt; new_last_size ? new_last_size : old_last_size) * <span class="keyword">sizeof</span>(<a class="code" href="jarray_8h.html#a85615ac53f7cf17115a1d922fd62694b">NDArrayBacker</a>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="jint_8h.html#a93a1409151dffdb2c15147214279817a">uptr</a> j = 0; j &lt; n_blocks; j++) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        memcpy(&amp;new_data[arr-&gt;<a class="code" href="structNDArray.html#a7a3022363f21129779cdf5bf25005808">size</a>[i] * j], &amp;arr-&gt;<a class="code" href="structNDArray.html#adf803233fe1cc715f6d7a96089df12ad">data</a>[tmp[i] * j], block_size);</div>
@@ -358,7 +358,7 @@ $(document).ready(function(){initNavTree('jarray_8c_source.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jarray_8c.html">jarray.c</a></li>
-    <li class="footer">Generated on Tue Dec 21 2021 20:06:44 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Wed Dec 20 2023 19:27:56 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

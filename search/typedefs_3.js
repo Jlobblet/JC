@@ -1,11 +1,19 @@
 var searchData=
 [
-  ['li16_337',['li16',['../jint_8h.html#a335e7fe290cb8801705609c7bd8632a4',1,'jint.h']]],
-  ['li32_338',['li32',['../jint_8h.html#a22db9db58308c761b2b76a89ad10495a',1,'jint.h']]],
-  ['li64_339',['li64',['../jint_8h.html#a5d1f7b2389991252ad0aefae07f307e9',1,'jint.h']]],
-  ['li8_340',['li8',['../jint_8h.html#a4157abae2d3c7720dd356d216255dc83',1,'jint.h']]],
-  ['lu16_341',['lu16',['../jint_8h.html#a9ff639323bef9060669677ec6505cbc3',1,'jint.h']]],
-  ['lu32_342',['lu32',['../jint_8h.html#a8499cbd1f07a3cdd1681e9c8aec2ab00',1,'jint.h']]],
-  ['lu64_343',['lu64',['../jint_8h.html#a8caee69fb510cced7d688af68d2bf151',1,'jint.h']]],
-  ['lu8_344',['lu8',['../jint_8h.html#a8db971ed87438e4b7f30f7a8c1f1d962',1,'jint.h']]]
+  ['jiterator_5faction_5ffn_607',['jiterator_action_fn',['../jiterator_8h.html#a4cb644eab14085942cae6ad6551b6fdc',1,'jiterator.h']]],
+  ['jiterator_5fcompare_5ffn_608',['jiterator_compare_fn',['../jiterator_8h.html#addd68bb62f318fd88b867699e83e5932',1,'jiterator.h']]],
+  ['jiterator_5fdrop_5fstate_609',['jiterator_drop_state',['../jiterator_8c.html#ac80b7a3e9e2f00f857e7988f4f6f34cb',1,'jiterator.c']]],
+  ['jiterator_5fdrop_5fwhile_5fstate_610',['jiterator_drop_while_state',['../jiterator_8c.html#a61ed2aee24962b7ed3cb3636811b64df',1,'jiterator.c']]],
+  ['jiterator_5ffold_5ffn_611',['jiterator_fold_fn',['../jiterator_8h.html#aafa3a9894c79d3ea0825ed258c0de9d0',1,'jiterator.h']]],
+  ['jiterator_5fgenerator_5ffn_612',['jiterator_generator_fn',['../jiterator_8h.html#a6ce61e2710251795491842b0b80f58a8',1,'jiterator.h']]],
+  ['jiterator_5fmap2_5ffn_613',['jiterator_map2_fn',['../jiterator_8h.html#a6e879a7f90168117a9404a57624b4dca',1,'jiterator.h']]],
+  ['jiterator_5fmap_5ffn_614',['jiterator_map_fn',['../jiterator_8h.html#ab91830cc088145a6a6150d719dea7d80',1,'jiterator.h']]],
+  ['jiterator_5fnext_615',['jiterator_next',['../jiterator_8h.html#a98b55d61054519ff2bbf680d4c8b4753',1,'jiterator.h']]],
+  ['jiterator_5fpredicate_5ffn_616',['jiterator_predicate_fn',['../jiterator_8h.html#a0e872888d5c0ce9f865302c4bc89e252',1,'jiterator.h']]],
+  ['jiterator_5freduce_5ffn_617',['jiterator_reduce_fn',['../jiterator_8h.html#a80ddec24b65ceacb16db91ff3518d8db',1,'jiterator.h']]],
+  ['jlogger_5fsink_5ffilter_618',['jlogger_sink_filter',['../jlog_8h.html#a2c430df079170e7100d469322c8f48aa',1,'jlog.h']]],
+  ['jlogger_5fsink_5ffn_619',['jlogger_sink_fn',['../jlog_8h.html#aab2830b216715cb64318bcd203be3bcc',1,'jlog.h']]],
+  ['jlogger_5fsink_5ffree_5ffn_620',['jlogger_sink_free_fn',['../jlog_8h.html#a12b0a7946248cccaa7127efca552d619',1,'jlog.h']]],
+  ['jlogger_5fsink_5ft_621',['jlogger_sink_t',['../jlog_8h.html#a7bd7f6fd9c54e400f44c351b4824de3a',1,'jlog.h']]],
+  ['jlogger_5ft_622',['jlogger_t',['../jlog_8h.html#a2ab3a28b578a4ec9e10f39673622b60e',1,'jlog.h']]]
 ];

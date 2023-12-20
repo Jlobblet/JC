@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">JC
-   &#160;<span id="projectnumber">v1.6.0</span>
+   &#160;<span id="projectnumber">v1.7.0</span>
    </div>
    <div id="projectbrief">Things that I use in C a bunch and want in a library.</div>
   </td>
@@ -109,6 +109,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acec9df393777e7c1ecf46a742ea70660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jmmap_8c.html#acec9df393777e7c1ecf46a742ea70660">mmap_close</a> (<a class="el" href="structjc__mmap.html">jc_mmap</a> *buf)</td></tr>
 <tr class="memdesc:acec9df393777e7c1ecf46a742ea70660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a memory-mapped <a class="el" href="structjc__mmap.html" title="Struct containing data about a memory-mapped file.">jc_mmap</a> file.  <a href="jmmap_8c.html#acec9df393777e7c1ecf46a742ea70660">More...</a><br /></td></tr>
 <tr class="separator:acec9df393777e7c1ecf46a742ea70660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99d16adb0326a0418a8077b41d9f80e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jmmap_8c.html#ad99d16adb0326a0418a8077b41d9f80e">mmap_read_write</a> (const char *filepath, <a class="el" href="structjc__mmap.html">jc_mmap</a> *buf)</td></tr>
+<tr class="memdesc:ad99d16adb0326a0418a8077b41d9f80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory map a file for writing.  <a href="jmmap_8c.html#ad99d16adb0326a0418a8077b41d9f80e">More...</a><br /></td></tr>
+<tr class="separator:ad99d16adb0326a0418a8077b41d9f80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Convenience functions for memory-mapped files. </p>
@@ -188,13 +191,58 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad99d16adb0326a0418a8077b41d9f80e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99d16adb0326a0418a8077b41d9f80e">&#9670;&nbsp;</a></span>mmap_read_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="jint_8h.html#a1436c3bda94547287cbc2d66af2606e3">iptr</a> mmap_read_write </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filepath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structjc__mmap.html">jc_mmap</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Memory map a file for writing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Filepath</td><td>Path to the file to open. </td></tr>
+    <tr><td class="paramname">buf</td><td><a class="el" href="structjc__mmap.html" title="Struct containing data about a memory-mapped file.">jc_mmap</a> to store mapped file information in. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, return the size of the mapped file in bytes (a non-negative integer). On error, -1 is returned and errno is set to indicate the error. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The file will be created if it does not exist. </dd>
+<dd>
+The file will be opened in read/write mode. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="jmmap_8c_source.html#l00052">52</a> of file <a class="el" href="jmmap_8c_source.html">jmmap.c</a>.</p>
+
+<p class="reference">References <a class="el" href="jmmap_8h_source.html#l00013">jc_mmap::address</a>, <a class="el" href="jmmap_8h_source.html#l00015">jc_mmap::fd</a>, and <a class="el" href="jmmap_8h_source.html#l00017">jc_mmap::stat</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="jmmap_8c.html">jmmap.c</a></li>
-    <li class="footer">Generated on Tue Dec 21 2021 20:06:44 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Wed Dec 20 2023 19:27:56 for JC by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

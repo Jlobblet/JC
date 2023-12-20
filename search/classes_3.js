@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector_196',['Vector',['../structVector.html',1,'']]]
+  ['pair_360',['pair',['../structpair.html',1,'']]]
 ];
